@@ -614,6 +614,10 @@ footer {
         /* border: 3px solid yellow; */
     }
 
+    .column-title {
+        padding-bottom: 5px;
+    }
+
     .logo-list {
         justify-content: center;
     }
@@ -709,8 +713,10 @@ footer {
 
     .footer-table {
         flex-direction: column;
+        gap: 30px;
         /* border: 3px solid yellow; */
     }
+
 }
 
 @media (max-width: 530px) {
