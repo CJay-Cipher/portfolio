@@ -670,7 +670,7 @@ footer {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 630px) {
     #logo>img {
         width: 120px;
         height: auto;
@@ -679,7 +679,7 @@ footer {
     }
 
     #head-section {
-        height: 690px;
+        height: 750px;
         /* border: 3px solid green; */
     }
 
