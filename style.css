@@ -693,7 +693,7 @@ footer {
     }
 
     #head-section {
-        padding-bottom: 20%;
+        padding-bottom: 5%;
     }
 
     #head-text {
@@ -714,6 +714,10 @@ footer {
 }
 
 @media (max-width: 530px) {
+    #head-section {
+        padding-bottom: 20%;
+    }
+
     #search-bar {
         /* border: 5px solid red; */
         width: 90%;
