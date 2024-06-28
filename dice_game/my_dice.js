@@ -14,14 +14,6 @@ button.addEventListener("click", function () {
     document.getElementById("lds-dual-ring").style.display = "inline-block"
     var diceNum1 = undefined;
     var diceNum2 = undefined;
-    // for (var i = 1; i <= 10; i++) {
-    //     diceNum1 = diceRoll();
-    //     diceNum2 = diceRoll();
-    //     setTimeout(function () {
-    //         document.getElementById("dice-1").src = "dice_images/black_" + diceNum1 + ".svg";
-    //         document.getElementById("dice-2").src = "dice_images/red_" + diceNum2 + ".svg";
-    //     }, 1000);
-    // }
 
     var counter = 0;
     var intervalId = setInterval(function () {
