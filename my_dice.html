@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="my_dice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Peralta&family=Rubik+Moonrocks&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-img"></div>
+    <section>
+        <h1 class="title">DICE GAME</h1>
+        <p class="info">The Player with the highest number wins</p>
+        <hr>
+    </section>
+
+    <section class="outcome">
+        <div class="dice-area">
+            <div class="player-one">
+                <h2>Player 1</h2>
+                <div class="dice">
+                    <img id="dice-1" src="dice_images/black_6.svg" alt="black dice">
+                </div>
+            </div>
+            <div class="player-two">
+                <h2>Player 2</h2>
+                <div class="dice">
+                    <img id="dice-2" src="dice_images/red_6.svg" alt="red dice">
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 id="result">Start</h2>
+            <div id="lds-dual-ring"></div>
+            <p id="start-game">Click the <span style="color: #65adf9;">Roll Dice</span> button below to begin</p>
+        </div>
+        <div class="dice_roll">
+            <button id="my-button">Roll Dice</button>
+        </div>
+
+        <div class="bottom">
+            <p>Desiged by <span class="my-name">CJay</span></p>
+        </div>
+    </section>
+
+    <script src="my_dice.js"></script>
+</body>
+
+</html>
