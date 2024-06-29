@@ -4,20 +4,29 @@ body {
     margin: 0;
     font-family: "Peralta", serif;
     color: white;
-    background-color: rgb(23, 23, 59);
-    height: 100vh;
+
+    background-image: url("bg_images/bg_image1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.main-body {
+    background-image: url("bg_images/bg_image2.jpg");
 }
 
 .background-img {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("bg_images/bg_image2.jpg");
-    background-size: cover;
+    background-color: rgb(23, 23, 59);
     /* Adjust the value between 0 (fully transparent) and 1 (fully opaque) */
-    opacity: 0.2;
+    opacity: 0.8;
     /* Ensure it's positioned behind the content */
     z-index: -1;
 }
@@ -57,7 +66,7 @@ h2 {
 }
 
 .outcome {
-    height: 78%;
+    /* height: 70%; */
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
@@ -101,7 +110,7 @@ h2 {
 }
 
 
-
+/* loading ring -----------------*/
 #lds-dual-ring,
 #lds-dual-ring:after {
     box-sizing: border-box;
@@ -135,6 +144,7 @@ h2 {
     }
 }
 
+/* loading ring -----------------*/
 
 
 #start-game {
@@ -178,6 +188,27 @@ h2 {
     align-self: flex-end;
     padding-right: 10px;
     /* border: 2px solid lime; */
+}
+
+#bg-color-swap {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    background-color: #007bff97;
+    color: #ffffffa4;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 3px 12px;
+}
+
+#bg-color-swap:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#bg-color-swap:active {
+    background-color: #003c80;
 }
 
 .bottom>p {

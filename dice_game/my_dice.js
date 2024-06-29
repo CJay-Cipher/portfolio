@@ -1,17 +1,23 @@
 function diceRoll() {
-    var roll = Math.floor(Math.random() * 6);
-    roll += 1
+    var roll = Math.floor(Math.random() * 6) + 1;
     return roll;
 }
 
 
-var button = document.getElementById("my-button");
-
-button.addEventListener("click", function () {
+// Event listener on button to change background Image.
+var swapBackgroundImage = document.getElementById("bg-color-swap");
+swapBackgroundImage.addEventListener("click", function () {
     // Actions to perform when the button is clicked
-    document.getElementById("start-game").style.display = "none"
-    document.getElementById("result").style.display = "none"
-    document.getElementById("lds-dual-ring").style.display = "inline-block"
+    document.body.classList.toggle("main-body")
+});
+
+// Add an event listener to the Roll Dice button
+var rollDiceButton = document.getElementById("my-button");
+rollDiceButton.addEventListener("click", function () {
+    // Actions to perform when the button is clicked
+    document.getElementById("start-game").style.display = "none";
+    document.getElementById("result").style.display = "none";
+    document.getElementById("lds-dual-ring").style.display = "inline-block";
     var diceNum1 = undefined;
     var diceNum2 = undefined;
 
@@ -40,13 +46,11 @@ button.addEventListener("click", function () {
             } else {
                 result = "👉 DRAW 👈";
             }
-            document.getElementById("result").innerHTML = result
-            document.getElementById("lds-dual-ring").style.display = "none"
-            document.getElementById("result").style.display = "block"
+            document.getElementById("result").innerHTML = result;
+            document.getElementById("lds-dual-ring").style.display = "none";
+            document.getElementById("result").style.display = "block";
         }
 
     }, 50);
 
-
-    // console.log("Button clicked!");
 });
