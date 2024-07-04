@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #eaeaea;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10px; */
+    z-index: 100;
+}
+
+/* header > * {
+    border: 2px solid;
+} */
+
+.logo-div {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.logo {
+    font-size: 25px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.logo:hover {
+    border-radius: 20px;
+    padding: 3px 10px;
+    background-color: transparent;
+    box-shadow: -10px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #1743e3;
+}
+
+.hidden-nav {
+    position: relative;
+    font-size: 30px;
+    padding: 3px 5px;
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    display: none;
+    /* border: 2px solid green; */
+}
+
+.hidden-nav:hover {
+    color: #1743e3;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+    /* background-color: #1743e3; */
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideSci 0.5s ease forwards;
+    animation-delay: calc(0.5s * var(--i));
+}
+
+.social-media a:hover {
+    border-color: #eaeaea;
+}
+
+.social-media a i {
+    font-size: 24px;
+    color: #eaeaea;
+    transform: rotate(-45deg);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+
+.home-content {
+    /* background-color: #1743e3; */
+    width: 50%;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    font-size: 40px;
+    color: #1743e3;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: #1743e3;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #eaeaea;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #1743e3;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: -10px 10px 5px #5375ee;
+}
+
+.home {
+    display: flex;
+    gap: 20px;
+}
+
+.home-img {
+    position: relative;
+    right: -10%;
+    width: 50%;
+    height: 50%;
+    transform: rotate(45deg);
+}
+
+.rhombus {
+    position: relative;
+    width: auto;
+    height: 100%;
+    background-color: #eaeaea;
+    border: 2vw solid #1743e3;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.rhombus img {
+    position: absolute;
+    top: 90px;
+    left: -90px;
+    width: 150%;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: car 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.rhombus2 {
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    top: -25%;
+    right: -50%;
+    background-color: #1743e3;
+    transform: rotate(45deg);
+    z-index: -1;
+    opacity: 0;
+    animation: rhombus2 1s ease forwards;
+    animation-delay: 0.1s;
+}
+
+/* KEYFRAMES ANIMATIONS */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci {
+    0% {
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes car {
+    0% {
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rhombus2 {
+    0% {
+        right: -40%;
+        opacity: 0;
+    }
+
+    100% {
+        right: -25%;
+        opacity: 1;
+    }
+}
+
+/* Media Query to hide anchor tags */
+/* @media (min-width: 1110px) {
+    .hidden-nav i {
+        display: none;
+    }
+} */
+@media (max-width: 1200px) {
+    .navbar .contact-nav {
+        display: none;
+    }
+    .hidden-nav {
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .logo {
+        font-size: 23px;
+    }
+    .navbar a {
+        font-size: 16px;
+    }
+    .social-media a i {
+        font-size: 20px;
+    }
+    .social-media a {
+        width: 35px;
+        height: 35px;
+    }
+    .home-content h1 {
+        font-size: 40px;
+    }
+    .home-content h3 {
+        font-size: 30px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    .home-content {
+        width: 60%;
+    }
+
+    .rhombus2 {
+        top: -22%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar .features-nav {
+        display: none;
+    }
+    .rhombus {
+        height: 80%;
+    }
+    .rhombus2 {
+        top: -25%;
+        left: 75%;
+    }
+}
+@media (max-width: 800px) {
+    .navbar .review-nav {
+        display: none;
+    }
+    .rhombus {
+        height: 60%;
+    }
+    .rhombus2 {
+        top: -35%;
+        left: 85%;
+    }
+}
+@media (max-width: 600px) {
+    .navbar .about-nav {
+        display: none;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    .social-media a i {
+        font-size: 15px;
+    }
+    .social-media a {
+        width: 30px;
+        height: 30px;
+    }
+    .home-content h1 {
+        font-size: 30px;
+    }
+    .home-content h3 {
+        font-size: 25px;
+    }
+    .home-content p {
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+    .home-content {
+        width: 70%;
+    }
+    .rhombus2 {
+        top: -38%;
+    }
+}
+@media (max-width: 500px) {
+    .navbar .home-nav {
+        display: none;
+    }
+    .home-content {
+        width: 80%;
+    }
+    .rhombus {
+        height: 40%;
+    }
+    .rhombus2 {
+        top: -40%;
+    }
+}
