@@ -204,10 +204,8 @@ header {
 
 .rhombus {
     position: relative;
-    top: -30%;
-    left: 30%;
-    width: 100%;
-    height: 120%;
+    width: auto;
+    height: 100%;
     background-color: #eaeaea;
     border: 2vw solid #1743e3;
     box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);
@@ -218,8 +216,8 @@ header {
 
 .rhombus img {
     position: absolute;
-    top: 20px;
-    left: -380px;
+    top: 90px;
+    left: -90px;
     width: 150%;
     transform: rotate(-45deg);
     opacity: 0;
@@ -400,12 +398,6 @@ header {
     }
     .rhombus {
         height: 80%;
-        top: -10%;
-        left: 10%;
-    }
-    .rhombus img {
-        top: 130px;
-        left: -130px;
     }
     .rhombus2 {
         top: -25%;
