@@ -218,7 +218,7 @@ header {
 
 .rhombus img {
     position: absolute;
-    top: 70px;
+    top: 20px;
     left: -380px;
     width: 150%;
     transform: rotate(-45deg);
@@ -385,8 +385,8 @@ header {
         width: 60%;
     }
     .rhombus img {
-        top: 130px;
-        left: -300px;
+        top: 70px;
+        left: -200px;
     }
 
     .rhombus2 {
