@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    height: 99vh;
+    height: 98svh;
     display: flex;
     flex-direction: column;
     /* border: 2px solid lime; */
@@ -94,7 +94,7 @@ h2 {
     /* border: 3px solid yellow; */
 }
 
-.dice>img {
+.dice > img {
     width: 220px;
     /* height: 220px; */
     margin: 20px;
@@ -108,7 +108,6 @@ h2 {
     font-size: 50px;
     /* border: 2px solid red; */
 }
-
 
 /* loading ring -----------------*/
 #lds-dual-ring,
@@ -146,11 +145,9 @@ h2 {
 
 /* loading ring -----------------*/
 
-
 #start-game {
     padding: 10px 30px;
 }
-
 
 #my-button {
     /* Button styles */
@@ -190,14 +187,14 @@ h2 {
     /* border: 2px solid white; */
 }
 
-.bottom>* {
+.bottom > * {
     display: flex;
     width: 100%;
     align-items: center;
     /* border: 2px solid red; */
 }
 
-.bottom>div {
+.bottom > div {
     margin-left: 10px;
 }
 
@@ -237,7 +234,6 @@ h2 {
     background-color: #003c80;
 }
 
-
 /* Styles for screens smaller than 600px */
 @media (max-width: 800px) {
     .title {
@@ -252,7 +248,7 @@ h2 {
         font-size: 35px;
     }
 
-    .dice>img {
+    .dice > img {
         width: 200px;
         /* height: 200px; */
         margin: 10px 30px;
@@ -283,7 +279,7 @@ h2 {
         font-size: 25px;
     }
 
-    .dice>img {
+    .dice > img {
         width: 150px;
         height: 150px;
         margin: 10px;
@@ -304,7 +300,7 @@ h2 {
         padding: 10px 30px;
     }
 
-    .bottom>p {
+    .bottom > p {
         font-size: 10px;
         letter-spacing: 2px;
     }
