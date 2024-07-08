@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CJay Projects</title>
 
-        <style>
-            body {
-                /* background-color: rgb(23, 23, 59); */
-                font-family: sans-serif;
-                background-image: url("background.jpg");
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-                background-repeat: no-repeat;
-                color: white;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CJay Projects</title>
 
-            .container a {
-                text-decoration: none;
-                color: rgb(0, 170, 255);
-            }
-        </style>
-    </head>
+    <style>
+        body {
+            /* background-color: rgb(23, 23, 59); */
+            font-family: sans-serif;
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100svh;
+        }
 
-    <body>
-        <div class="container">
-            <div>
-                <h1>My Web-Dev Practice Projects</h1>
-            </div>
-            <ul class="project1">
-                <li>
-                    <h2>
-                        <a href="shortly_clone/page.html">First Clone Site</a>
-                    </h2>
-                </li>
-            </ul>
-            <ul class="project2">
-                <li>
-                    <h2><a href="dice_game/my_dice.html">My Dice Game</a></h2>
-                </li>
-            </ul>
-            <ul class="project3">
-                <li>
-                    <h2>
-                        <a href="landing_page/index.html"
-                            >Animated Landing Page</a
-                        >
-                    </h2>
-                </li>
-            </ul>
+        a {
+            text-decoration: none;
+            /* color: rgb(0, 170, 255); */
+        }
+
+        .others {
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>My Web-Dev Practice Projects</h1>
         </div>
-    </body>
+        <ul class="project1">
+            <li>
+                <h2>
+                    <a href="shortly_clone/page.html">First Clone Site</a>
+                </h2>
+            </li>
+        </ul>
+        <ul class="project2">
+            <li>
+                <h2><a href="dice_game/my_dice.html">My Dice Game</a></h2>
+            </li>
+        </ul>
+        <ul class="project3">
+            <li>
+                <h2>
+                    <a href="landing_page/index.html">Animated Landing Page</a>
+                </h2>
+            </li>
+        </ul>
+    </div>
+    <div class="others">
+        <h5>Others</h5>
+        <ul>
+            <li><a href="infinity_scroll/index.html">Infinity Scrolling</a></li>
+            <li><a href="using_animation/index.html">Testing Animation</a></li>
+        </ul>
+    </div>
+</body>
+
 </html>
