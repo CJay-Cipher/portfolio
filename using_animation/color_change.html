@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Animation</title>
+
+    <style>
+        :root {
+            --color1: #82207c76;
+            --color2: #0c0cc7;
+            --color3: #105077;
+            --color4: #4d14a8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, rgb(10, 10, 92), rgb(0, 0, 0));
+            height: 100svh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            height: 50%;
+            width: 50%;
+            /* border: 3px solid transparent; */
+            border-radius: 50%;
+            animation: rotateLeft 30s linear infinite;
+        }
+
+        .circle:nth-child(1) {
+            /* top: 50%; */
+            height: 70%;
+            width: 70%;
+            border: 1px solid var(--color1);
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            left: 50%;
+            border: 1px solid var(--color2);
+            animation-delay: -5.5s;
+        }
+
+        .circle:nth-child(3) {
+            top: 50%;
+            border: 1px solid var(--color3);
+            animation-delay: -11.5s;
+        }
+
+        .circle:nth-child(4) {
+            height: 80%;
+            width: 80%;
+            top: 20%;
+            left: 30%;
+            border: 1px solid var(--color4);
+            animation-delay: -16.5s;
+        }
+
+        .circle:nth-child(1)::before,
+        .circle:nth-child(2)::before,
+        .circle:nth-child(3)::before,
+        .circle:nth-child(4)::before {
+            content: "";
+            position: absolute;
+            height: 20vw;
+            width: 20vw;
+            border-radius: 50%;
+            box-shadow: 0 0 20vw var(--color2);
+            filter: blur(20px);
+        }
+
+        .circle:nth-child(1)::after,
+        .circle:nth-child(2)::after,
+        .circle:nth-child(3)::after,
+        .circle:nth-child(4)::after {
+            content: "";
+            position: absolute;
+            height: 5vw;
+            width: 5vw;
+            left: 80%;
+            top: 80%;
+            border-radius: 50%;
+            box-shadow: 0 0 20vw var(--color2);
+            /* filter: blur(30px); */
+        }
+
+        .circle:nth-child(1)::before,
+        .circle:nth-child(4)::after {
+            background-color: var(--color1);
+        }
+
+        .circle:nth-child(2)::before,
+        .circle:nth-child(3)::after {
+            background-color: var(--color2);
+        }
+
+        .circle:nth-child(3)::before,
+        .circle:nth-child(2)::after {
+            background-color: var(--color3);
+        }
+
+        .circle:nth-child(4)::before,
+        .circle:nth-child(1)::after {
+            background-color: var(--color4);
+        }
+
+        .circle::before {
+            background-color: yellow;
+        }
+
+        @keyframes rotateLeft {
+            0% {
+                transform: rotate(360deg);
+                /* background: radial-gradient(circle, cyan, blue); */
+            }
+        }
+
+        @keyframes rotateRight {
+            100% {
+                transform: rotate(360deg);
+                /* background: radial-gradient(circle, cyan, blue); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

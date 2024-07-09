@@ -5,38 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CJay Projects</title>
-
-    <style>
-        body {
-            /* background-color: rgb(23, 23, 59); */
-            font-family: sans-serif;
-            background-image: url("background.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            height: 100svh;
-        }
-
-        a {
-            text-decoration: none;
-            /* color: rgb(0, 170, 255); */
-        }
-
-        .others {
-            margin-top: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <div>
-            <h1>My Web-Dev Practice Projects</h1>
-        </div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+
+        <h1 class="title">My Web-Dev Practice Projects</h1>
+
         <ul class="project1">
             <li>
                 <h2>
@@ -56,14 +36,16 @@
                 </h2>
             </li>
         </ul>
+        <div class="others">
+            <h5>Others</h5>
+            <ul>
+                <li><a href="infinity_scroll/index.html">Infinity Scrolling</a></li>
+                <li><a href="using_animation/index.html">Testing Animation</a></li>
+                <li><a href="using_animation/color_change.html">Background Effects</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="others">
-        <h5>Others</h5>
-        <ul>
-            <li><a href="infinity_scroll/index.html">Infinity Scrolling</a></li>
-            <li><a href="using_animation/index.html">Testing Animation</a></li>
-        </ul>
-    </div>
+
 </body>
 
 </html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading ...</title>
+
+    <style>
+        :root {
+            --shadow: 0 0 50px #ffffff,
+                0 0 40px #ffffff,
+                0 0 30px #ffffff,
+                0 0 20px #ffffff,
+                0 0 10px #ffffff;
+            /* --secondary-color: #6c757d; */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(5, 5, 31);
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* gap: 5px; */
+        }
+
+        .roller {
+            /* background-color: transparent; */
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            /* border: 3px solid transparent; */
+            animation: rotateRight 2s linear infinite;
+        }
+
+        .roller:nth-child(1)::after,
+        .roller:nth-child(2)::after,
+        .roller:nth-child(3)::after,
+        .roller:nth-child(4)::after {
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+        }
+
+        .roller:nth-child(1)::after {
+            bottom: 24px;
+            right: 24px;
+            background-color: blue;
+        }
+
+        .roller:nth-child(2)::after {
+            top: 23px;
+            left: 23px;
+            background-color: green;
+        }
+
+        .roller:nth-child(3)::after {
+            top: 25px;
+            left: 168px;
+            background-color: red;
+        }
+
+        .roller:nth-child(4)::after {
+            top: 164px;
+            left: 22px;
+            background-color: yellow;
+        }
+
+        .roller:nth-child(1) {
+            position: absolute;
+            right: 372px;
+            border-right: 3px solid blue;
+            /* animation-delay: -1.2s; */
+        }
+
+        .roller:nth-child(2) {
+            position: absolute;
+            left: 372px;
+            border-left: 3px solid green;
+            /* animation-delay: -0.6s; */
+        }
+
+        .roller:nth-child(3) {
+            position: absolute;
+            top: 420px;
+            border-top: 3px solid red;
+            /* animation-delay: -0.9s; */
+        }
+
+        .roller:nth-child(4) {
+            position: absolute;
+            bottom: 420px;
+            border-bottom: 3px solid yellow;
+            /* animation-delay: -0.3s; */
+        }
+
+        .roller:nth-child(5) {
+            height: 10px;
+            width: 10px;
+            background-color: white;
+            box-shadow: var(--shadow);
+            /* z-index: 1; */
+            /* border: 2px solid red; */
+        }
+
+        @keyframes rotateRight {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotateLeft {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="roller"></div>
+        <div class="roller"></div>
+        <div class="roller"></div>
+        <div class="roller"></div>
+        <div class="roller"></div>
+    </div>
+
+</body>
+
+</html>
