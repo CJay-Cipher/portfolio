@@ -40,31 +40,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
-    border: 2px solid green;
+    border: 2px solid blue;
 }
 
-#pause {
-    width: 70px;
-    height: 30px;
-    font-size: 12px;
-    border-radius: 20px;
+#slide-control img {
+    width: 25px;
+}
+#slide-control i {
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 3px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+#pause:hover i {
+    color: white;
+    background-color: black;
+}
+
+#pause,
+#prev,
+#next {
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    border-radius: 2px;
     cursor: pointer;
     /* border: 2px solid black; */
 }
-
-#pause:hover {
-    background-color: #b4b4b4;
+#prev img,
+#next img {
+    transition: transform 0.5s ease;
+}
+#prev:hover img {
+    transform: translateX(-12px);
+}
+#next:hover img {
+    transform: translateX(12px);
 }
 
-#pause:active {
-    background-color: #8a8a8a;
-    border: 3px solid #1111e9;
+#pause:hover,
+#prev:hover,
+#next:hover {
+    background-color: #e4e4e490;
 }
 
-#pause:hover + .slider {
-    visibility: hidden;
-    background-color: cyan;
+#pause:active,
+#prev:active,
+#next:active {
+    border: 1.5px solid black;
+    border-style: dashed;
+    /* background-color: #b8b8b8; */
+}
+
+#s1-indicate,
+#s2-indicate {
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    /* background-color: blue; */
 }
 
 @keyframes slideLeft1 {

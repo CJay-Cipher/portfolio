@@ -118,6 +118,15 @@ body {
 #nav-action * {
     color: var(--header-color);
 }
+.all-products {
+    display: flex;
+    margin-top: 5px;
+    /* border: 1px solid; */
+}
+.all-products img {
+    padding: 3px;
+    width: 15px;
+}
 
 #search-microsoft {
     height: var(--search-bar-height);
