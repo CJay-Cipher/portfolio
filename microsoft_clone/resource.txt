@@ -1,0 +1,195 @@
+IMAGES:
+microsoft_logo - https://pixabay.com/vectors/microsoft-ms-logo-business-windows-80658/
+home_image_1 - https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-MultiCanvas-Microsoft-Copilot-App-3screens:VP5-1920x600
+home_image_2 - https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Slim-Multi-Canvas-M365-Anthem-Attract-Image-Create:VP5-1920x600
+article_1 - https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Windows11-GlobalLaunch?wid=380&hei=213&fit=crop
+article_2 - https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?wid=380&hei=213&fit=crop
+article_3 - https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?wid=380&hei=213&fit=crop
+article_4 - https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-PC-SMB-OneNote?wid=380&hei=213&fit=crop
+
+
+COLORS:
+> background white - #FFFFFF
+> button blue - #005CA5
+
+FONTS:
+<link rel="preload" href="https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff2" as="font" type="font/woff2" crossorigin="">
+font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+ICONS:
+register - <i class='bx bxs-user-plus'></i>
+cart - <i class='bx bxs-cart-alt' style='color:#ffffff' ></i>
+search - <i class='bx bxs-search-alt-2' style='color:#ffffff' ></i>
+
+MEDIA QUERY - 1400px, 1084px, 860px and 540px
+
+@keyframes slideLeft1 {
+            10% {
+                left: 0%;
+            }
+
+            20% {
+                left: 0%;
+            }
+
+            30% {
+                left: 0%;
+            }
+
+            40% {
+                left: 0%;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            70% {
+                left: 100%;
+            }
+
+            80% {
+                left: 100%;
+            }
+
+            90% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+
+        }
+
+        @keyframes slideLeft2 {
+            10% {
+                left: 100%;
+            }
+
+            20% {
+                left: 100%;
+            }
+
+            30% {
+                left: 100%;
+            }
+
+            40% {
+                left: 100%;
+            }
+
+            50% {
+                left: 0%;
+            }
+
+            60% {
+                left: 0%;
+            }
+
+            70% {
+                left: 0%;
+            }
+
+            80% {
+                left: 0%;
+            }
+
+            90% {
+                left: 0%;
+            }
+
+            100% {
+                left: -100%;
+            }
+
+        }
+        @keyframes slideRight1 {
+            10% {
+                left: 0%;
+            }
+
+            20% {
+                left: 0%;
+            }
+
+            30% {
+                left: 0%;
+            }
+
+            40% {
+                left: 0%;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            70% {
+                left: 100%;
+            }
+
+            80% {
+                left: 100%;
+            }
+
+            90% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+
+        }
+
+        @keyframes slideRight2 {
+            10% {
+                left: 100%;
+            }
+
+            20% {
+                left: 100%;
+            }
+
+            30% {
+                left: 100%;
+            }
+
+            40% {
+                left: 100%;
+            }
+
+            50% {
+                left: 0%;
+            }
+
+            60% {
+                left: 0%;
+            }
+
+            70% {
+                left: 0%;
+            }
+
+            80% {
+                left: 0%;
+            }
+
+            90% {
+                left: 0%;
+            }
+
+            100% {
+                left: -100%;
+            }
+
+        }

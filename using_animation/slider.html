@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .slider {
+            position: relative;
+            width: 500%;
+            animation: moveLeft 10s ease-in-out infinite;
+        }
+
+        .slide {
+            background-color: #2b8787;
+            /* border: 3px solid red; */
+            position: relative;
+            width: 20%;
+            float: left;
+            height: 100svh;
+        }
+
+        h1 {
+            background: #09d3e56a;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            /* font-size: 6em; */
+            width: 100%;
+        }
+
+        .slide {
+            background-size: cover;
+        }
+
+        .slide:nth-child(1) {
+            background-color: #310631;
+        }
+
+        .slide:nth-child(2) {
+            background-color: #060d31;
+        }
+
+        .slide:nth-child(3) {
+            background-color: #063119;
+        }
+
+        .slide:nth-child(4) {
+            background-color: #310f06;
+        }
+
+        .slide:nth-child(5) {
+            background-color: #312906;
+        }
+
+        @keyframes moveLeft {
+            0% {
+                left: 0%;
+            }
+
+            20% {
+                left: -100%;
+            }
+
+            40% {
+                left: -200%;
+            }
+
+            60% {
+                left: -300%;
+            }
+
+            80% {
+                left: -400%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slide">
+                <h1>Slide 1</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 2</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 3</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 4</h1>
+            </div>
+            <div class="slide">
+                <h1>Slide 5</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

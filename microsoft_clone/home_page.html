@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="head-nav-bar">
+        <a href="#" class="main-logo"><img src="images/logos/microsoft_logo.svg" alt="Main Logo"></a>
+        <nav id="nav-bar" class="hide-nav">
+            <ul class="nav-options">
+                <li><a href="#">Microsoft 365</a></li>
+                <li><a href="#">Office</a></li>
+                <li><a href="#">Copilot</a></li>
+                <li><a href="#">Windows</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+        <div id="nav-action">
+            <div><a href="#" class="all-products hide-nav">All Microsoft <i class='bx bx-chevron-down'></i></a></div>
+            <a href="#" id="head-search" class=" hide-nav">Search<img src="icons/search_icon.svg" alt="Search icon"></a>
+            <form id="search-microsoft">
+                <div class="search-box">
+                    <input id="search-input" type="text" placeholder="Search Microsoft.com">
+                    <a href="#"><img src="icons/search_icon.svg" alt="Search icon"></a>
+                </div>
+            </form>
+            <button id="search-cancel">Cancel</button>
+            <a href="#" id="head-cart" class=" hide-nav">Cart<img src="icons/cart_icon.svg" alt="Cart icon"></a>
+            <a href="#" id="head-sign-in" class=" hide-nav">Sign in</a>
+            <a id="head-sign-up" class=" hide-nav" href="#"><img src="icons/user_icon.svg" alt="Register"></a>
+        </div>
+    </header>
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slide"><img id="slide-1" src="images/home_slides/home_xl_img_1.avif" alt="image 1"></div>
+            <div class="slide"><img id="slide-2" src="images/home_slides/home_xl_img_2.avif" alt="image 2"></div>
+        </div>
+        <div id="slide-control">
+            <button id="pause">Pause</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+</body>
+
+</html>
