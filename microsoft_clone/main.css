@@ -11,8 +11,9 @@
     --btn-padding: 11px 15px;
 
     /* FONTS */
-    --main-font-family: "CJay font", SegoeUI, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
+    /* --main-font-family: "CJay font", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+        sans-serif; */
+    --main-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     /* DIMENTIONS */
     --head-nav-bar-height: 54px;
@@ -29,20 +30,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--main-font-family);
 }
 
 body {
     width: 100%;
     height: auto;
     color: var(--main-font-color);
-    font-family: var(--main-font-family);
 }
 
 h2,
 h3 {
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
 }
 h2 {
     font-size: 2.2em;
@@ -293,6 +294,7 @@ h3 {
     line-height: 1.5;
 }
 .card-button {
+    display: flex;
     margin-top: auto;
     margin-bottom: 0;
 }
@@ -310,15 +312,18 @@ h3 {
 }
 
 .btn {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
-    color: #ffffff;
+    font-size: 1em;
+    line-height: 1.1;
+    /* letter-spacing: 0.03rem; */
+    text-align: start;
+    color: #fff;
     background-color: var(--blue-bg-btn-color);
     border: none;
     border-radius: 5px;
     text-decoration: none;
     padding: var(--btn-padding);
-    font-size: 1rem;
-    line-height: 1.2;
     cursor: pointer;
 }
 
@@ -380,21 +385,38 @@ h3 {
 
 /* RESPONSIVENESS */
 @media (max-width: 1400px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
     #nav-bar {
         display: none;
     }
-    .top-products,
-    .bottom-products {
-        --product-img-width: 50%;
-    }
+    /* .btn {
+        font-size: 0.9rem;
+    } */
     .outlook-product img {
         content: url("images/articles/outlook_lg_img.webp");
     }
 }
 
 @media (max-width: 1084px) {
+    h2 {
+        font-size: 1.55rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
     .main-body {
         width: 100%;
+    }
+    .top-products,
+    .bottom-products {
+        --product-img-width: 50%;
     }
     .outlook-product img {
         content: url("images/articles/outlook_md_img.avif");
@@ -402,6 +424,13 @@ h3 {
 }
 
 @media (max-width: 860px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
     .outlook-product img {
         content: url("images/articles/outlook_sm_img.avif");
     }
@@ -412,6 +441,13 @@ h3 {
 }
 
 @media (max-width: 540px) {
+    /* h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    } */
     #nav-action {
         display: none;
     }
