@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Design by CJay 
+Please note that this code is just for practice purpose only -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft</title>
+    <title>Microsoft Clone by CJay</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="slider.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <header class="head-nav-bar">
+    <header class="head-nav-bar" id="top">
         <a href="#" class="main-logo"><img src="images/logos/microsoft_logo.svg" alt="Main Logo"></a>
         <nav id="nav-bar" class="hide-nav">
             <ul class="nav-options">
@@ -49,9 +52,128 @@
             <button id="prev"><img src="icons/arrow_left.svg" alt="previous slide"></button>
             <span id="s1-indicate"></span><span id="s2-indicate"></span>
             <button id="next"><img src="icons/arrow_rigt.svg" alt="next slide"></button>
-
         </div>
     </section>
+
+    <main class="main-body">
+        <div class="top-products">
+            <div class="item">
+                <img src="images/articles/article_1.jpeg" alt="item 1">
+                <div class="content">
+                    <h3>Designed for life today—and tomorrow</h3>
+                    <p>The next-generation of games. Your goals. Friends and family. Windows 11 was made to bring you
+                        closer to everything you love.</p>
+                    <div class="card-button">
+                        <button class="btn">See if your PC is ready</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="images/articles/article_2.avif" alt="item 2">
+                <div class="content">
+                    <h3>Microsoft Edge</h3>
+                    <p>World-class performance with more privacy, more productivity, and more value while you browse.
+                    </p>
+                    <div class="card-button">
+                        <button class="btn">Download now</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="images/articles/article_3.webp" alt="item 3">
+                <div class="content">
+                    <h3>Microsoft OneDrive</h3>
+                    <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
+                    <div class="card-button">
+                        <button class="btn">Learn more</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="images/articles/article_4.webp" alt="item 4">
+                <div class="content">
+                    <h3>One Note</h3>
+                    <p>Organize your note and your life</p>
+                    <div class="card-button">
+                        <button class="btn">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outlook-product">
+            <img src="images/articles/outlook_xl_img.webp" alt="item 1">
+        </div>
+
+        <div class="bottom-products-title">
+            <h2>For business</h2>
+        </div>
+        <div class="bottom-products">
+            <div class="item">
+                <img src="images/articles/article_5.avif" alt="item 1">
+                <div class="content">
+                    <h3>Copilot for Microsoft 365</h3>
+                    <p>Save time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
+                    <div class="card-button">
+                        <button class="btn">Learn more</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="images/articles/article_6.avif" alt="item 2">
+                <div class="content">
+                    <h3>Visual Studio 2022</h3>
+                    <p>Get the most comprehensive IDE for .NET and C++ developers on Windows for building web, cloud,
+                        desktop, mobile apps, services, and games.</p>
+                    <div class="card-button">
+                        <button class="btn">Download Visual Studio 2022</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="images/articles/article_7.avif" alt="item 3">
+                <div class="content">
+                    <h3>Get Microsoft Teams for your business</h3>
+                    <p>Online meetings, chat, real-time collaboration, and shared cloud storage - all in one place.</p>
+                    <div class="card-button">
+                        <button class="btn">Find the right plan for your business</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="images/articles/article_8.webp" alt="item 4">
+                <div class="content">
+                    <h3>Welcome to your Windows 365 Cloud PC</h3>
+                    <p>Securely stream your Windows experience from the Microsoft cloud to any device.</p>
+                    <div class="card-button">
+                        <button class="btn">Get it today</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower-section">
+            <div class="follow-socials">
+                <p>Follow Microsoft</p>
+                <img src="icons/x_twitter.svg" alt="">
+                <img src="icons/linkedin.svg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <div class="head-to-top">
+        <a href="#top">
+            <button>
+                <img src="icons/arrowhead-up.svg" alt="move to top"><span>Back to top</span>
+            </button>
+        </a>
+    </div>
 
     <script src="script.js"></script>
     <script src="slider.js"></script>

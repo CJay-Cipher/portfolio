@@ -3,9 +3,12 @@
     --bg-color: #ffffff;
     --header-color: #262626;
     --main-font-color: #000000;
-    --default-button-color: #005ca5;
+    --blue-bg-btn-color: #0067b8;
     --hover-color: #c9c9c930;
-    --nav_hover: #000;
+    --nav-hover: #000;
+    --card-box-shadow: 0 0.7px 2.5px rgba(0, 0, 0, 0.11),
+        -2px 2px 6px rgba(0, 0, 0, 0.11);
+    --btn-padding: 11px 15px;
 
     /* FONTS */
     --main-font-family: "CJay font", SegoeUI, "Helvetica Neue", Helvetica, Arial,
@@ -14,6 +17,7 @@
     /* DIMENTIONS */
     --head-nav-bar-height: 54px;
     --search-bar-height: 36px;
+    --product-img-width: 25%;
 }
 
 @font-face {
@@ -21,16 +25,31 @@
     src: url(fonts/Segoe\ UI.woff) format("woff");
 }
 
-html {
-    font-family: sans-serif, Arial;
-}
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     width: 100%;
     height: auto;
     color: var(--main-font-color);
     font-family: var(--main-font-family);
+}
+
+h2,
+h3 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.75em;
 }
 
 .head-nav-bar {
@@ -54,7 +73,7 @@ body {
 }
 
 .head-nav-bar a:hover {
-    color: var(--nav_hover);
+    color: var(--nav-hover);
     /* background-color: var(--hover-color); */
 }
 
@@ -187,21 +206,13 @@ body {
     align-items: center;
 }
 
-/* #nav-action img {
-    width: 15px;
-} */
-
 #nav-action > #head-cart > img,
 #nav-action > #head-search > img {
-    width: 15px;
+    width: 23px;
     margin-top: 2px;
     padding-left: 5px;
     /* border: 2px solid red; */
 }
-
-/* #head-search:active + #search-cancel {
-    background-color: blue;
-} */
 
 #search-cancel {
     cursor: pointer;
@@ -223,11 +234,148 @@ body {
 }
 
 #head-sign-up img {
-    width: 18px;
-    padding: 7px;
+    width: 32px;
+    padding: 5px;
     /* margin-top: 5px; */
     border-radius: 50%;
     border: 1px solid var(--header-color);
+}
+
+/* MAIN BODY SECTION  -------------------------------------------*/
+.main-body {
+    width: 90%;
+    max-width: 1600px;
+    margin-inline: auto;
+    margin-top: 5vw;
+    /* border: 2px solid orange; */
+}
+
+/* Top Product section */
+.top-products,
+.bottom-products {
+    min-width: 100%;
+    display: grid;
+    /* --product-img-width: 25%; */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--product-img-width), 1fr)
+    );
+    /* border: 2px solid red; */
+}
+
+.item {
+    margin: 12px;
+    margin-bottom: 48px;
+    border-radius: 7px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-box-shadow);
+    /* border: 2px solid blue; */
+}
+
+.item img {
+    width: 100%;
+}
+
+.content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+}
+.content > * {
+    margin-bottom: 15px;
+    /* border: 2px solid orange; */
+}
+.content p {
+    line-height: 1.5;
+}
+.card-button {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+.outlook-product {
+    margin: 50px 12px 100px;
+    /* border: 2px solid blue; */
+}
+.outlook-product img {
+    width: 100%;
+}
+
+.bottom-products-title {
+    margin: 0 12px 3px;
+    /* border: 2px solid blue; */
+}
+
+.btn {
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--blue-bg-btn-color);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: var(--btn-padding);
+    font-size: 1rem;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.lower-section {
+    margin: 12px;
+    margin-bottom: 50px;
+}
+.follow-socials {
+    margin: 0 12px;
+    display: flex;
+    align-content: center;
+}
+.follow-socials > * {
+    margin-right: 20px;
+}
+.follow-socials img {
+    width: 20px;
+}
+.head-to-top {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    bottom: 0;
+    margin-bottom: 100px;
+    visibility: hidden;
+    /* border: 1px solid red; */
+}
+/* .head-to-top.hidden {
+    display: none;
+} */
+.head-to-top button {
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 12px;
+    padding: var(--btn-padding);
+    border: none;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+.head-to-top span {
+    padding-right: 7px;
+}
+.head-to-top button:hover {
+    background-color: #fff;
+    box-shadow: var(--card-box-shadow);
+}
+.head-to-top a {
+    text-decoration: none;
+    /* border: 1px solid black; */
+}
+.head-to-top img {
+    width: 17px;
+    margin-right: 8px;
+    /* background-color: red; */
 }
 
 /* RESPONSIVENESS */
@@ -235,13 +383,43 @@ body {
     #nav-bar {
         display: none;
     }
+    .top-products,
+    .bottom-products {
+        --product-img-width: 50%;
+    }
+    .outlook-product img {
+        content: url("images/articles/outlook_lg_img.webp");
+    }
 }
 
 @media (max-width: 1084px) {
+    .main-body {
+        width: 100%;
+    }
+    .outlook-product img {
+        content: url("images/articles/outlook_md_img.avif");
+    }
 }
 
 @media (max-width: 860px) {
+    .outlook-product img {
+        content: url("images/articles/outlook_sm_img.avif");
+    }
+    .outlook-product {
+        margin: 10px 12px 50px;
+        /* border: 2px solid blue; */
+    }
 }
 
 @media (max-width: 540px) {
+    #nav-action {
+        display: none;
+    }
+    .top-products,
+    .bottom-products {
+        --product-img-width: 100%;
+    }
+    .head-to-top {
+        display: none;
+    }
 }

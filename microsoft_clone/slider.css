@@ -40,7 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 #slide-control img {
@@ -50,7 +50,7 @@
     font-size: 20px;
     padding: 0;
     margin-bottom: 3px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 50%;
 }
 #pause:hover i {
@@ -61,7 +61,7 @@
 #pause,
 #prev,
 #next {
-    padding: 8px 12px;
+    padding: 10px 15px;
     border: none;
     background-color: transparent;
     border-radius: 2px;

@@ -24,3 +24,23 @@ seachCancelButton.addEventListener("click", function () {
     document.getElementsByClassName("search-box")[0].style.border =
         "1px solid #262626";
 });
+
+window.addEventListener("scroll", function () {
+    var button = document.querySelector(".head-to-top");
+    var threshold = 0.31; // % of the page height
+    var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (window.scrollY > threshold * pageHeight) {
+        button.style.visibility = "visible";
+    } else {
+        button.style.visibility = "hidden";
+    }
+});
+
+// window.addEventListener("scroll", function () {
+//     var button = document.querySelector(".head-to-top");
+//     if (window.scrollY > 0) {
+//         button.style.visibility = "visible";
+//     } else {
+//         button.style.visibility = "hidden";
+//     }
+// });
