@@ -404,8 +404,8 @@ h3 {
 }
 
 @media (max-width: 1084px) {
-    #nav-bar {
-        display: none;
+    .nav-options li a {
+        padding: 10px;
     }
     .main-body {
         width: 100%;
@@ -420,6 +420,9 @@ h3 {
 }
 
 @media (max-width: 860px) {
+    #nav-bar {
+        display: none;
+    }
     h2 {
         font-size: 1.55rem;
     }
