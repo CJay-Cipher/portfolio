@@ -15,36 +15,48 @@ Please note that this code is just for practice purpose only -->
 
 <body>
     <header class="head-nav-bar" id="top">
+        <a href="#" class="menu-hamburger"><img src="icons/menu_hamburger_nav.svg" alt="Dropdown menu"></a>
         <a href="#" class="main-logo"><img src="images/logos/microsoft_logo.svg" alt="Main Logo"></a>
         <nav id="nav-bar" class="hide-nav">
             <ul class="nav-options">
                 <li><a href="#">Microsoft 365</a></li>
                 <li><a href="#">Office</a></li>
                 <li><a href="#">Copilot</a></li>
-                <li><a href="#">Windows</a></li>
-                <li><a href="#">Xbox</a></li>
-                <li><a href="#">Support</a></li>
+                <li class="nav-1"><a href="#">Windows</a></li>
+                <li class="nav-2"><a href="#">Xbox</a></li>
+                <li class="nav-3"><a href="#">Support</a></li>
+                <li class="more-dropdown">
+                    <a href="#">More<i class='bx bx-chevron-down'></i></a>
+                    <ul>
+                        <li class="nav-4"><a href="#">Windows</a></li>
+                        <li class="nav-5"><a href="#">Xbox</a></li>
+                        <li class="nav-6"><a href="#">Support</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-        <div id="nav-action">
-            <div>
-                <a href="#" class="all-products hide-nav">All Microsoft
-                    <img src="icons/arrow_down.svg" alt="Search icon">
-                </a>
-            </div>
-            <a href="#" id="head-search" class="hide-nav">Search<img src="icons/search_icon.svg" alt="Search icon"></a>
-            <form id="search-microsoft">
-                <div class="search-box">
-                    <input id="search-input" type="text" placeholder="Search Microsoft.com">
-                    <a href="#"><img src="icons/search_icon.svg" alt="Search icon"></a>
-                </div>
-            </form>
-            <button id="search-cancel">Cancel</button>
-            <a href="#" id="head-cart" class="hide-nav">Cart<img src="icons/cart_icon.svg" alt="Cart icon"></a>
-            <a href="#" id="head-sign-in" class="hide-nav">Sign in</a>
-            <a id="head-sign-up" class=" hide-nav" href="#"><img src="icons/user_icon.svg" alt="Register"></a>
+        <!-- <div id="nav-action">
+
+        </div> -->
+        <a href="#" class="all-products hide-nav">All Microsoft
+            <img src="icons/arrow_down.svg" alt="Search icon">
+        </a>
+
+        <a href="#" id="head-search" class="hide-nav">Search<img src="icons/search_icon.svg" alt="Search icon"></a>
+
+        <div class="search-box">
+            <input id="search-input" type="text" placeholder="Search Microsoft.com">
+            <a href="#"><img src="icons/search_icon.svg" alt="Search icon"></a>
         </div>
+
+        <button id="search-cancel">Cancel</button>
+
+        <a href="#" id="head-cart" class="hide-nav">Cart<img src="icons/cart_icon.svg" alt="Cart icon"></a>
+        <a href="#" id="login" class="hide-nav">Sign in</a>
+        <a id="head-sign-up" class="hide-nav" href="#"><img src="icons/user_icon.svg" alt="Register"></a>
     </header>
+
+
     <section class="slider-container">
         <div class="slider">
             <div class="slide"><img id="slide-1" src="images/home_slides/home_xl_img_1.avif" alt="image 1"></div>
@@ -67,7 +79,7 @@ Please note that this code is just for practice purpose only -->
                     <p>The next-generation of games. Your goals. Friends and family. Windows 11 was made to bring you
                         closer to everything you love.</p>
                     <div class="card-button">
-                        <a href="#" class="btn">See if your PC is ready</a>
+                        <a href="#3434" class="btn">See if your PC is ready</a>
                     </div>
                 </div>
 
@@ -79,7 +91,7 @@ Please note that this code is just for practice purpose only -->
                     <p>World-class performance with more privacy, more productivity, and more value while you browse.
                     </p>
                     <div class="card-button">
-                        <a href="#" class="btn">Download now</a>
+                        <a href="#sdfs" class="btn">Download now</a>
                     </div>
                 </div>
 
@@ -90,7 +102,7 @@ Please note that this code is just for practice purpose only -->
                     <h3>Microsoft OneDrive</h3>
                     <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
                     <div class="card-button">
-                        <a href="#" class="btn">Learn more</a>
+                        <a href="#sdfs" class="btn">Learn more</a>
                     </div>
                 </div>
 
@@ -101,7 +113,7 @@ Please note that this code is just for practice purpose only -->
                     <h3>OneNote</h3>
                     <p>Organize your note and your life</p>
                     <div class="card-button">
-                        <a href="#" class="btn">Learn more</a>
+                        <a href="#sdfs" class="btn">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +148,7 @@ Please note that this code is just for practice purpose only -->
                     <p>Get the most comprehensive IDE for .NET and C++ developers on Windows for building web, cloud,
                         desktop, mobile apps, services, and games.</p>
                     <div class="card-button">
-                        <a href="#" class="btn">Download Visual Studio 2022</a>
+                        <a href="#sdfs" class="btn">Download Visual Studio 2022</a>
                     </div>
                 </div>
 
@@ -147,7 +159,7 @@ Please note that this code is just for practice purpose only -->
                     <h3>Get Microsoft Teams for your business</h3>
                     <p>Online meetings, chat, real-time collaboration, and shared cloud storage - all in one place.</p>
                     <div class="card-button">
-                        <a href="#" class="btn">Find the right plan for your business</a>
+                        <a href="#sdfs" class="btn">Find the right plan for your business</a>
                     </div>
                 </div>
 
@@ -158,7 +170,7 @@ Please note that this code is just for practice purpose only -->
                     <h3>Welcome to your Windows 365 Cloud PC</h3>
                     <p>Securely stream your Windows experience from the Microsoft cloud to any device.</p>
                     <div class="card-button">
-                        <a href="#" class="btn">Get it today</a>
+                        <a href="#sdfs" class="btn">Get it today</a>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,8 @@
-const allProductsNav = document.querySelector(".all-products");
+// const allProductsNav = document.querySelector(".all-products");
 const searchNav = document.getElementById("head-search");
+const navBar = document.getElementById("nav-bar");
 const cartNav = document.getElementById("head-cart");
-const signInNav = document.getElementById("head-sign-in");
+const signInNav = document.getElementById("login");
 const hideNavElements = document.getElementsByClassName("hide-nav");
 
 searchNav.addEventListener("click", function () {
@@ -9,7 +10,7 @@ searchNav.addEventListener("click", function () {
         hideNavElements[i].style.display = "none";
     }
     document.getElementById("search-microsoft").style.display = "flex";
-    document.getElementById("search-cancel").style.display = "block";
+    document.getElementById("search-cancel").style.display = "flex";
     document.getElementById("nav-action").style.flex = 5;
     document.getElementById("search-input").focus();
     document.getElementsByClassName("search-box")[0].style.border =
@@ -44,22 +45,21 @@ function handleViewportChange1(event) {
         // Change the text when the viewport width is less than or equal to 1400px
         searchNav.firstChild.textContent = "";
         cartNav.firstChild.textContent = "";
-        signInNav.firstChild.textContent = "";
+        signInNav.style.display = "none";
     } else {
         // Change the text for other viewport widths
         searchNav.firstChild.textContent = "Search";
         cartNav.firstChild.textContent = "Cart";
-        signInNav.firstChild.textContent = "Sign in";
+        signInNav.style.display = "flex";
     }
 }
 
 function handleViewportChange2(event) {
     if (window.matchMedia("(max-width: 860px)").matches) {
-        allProductsNav.innerHTML = "";
+        navBar.style.display = "none";
     } else {
         // Change the text for other viewport widths
-        allProductsNav.innerHTML =
-            'All Microsoft <img src="icons/user_icon.svg" alt="Register">';
+        navBar.style.display = "block";
     }
 }
 

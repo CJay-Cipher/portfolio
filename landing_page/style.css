@@ -395,7 +395,7 @@ header {
         display: block;
     }
     .hidden-nav {
-        display: block;
+        /* display: block; */
         display: flex;
         justify-content: center;
         align-items: center;
