@@ -11,9 +11,9 @@
     --btn-padding: 11px 15px;
 
     /* FONTS */
-    /* --main-font-family: "CJay font", SegoeUI, "Helvetica Neue", Helvetica, Arial,
-        sans-serif; */
-    --main-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --main-font-family: "CJay font", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    /* --main-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
 
     /* DIMENTIONS */
     --head-nav-bar-height: 54px;
@@ -43,7 +43,7 @@ h2,
 h3 {
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.03em;
 }
 h2 {
     font-size: 2.2em;
@@ -140,7 +140,7 @@ h3 {
 }
 .all-products {
     display: flex;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     /* border: 1px solid; */
 }
 .all-products img {
@@ -311,6 +311,12 @@ h3 {
     /* border: 2px solid blue; */
 }
 
+.content .new {
+    width: max-content;
+    padding: 4px 12px;
+    background-color: #ffb900;
+}
+
 .btn {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
@@ -392,24 +398,14 @@ h3 {
     h3 {
         font-size: 1.4rem;
     }
-    #nav-bar {
-        display: none;
-    }
-    /* .btn {
-        font-size: 0.9rem;
-    } */
     .outlook-product img {
         content: url("images/articles/outlook_lg_img.webp");
     }
 }
 
 @media (max-width: 1084px) {
-    h2 {
-        font-size: 1.55rem;
-    }
-
-    h3 {
-        font-size: 1.25rem;
+    #nav-bar {
+        display: none;
     }
     .main-body {
         width: 100%;
@@ -425,11 +421,11 @@ h3 {
 
 @media (max-width: 860px) {
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.55rem;
     }
 
     h3 {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
     }
     .outlook-product img {
         content: url("images/articles/outlook_sm_img.avif");
