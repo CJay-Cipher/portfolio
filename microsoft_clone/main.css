@@ -59,9 +59,8 @@ h3 {
     cursor: pointer;
     font-size: 13px;
     height: var(--head-nav-bar-height);
-    padding: 0 7%;
-    /* margin-bottom: 2px; */
-    border-bottom: 1px solid blue;
+    padding: 0 5%;
+    /* border-bottom: 1px solid blue; */
 }
 
 .head-nav-bar * {
@@ -72,7 +71,7 @@ h3 {
 .head-nav-bar > * {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     /* border: 2px solid red; */
 }
 
@@ -127,7 +126,7 @@ h3 {
 }
 
 .nav-options li {
-    display: inline-block;
+    display: flex;
     padding: 10px 0;
     list-style: none;
     /* border: 1px solid red; */
@@ -142,7 +141,7 @@ h3 {
     color: var(--header-color);
     display: inline-block;
     width: max-content;
-    padding: 15px;
+    padding: 12px;
 }
 
 .nav-options > .more-dropdown {
@@ -245,12 +244,10 @@ h3 {
     padding: 5px 10px;
 } */
 
-/* #head-cart > img,
+#head-cart > img,
 #head-search > img {
-    width: 23px;
-    height: 23px;
-    border: 2px solid red;
-} */
+    margin-left: 5px;
+}
 
 #search-cancel {
     display: none;
@@ -263,14 +260,12 @@ h3 {
 }
 
 #head-sign-up {
-    /* margin: 0; */
-    /* padding: 7px; */
     /* border: 2px solid blue; */
 }
 
 #head-sign-up img {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     padding: 5px;
     border-radius: 50%;
     border: 1px solid var(--header-color);
@@ -425,6 +420,15 @@ h3 {
 
 /* RESPONSIVENESS */
 @media (max-width: 1400px) {
+    .head-nav-bar {
+        padding: 0 4%;
+    }
+    .head-nav-bar > * {
+        padding: 10px;
+    }
+    /* .nav-options li a {
+        padding: 12px;
+    } */
     h2 {
         font-size: 1.75rem;
     }
@@ -438,9 +442,9 @@ h3 {
 }
 
 @media (max-width: 1084px) {
-    .nav-options li a {
-        padding: 14px;
-    }
+    /* .nav-options li a {
+        padding: 12px;
+    } */
     .nav-options > .more-dropdown {
         display: inline;
     }
@@ -464,9 +468,6 @@ h3 {
 @media (max-width: 1000px) {
     .head-nav-bar {
         padding: 0 2%;
-    }
-    .nav-options li a {
-        padding: 13px;
     }
     .nav-options .nav-2 {
         display: none;
@@ -492,7 +493,7 @@ h3 {
         padding: 0;
     }
     .head-nav-bar > * {
-        padding: 13px;
+        padding: 15px;
     }
     .main-logo {
         flex: 10;
