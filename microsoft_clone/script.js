@@ -1,9 +1,14 @@
-// const allProductsNav = document.querySelector(".all-products");
+const moreNav = document.querySelector(".more-dropdown");
+const hiddenNav = document.querySelector(".hidden-dropdown");
 const searchNav = document.getElementById("head-search");
 const navBar = document.getElementById("nav-bar");
 const cartNav = document.getElementById("head-cart");
 const signInNav = document.getElementById("login");
 const hideNavElements = document.getElementsByClassName("hide-nav");
+
+moreNav.addEventListener("click", function () {
+    hiddenNav.classList.toggle("show-hidden");
+});
 
 searchNav.addEventListener("click", function () {
     for (let i = 0; i < hideNavElements.length; i++) {
