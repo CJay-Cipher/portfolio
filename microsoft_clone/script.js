@@ -8,6 +8,7 @@ const hideNavElements = document.getElementsByClassName("hide-nav");
 
 moreNav.addEventListener("click", function () {
     hiddenNav.classList.toggle("show-hidden");
+    moreNav.classList.toggle("bg_active_color");
 });
 
 searchNav.addEventListener("click", function () {
