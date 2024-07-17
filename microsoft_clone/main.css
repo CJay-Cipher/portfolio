@@ -155,7 +155,7 @@ h3 {
     /* border: 1px solid black; */
 }
 .more-dropdown ul {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 60px;
     z-index: 1;
