@@ -1,12 +1,16 @@
 const moreNav = document.querySelector(".more-dropdown");
 const hiddenNav = document.querySelector(".hidden-dropdown");
+const menuHamburger = document.getElementById("menu-hamburger");
+const mainLogo = document.getElementById("main-logo");
 const searchNav = document.getElementById("head-search");
+const searchBoxNav = document.getElementById("search-box");
 const navBar = document.getElementById("nav-bar");
 const allProducts = document.getElementById("all-products");
 const cartNav = document.getElementById("head-cart");
 const signInNav = document.getElementById("login");
 const hideNavElements = document.getElementsByClassName("hide-nav");
-const seachCancelButton = document.getElementById("search-cancel");
+// const searchCancelArrowButton = document.querySelector(".search-cancel-arrow");
+const searchCancelButton = document.getElementById("search-cancel");
 let displayedNavElement;
 
 moreNav.addEventListener("click", function () {
@@ -22,18 +26,33 @@ searchNav.addEventListener("click", function () {
             hideNavElements[i].style.display = "none";
         }
     }
-    document.getElementById("search-box").style.display = "flex";
-    document.getElementById("search-cancel").style.display = "flex";
+    if (window.matchMedia("(min-width: 861px)").matches) {
+        mainLogo.style.display = "flex";
+    } else {
+        mainLogo.style.display = "none";
+    }
+    if (window.matchMedia("(max-width: 860px)").matches) {
+        menuHamburger.style.display = "none";
+    }
+    searchBoxNav.style.display = "flex";
+    searchCancelButton.style.display = "flex";
     document.getElementById("search-input").focus();
     // document.getElementById("search-box").style.border = "2px solid #005ca5";
 });
 
-seachCancelButton.addEventListener("click", function () {
+searchCancelButton.addEventListener("click", function () {
     for (let i = 0; i < displayedNavElement.length; i++) {
         displayedNavElement[i].style.display = "flex";
     }
-    seachCancelButton.style.display = "none";
-    document.getElementById("search-box").style.display = "none";
+    searchCancelButton.style.display = "none";
+    searchBoxNav.style.display = "none";
+    mainLogo.style.display = "flex";
+    if (window.matchMedia("(min-width: 861px)").matches) {
+        menuHamburger.style.display = "none";
+    }
+    if (window.matchMedia("(max-width: 860px)").matches) {
+        menuHamburger.style.display = "flex";
+    }
     // document.getElementById("search-box").style.border = "1px solid #262626";
 });
 
@@ -66,10 +85,21 @@ function handleViewportChange2(event) {
     if (window.matchMedia("(max-width: 860px)").matches) {
         navBar.style.display = "none";
         allProducts.style.display = "none";
+        searchCancelButton.style.border = "none";
+        searchCancelButton.style.order = "-3";
+        searchCancelButton.innerHTML =
+            '<img src="icons/arrowhead_left.svg" alt="Search cancel icon">';
+        searchCancelButton.style.padding = "0";
+        menuHamburger.style.display = "flex";
     } else {
         // Change the text for other viewport widths
         navBar.style.display = "flex";
         allProducts.style.display = "flex";
+        searchCancelButton.style.border = "1px solid #000";
+        searchCancelButton.style.order = "0";
+        searchCancelButton.innerHTML = "Cancel";
+        searchCancelButton.style.padding = "0 15px";
+        menuHamburger.style.display = "none";
     }
 }
 

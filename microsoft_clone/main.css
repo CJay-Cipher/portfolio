@@ -74,6 +74,11 @@ h3 {
     padding: 10px;
     /* border: 2px solid red; */
 }
+.head-nav-bar > button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
 
 .head-nav-bar img {
     width: 17px;
@@ -88,16 +93,17 @@ h3 {
     color: var(--nav-hover);
     /* background-color: var(--hover-color); */
 }
-.menu-hamburger {
-    display: none;
+#menu-hamburger {
+    /* display: none; */
     order: -2;
     /* border: 2px solid blue; */
 }
-.menu-hamburger img {
+#menu-hamburger img {
     width: 20px;
     height: 20px;
 }
-.main-logo {
+
+#main-logo {
     /* flex: 1; */
     display: flex;
     justify-content: center;
@@ -106,7 +112,7 @@ h3 {
     /* border: 2px solid red; */
 }
 
-.main-logo > img {
+#main-logo > img {
     width: 108px;
     height: 23px;
     margin-bottom: 3px;
@@ -219,41 +225,6 @@ h3 {
     width: 40px;
 }
 
-/* .search-box {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border: 1px solid var(--header-color);
-}
-.search-box > * {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border: none;
-}
-
-#search-input {
-    flex-grow: 1;
-    margin-left: 10px;
-    background-color: transparent;
-}
-#search-input::placeholder {
-    color: #9b9b9b;
-    font-family: var(--main-font-family);
-    background-color: transparent;
-}
-
-#search-input:focus {
-    outline: none;
-}
-
-.search-box > a > img {
-    width: 15px;
-    padding: 5px 10px;
-} */
-
 #head-cart > img,
 #head-search > img {
     margin-left: 5px;
@@ -292,11 +263,14 @@ h3 {
     display: none;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid;
+    border: 1px solid #000;
     margin: 9px;
     padding: 0 15px;
 }
-
+#search-cancel img {
+    width: 35px;
+    height: 35px;
+}
 #head-sign-up img {
     width: 32px;
     height: 32px;
@@ -520,7 +494,7 @@ h3 {
 }
 
 @media (max-width: 860px) {
-    .menu-hamburger {
+    #menu-hamburger {
         display: flex;
     }
     .head-nav-bar {
@@ -529,7 +503,7 @@ h3 {
     .head-nav-bar > * {
         padding: 15px;
     }
-    .main-logo {
+    #main-logo {
         flex: 10;
     }
     h2 {
