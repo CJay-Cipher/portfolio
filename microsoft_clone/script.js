@@ -74,7 +74,6 @@ function handleViewportChange2(event) {
     if (window.matchMedia("(max-width: 860px)").matches) {
         navBar.style.display = "none";
         allProducts.style.display = "none";
-        searchCancelButton.style.border = "none";
         searchCancelButton.style.order = "-3";
         searchCancelButton.innerHTML =
             '<img src="icons/arrowhead_left.svg" alt="Search cancel icon">';
@@ -83,7 +82,6 @@ function handleViewportChange2(event) {
         // Change the text for other viewport widths
         navBar.style.display = "flex";
         allProducts.style.display = "flex";
-        searchCancelButton.style.border = "1px solid #000";
         searchCancelButton.style.order = "0";
         searchCancelButton.innerHTML = "Cancel";
         menuHamburger.style.display = "none";
