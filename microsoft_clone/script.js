@@ -31,13 +31,9 @@ searchNav.addEventListener("click", function () {
     } else {
         mainLogo.style.display = "none";
     }
-    if (window.matchMedia("(max-width: 860px)").matches) {
-        menuHamburger.style.display = "none";
-    }
     searchBoxNav.style.display = "flex";
     searchCancelButton.style.display = "flex";
-    document.getElementById("search-input").focus();
-    // document.getElementById("search-box").style.border = "2px solid #005ca5";
+    // document.getElementById("search-input").focus();
 });
 
 searchCancelButton.addEventListener("click", function () {
@@ -47,13 +43,6 @@ searchCancelButton.addEventListener("click", function () {
     searchCancelButton.style.display = "none";
     searchBoxNav.style.display = "none";
     mainLogo.style.display = "flex";
-    if (window.matchMedia("(min-width: 861px)").matches) {
-        menuHamburger.style.display = "none";
-    }
-    if (window.matchMedia("(max-width: 860px)").matches) {
-        menuHamburger.style.display = "flex";
-    }
-    // document.getElementById("search-box").style.border = "1px solid #262626";
 });
 
 window.addEventListener("scroll", function () {
@@ -89,7 +78,6 @@ function handleViewportChange2(event) {
         searchCancelButton.style.order = "-3";
         searchCancelButton.innerHTML =
             '<img src="icons/arrowhead_left.svg" alt="Search cancel icon">';
-        searchCancelButton.style.padding = "0";
         menuHamburger.style.display = "flex";
     } else {
         // Change the text for other viewport widths
@@ -98,7 +86,6 @@ function handleViewportChange2(event) {
         searchCancelButton.style.border = "1px solid #000";
         searchCancelButton.style.order = "0";
         searchCancelButton.innerHTML = "Cancel";
-        searchCancelButton.style.padding = "0 15px";
         menuHamburger.style.display = "none";
     }
 }
