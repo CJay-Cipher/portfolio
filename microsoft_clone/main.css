@@ -235,10 +235,7 @@ h3 {
 #search-box img {
     margin: 5px;
 }
-#search-box:hover,
-#search-box:active {
-    border: 2px solid var(--blue-bg-btn-color);
-}
+
 #search-input {
     flex-grow: 1;
     padding: 8px 0;

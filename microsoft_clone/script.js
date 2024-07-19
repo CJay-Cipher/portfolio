@@ -3,7 +3,7 @@ const hiddenNav = document.querySelector(".hidden-dropdown");
 const menuHamburger = document.getElementById("menu-hamburger");
 const mainLogo = document.getElementById("main-logo");
 const searchNav = document.getElementById("head-search");
-const searchBoxNav = document.getElementById("search-box");
+const searchBox = document.getElementById("search-box");
 const searchInput = document.getElementById("search-input");
 const navBar = document.getElementById("nav-bar");
 const allProducts = document.getElementById("all-products");
@@ -13,8 +13,9 @@ const hideNavElements = document.getElementsByClassName("hide-nav");
 const searchCancelButton = document.getElementById("search-cancel");
 let displayedNavElement;
 let searchCheck = true;
+let mobileViewCheck;
 const midPcWidth = 1400;
-const midTabWidth = 950;
+const smTabWidth = 950;
 const lgMobileWidth = 860;
 
 moreNav.addEventListener("click", function () {
@@ -40,7 +41,7 @@ document.addEventListener("click", function (event) {
 
 document.addEventListener("click", function (event) {
     if (!searchNav.contains(event.target)) {
-        if (!searchBoxNav.contains(event.target)) {
+        if (!searchBox.contains(event.target)) {
             cancelSearchAction();
         }
     }
@@ -59,13 +60,16 @@ window.addEventListener("scroll", function () {
 
 function handleResize() {
     let windowWidth = window.innerWidth;
-    if (windowWidth > midTabWidth || windowWidth <= lgMobileWidth) {
+    if (windowWidth > smTabWidth || windowWidth <= lgMobileWidth) {
         hiddenNav.style.display = "none";
         moreNav.classList.remove("bg-active-color");
     }
-    // if (windowWidth > lgMobileWidth) {
-    //     cancelSearchAction();
-    // }
+    if (windowWidth > lgMobileWidth - 10 && mobileViewCheck === true) {
+        cancelSearchAction();
+    }
+    if (window.innerWidth <= lgMobileWidth && mobileViewCheck === false) {
+        cancelSearchAction();
+    }
 }
 
 function clickSearchAction() {
@@ -82,20 +86,22 @@ function clickSearchAction() {
     } else {
         mainLogo.style.display = "none";
     }
-    searchBoxNav.style.display = "flex";
+    searchBox.style.display = "flex";
     searchCancelButton.style.display = "flex";
     searchInput.focus();
 }
 
 function cancelSearchAction() {
-    searchCheck = true;
-    for (let i = 0; i < displayedNavElement.length; i++) {
-        displayedNavElement[i].style.display = "flex";
+    if (searchCheck === false) {
+        searchCheck = true;
+        for (let i = 0; i < displayedNavElement.length; i++) {
+            displayedNavElement[i].style.display = "flex";
+        }
+        searchCancelButton.style.display = "none";
+        searchBox.style.display = "none";
+        mainLogo.style.display = "flex";
+        searchInput.value = "";
     }
-    searchCancelButton.style.display = "none";
-    searchBoxNav.style.display = "none";
-    mainLogo.style.display = "flex";
-    searchInput.value = "";
 }
 
 function handleViewportChange1(event) {
@@ -108,12 +114,22 @@ function handleViewportChange1(event) {
         // Change the text for other viewport widths
         searchNav.firstChild.textContent = "Search";
         cartNav.firstChild.textContent = "Cart";
-        signInNav.style.display = "flex";
+        if (searchCheck === true) {
+            signInNav.style.display = "flex";
+        }
     }
+    searchInput.addEventListener("focus", () => {
+        searchBox.style.border = "2px solid var(--blue-bg-btn-color)";
+    });
+
+    searchInput.addEventListener("blur", () => {
+        searchBox.style.border = "1px solid var(--header-color)";
+    });
 }
 
 function handleViewportChange2(event) {
     if (window.innerWidth <= lgMobileWidth) {
+        mobileViewCheck = true;
         navBar.style.display = "none";
         allProducts.style.display = "none";
         searchCancelButton.style.order = "-3";
@@ -123,10 +139,11 @@ function handleViewportChange2(event) {
             menuHamburger.style.display = "flex";
         }
     } else {
-        // Change the text for other viewport widths
-        cancelSearchAction();
-        navBar.style.display = "flex";
-        allProducts.style.display = "flex";
+        mobileViewCheck = false;
+        if (searchCheck === true) {
+            navBar.style.display = "flex";
+            allProducts.style.display = "flex";
+        }
         searchCancelButton.style.order = "0";
         searchCancelButton.innerHTML = "Cancel";
         menuHamburger.style.display = "none";
