@@ -59,10 +59,13 @@ window.addEventListener("scroll", function () {
 
 function handleResize() {
     let windowWidth = window.innerWidth;
-    if (windowWidth > midTabWidth || windowWidth < lgMobileWidth) {
+    if (windowWidth > midTabWidth || windowWidth <= lgMobileWidth) {
         hiddenNav.style.display = "none";
         moreNav.classList.remove("bg-active-color");
     }
+    // if (windowWidth > lgMobileWidth) {
+    //     cancelSearchAction();
+    // }
 }
 
 function clickSearchAction() {
@@ -121,6 +124,7 @@ function handleViewportChange2(event) {
         }
     } else {
         // Change the text for other viewport widths
+        cancelSearchAction();
         navBar.style.display = "flex";
         allProducts.style.display = "flex";
         searchCancelButton.style.order = "0";
