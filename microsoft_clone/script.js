@@ -12,14 +12,56 @@ const hideNavElements = document.getElementsByClassName("hide-nav");
 // const searchCancelArrowButton = document.querySelector(".search-cancel-arrow");
 const searchCancelButton = document.getElementById("search-cancel");
 let displayedNavElement;
+let searchCheck;
 
-moreNav.addEventListener("click", function () {
-    hiddenNav.classList.toggle("show-hidden");
-    moreNav.classList.toggle("bg-active-color");
+// moreNav.addEventListener("click", function () {
+//     hiddenNav.classList.toggle("show-hidden");
+//     moreNav.classList.toggle("bg-active-color");
+// });
+
+function toggleDropdown1() {
+    hiddenNav.style.display =
+        hiddenNav.style.display === "block" ? "none" : "block";
+    // moreNav.classList.toggle("bg-active-color");
+}
+
+document.addEventListener("click", function (event) {
+    if (!moreNav.contains(event.target)) {
+        hiddenNav.style.display = "none";
+        // moreNav.classList.toggle("bg-active-color");
+    }
 });
+// function toggleDropdown2() {
+//     displayedNavElement = [];
+//     for (let i = 0; i < hideNavElements.length; i++) {
+//         if (hideNavElements[i].style.display != "none") {
+//             displayedNavElement.push(hideNavElements[i]);
+//             hideNavElements[i].style.display = "none";
+//         }
+//     }
+//     if (window.matchMedia("(min-width: 861px)").matches) {
+//         mainLogo.style.display = "flex";
+//     } else {
+//         mainLogo.style.display = "none";
+//     }
+//     searchBoxNav.style.display = "flex";
+//     searchCancelButton.style.display = "flex";
+//     document.getElementById("search-input").focus();
+// }
 
+// document.addEventListener("click", function (event) {
+//     if (!searchNav.contains(event.target)) {
+//         for (let i = 0; i < displayedNavElement.length; i++) {
+//             displayedNavElement[i].style.display = "flex";
+//         }
+//         searchCancelButton.style.display = "none";
+//         searchBoxNav.style.display = "none";
+//         mainLogo.style.display = "flex";
+//     }
+// });
 searchNav.addEventListener("click", function () {
     displayedNavElement = [];
+    searchCheck = false;
     for (let i = 0; i < hideNavElements.length; i++) {
         if (hideNavElements[i].style.display != "none") {
             displayedNavElement.push(hideNavElements[i]);
@@ -33,10 +75,11 @@ searchNav.addEventListener("click", function () {
     }
     searchBoxNav.style.display = "flex";
     searchCancelButton.style.display = "flex";
-    // document.getElementById("search-input").focus();
+    document.getElementById("search-input").focus();
 });
 
 searchCancelButton.addEventListener("click", function () {
+    searchCheck = true;
     for (let i = 0; i < displayedNavElement.length; i++) {
         displayedNavElement[i].style.display = "flex";
     }
@@ -77,7 +120,12 @@ function handleViewportChange2(event) {
         searchCancelButton.style.order = "-3";
         searchCancelButton.innerHTML =
             '<img src="icons/arrowhead_left.svg" alt="Search cancel icon">';
-        menuHamburger.style.display = "flex";
+        if (
+            window.matchMedia("(max-width: 860px)").matches &&
+            searchCheck === true
+        ) {
+            menuHamburger.style.display = "flex";
+        }
     } else {
         // Change the text for other viewport widths
         navBar.style.display = "flex";

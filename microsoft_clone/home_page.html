@@ -17,7 +17,7 @@ Please note that this code is just for practice purpose only -->
     <header class="head-nav-bar" id="top">
         <button id="menu-hamburger" class="hide-nav"><img src="icons/menu_hamburger_nav.svg"
                 alt="Dropdown menu"></button>
-        <a href="#" id="main-logo"><img src="images/logos/microsoft_logo.svg" alt="Main Logo"></a>
+        <div id="main-logo"><a href=""><img src="images/logos/microsoft_logo.svg" alt="Main Logo"></a></div>
         <nav id="nav-bar" class="hide-nav">
             <ul class="nav-options">
                 <li><a href="#">Microsoft 365</a></li>
@@ -27,7 +27,7 @@ Please note that this code is just for practice purpose only -->
                 <li class="nav-2"><a href="#">Xbox</a></li>
                 <li class="nav-3"><a href="#">Support</a></li>
                 <li class="more-dropdown">
-                    <a href="#">More<i class='bx bx-chevron-down'></i></a>
+                    <a href="#" onclick="toggleDropdown1()">More<i class='bx bx-chevron-down'></i></a>
                     <ul class="hidden-dropdown">
                         <li class="nav-4"><a href="#">Windows</a></li>
                         <li class="nav-5"><a href="#">Xbox</a></li>
@@ -36,14 +36,12 @@ Please note that this code is just for practice purpose only -->
                 </li>
             </ul>
         </nav>
-        <!-- <div id="nav-action">
-
-        </div> -->
         <a href="#" id="all-products" class="hide-nav">All Microsoft<img src="icons/arrow_down.svg" alt="Search icon">
 
         </a>
 
-        <button id="head-search" class="hide-nav">Search<img src="icons/search_icon.svg" alt="Search icon"></button>
+        <button id="head-search" class="hide-nav" onclick="toggleDropdown2()">Search<img src="icons/search_icon.svg"
+                alt="Search icon"></button>
 
         <div id="search-box">
             <input id="search-input" type="text" placeholder="Search Microsoft.com">

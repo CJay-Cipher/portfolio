@@ -110,7 +110,7 @@ h3 {
     /* border: 2px solid red; */
 }
 
-#main-logo > img {
+#main-logo img {
     width: 108px;
     height: 23px;
     margin-bottom: 3px;
@@ -497,6 +497,9 @@ h3 {
     }
     #main-logo {
         flex: 10;
+    }
+    #menu-hamburger {
+        display: flex;
     }
 
     h2 {
