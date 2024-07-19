@@ -10,7 +10,6 @@ const allProducts = document.getElementById("all-products");
 const cartNav = document.getElementById("head-cart");
 const signInNav = document.getElementById("login");
 const hideNavElements = document.getElementsByClassName("hide-nav");
-// const searchCancelArrowButton = document.querySelector(".search-cancel-arrow");
 const searchCancelButton = document.getElementById("search-cancel");
 let displayedNavElement;
 let searchCheck = true;
@@ -18,30 +17,55 @@ const midPcWidth = 1400;
 const midTabWidth = 950;
 const lgMobileWidth = 860;
 
-// moreNav.addEventListener("click", function () {
-//     hiddenNav.classList.toggle("show-hidden");
-//     moreNav.classList.toggle("bg-active-color");
-// });
-
-function toggleDropdown() {
+moreNav.addEventListener("click", function () {
     hiddenNav.style.display =
         hiddenNav.style.display === "block" ? "none" : "block";
-    // moreNav.classList.toggle("bg-active-color");
-}
+    moreNav.classList.toggle("bg-active-color");
+});
+
+searchNav.addEventListener("click", function () {
+    clickSearchAction();
+});
+
+searchCancelButton.addEventListener("click", function () {
+    cancelSearchAction();
+});
 
 document.addEventListener("click", function (event) {
     if (!moreNav.contains(event.target)) {
         hiddenNav.style.display = "none";
+        moreNav.classList.remove("bg-active-color");
     }
 });
+
+document.addEventListener("click", function (event) {
+    if (!searchNav.contains(event.target)) {
+        if (!searchBoxNav.contains(event.target)) {
+            cancelSearchAction();
+        }
+    }
+});
+
+window.addEventListener("scroll", function () {
+    let button = document.querySelector(".head-to-top");
+    let threshold = 0.31; // % of the page height
+    let pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (window.scrollY > threshold * pageHeight) {
+        button.style.visibility = "visible";
+    } else {
+        button.style.visibility = "hidden";
+    }
+});
+
 function handleResize() {
     let windowWidth = window.innerWidth;
     if (windowWidth > midTabWidth || windowWidth < lgMobileWidth) {
         hiddenNav.style.display = "none";
+        moreNav.classList.remove("bg-active-color");
     }
 }
 
-searchNav.addEventListener("click", function () {
+function clickSearchAction() {
     displayedNavElement = [];
     searchCheck = false;
     for (let i = 0; i < hideNavElements.length; i++) {
@@ -58,9 +82,9 @@ searchNav.addEventListener("click", function () {
     searchBoxNav.style.display = "flex";
     searchCancelButton.style.display = "flex";
     searchInput.focus();
-});
+}
 
-searchCancelButton.addEventListener("click", function () {
+function cancelSearchAction() {
     searchCheck = true;
     for (let i = 0; i < displayedNavElement.length; i++) {
         displayedNavElement[i].style.display = "flex";
@@ -69,18 +93,7 @@ searchCancelButton.addEventListener("click", function () {
     searchBoxNav.style.display = "none";
     mainLogo.style.display = "flex";
     searchInput.value = "";
-});
-
-window.addEventListener("scroll", function () {
-    var button = document.querySelector(".head-to-top");
-    var threshold = 0.31; // % of the page height
-    var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-    if (window.scrollY > threshold * pageHeight) {
-        button.style.visibility = "visible";
-    } else {
-        button.style.visibility = "hidden";
-    }
-});
+}
 
 function handleViewportChange1(event) {
     if (window.innerWidth <= midPcWidth) {
@@ -95,9 +108,7 @@ function handleViewportChange1(event) {
         signInNav.style.display = "flex";
     }
 }
-// if (window.innerWidth <= lgMobileViewWidth) {
-//     menuHamburger.style.display = "flex";
-// }
+
 function handleViewportChange2(event) {
     if (window.innerWidth <= lgMobileWidth) {
         navBar.style.display = "none";
