@@ -12,14 +12,14 @@ const hideNavElements = document.getElementsByClassName("hide-nav");
 // const searchCancelArrowButton = document.querySelector(".search-cancel-arrow");
 const searchCancelButton = document.getElementById("search-cancel");
 let displayedNavElement;
-let searchCheck;
+let searchCheck = true;
 
 // moreNav.addEventListener("click", function () {
 //     hiddenNav.classList.toggle("show-hidden");
 //     moreNav.classList.toggle("bg-active-color");
 // });
 
-function toggleDropdown1() {
+function toggleDropdown() {
     hiddenNav.style.display =
         hiddenNav.style.display === "block" ? "none" : "block";
     // moreNav.classList.toggle("bg-active-color");
@@ -49,16 +49,17 @@ document.addEventListener("click", function (event) {
 //     document.getElementById("search-input").focus();
 // }
 
-// document.addEventListener("click", function (event) {
-//     if (!searchNav.contains(event.target)) {
-//         for (let i = 0; i < displayedNavElement.length; i++) {
-//             displayedNavElement[i].style.display = "flex";
-//         }
-//         searchCancelButton.style.display = "none";
-//         searchBoxNav.style.display = "none";
-//         mainLogo.style.display = "flex";
-//     }
-// });
+document.addEventListener("click", function (event) {
+    if (!searchNav.contains(event.target)) {
+        searchCheck = true;
+        for (let i = 0; i < displayedNavElement.length; i++) {
+            displayedNavElement[i].style.display = "flex";
+        }
+        searchCancelButton.style.display = "none";
+        searchBoxNav.style.display = "none";
+        mainLogo.style.display = "flex";
+    }
+});
 searchNav.addEventListener("click", function () {
     displayedNavElement = [];
     searchCheck = false;
@@ -112,7 +113,9 @@ function handleViewportChange1(event) {
         signInNav.style.display = "flex";
     }
 }
-
+if (window.matchMedia("(max-width: 860px)").matches) {
+    menuHamburger.style.display = "flex";
+}
 function handleViewportChange2(event) {
     if (window.matchMedia("(max-width: 860px)").matches) {
         navBar.style.display = "none";
