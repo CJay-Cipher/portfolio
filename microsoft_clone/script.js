@@ -4,6 +4,7 @@ const menuHamburger = document.getElementById("menu-hamburger");
 const mainLogo = document.getElementById("main-logo");
 const searchNav = document.getElementById("head-search");
 const searchBoxNav = document.getElementById("search-box");
+const searchInput = document.getElementById("search-input");
 const navBar = document.getElementById("nav-bar");
 const allProducts = document.getElementById("all-products");
 const cartNav = document.getElementById("head-cart");
@@ -28,38 +29,15 @@ function toggleDropdown() {
 document.addEventListener("click", function (event) {
     if (!moreNav.contains(event.target)) {
         hiddenNav.style.display = "none";
-        // moreNav.classList.toggle("bg-active-color");
     }
 });
-// function toggleDropdown2() {
-//     displayedNavElement = [];
-//     for (let i = 0; i < hideNavElements.length; i++) {
-//         if (hideNavElements[i].style.display != "none") {
-//             displayedNavElement.push(hideNavElements[i]);
-//             hideNavElements[i].style.display = "none";
-//         }
-//     }
-//     if (window.matchMedia("(min-width: 861px)").matches) {
-//         mainLogo.style.display = "flex";
-//     } else {
-//         mainLogo.style.display = "none";
-//     }
-//     searchBoxNav.style.display = "flex";
-//     searchCancelButton.style.display = "flex";
-//     document.getElementById("search-input").focus();
-// }
+function handleResize() {
+    let windowWidth = window.innerWidth;
+    if (windowWidth > 950 || windowWidth < 860) {
+        hiddenNav.style.display = "none";
+    }
+}
 
-document.addEventListener("click", function (event) {
-    if (!searchNav.contains(event.target)) {
-        searchCheck = true;
-        for (let i = 0; i < displayedNavElement.length; i++) {
-            displayedNavElement[i].style.display = "flex";
-        }
-        searchCancelButton.style.display = "none";
-        searchBoxNav.style.display = "none";
-        mainLogo.style.display = "flex";
-    }
-});
 searchNav.addEventListener("click", function () {
     displayedNavElement = [];
     searchCheck = false;
@@ -76,7 +54,7 @@ searchNav.addEventListener("click", function () {
     }
     searchBoxNav.style.display = "flex";
     searchCancelButton.style.display = "flex";
-    document.getElementById("search-input").focus();
+    searchInput.focus();
 });
 
 searchCancelButton.addEventListener("click", function () {
@@ -87,6 +65,7 @@ searchCancelButton.addEventListener("click", function () {
     searchCancelButton.style.display = "none";
     searchBoxNav.style.display = "none";
     mainLogo.style.display = "flex";
+    searchInput.value = "";
 });
 
 window.addEventListener("scroll", function () {
@@ -101,7 +80,7 @@ window.addEventListener("scroll", function () {
 });
 
 function handleViewportChange1(event) {
-    if (window.matchMedia("(max-width: 1400px)").matches) {
+    if (window.innerWidth <= 1400) {
         // Change the text when the viewport width is less than or equal to 1400px
         searchNav.firstChild.textContent = "";
         cartNav.firstChild.textContent = "";
@@ -113,20 +92,17 @@ function handleViewportChange1(event) {
         signInNav.style.display = "flex";
     }
 }
-if (window.matchMedia("(max-width: 860px)").matches) {
-    menuHamburger.style.display = "flex";
-}
+// if (window.innerWidth <= 860) {
+//     menuHamburger.style.display = "flex";
+// }
 function handleViewportChange2(event) {
-    if (window.matchMedia("(max-width: 860px)").matches) {
+    if (window.innerWidth <= 860) {
         navBar.style.display = "none";
         allProducts.style.display = "none";
         searchCancelButton.style.order = "-3";
         searchCancelButton.innerHTML =
             '<img src="icons/arrowhead_left.svg" alt="Search cancel icon">';
-        if (
-            window.matchMedia("(max-width: 860px)").matches &&
-            searchCheck === true
-        ) {
+        if (window.innerWidth <= 860 && searchCheck === true) {
             menuHamburger.style.display = "flex";
         }
     } else {
@@ -142,6 +118,8 @@ function handleViewportChange2(event) {
 // Call the function initially
 handleViewportChange1();
 handleViewportChange2();
+
+window.addEventListener("resize", handleResize);
 
 // Add event listener to trigger the function whenever the viewport width changes
 window.addEventListener("resize", handleViewportChange1);

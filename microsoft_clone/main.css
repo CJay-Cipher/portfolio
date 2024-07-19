@@ -204,7 +204,7 @@ h3 {
     height: 2px;
     background-color: #000;
     top: 40px;
-    transition: width 0.2s;
+    transition: width 0.15s;
 }
 
 #all-products:hover::after {
