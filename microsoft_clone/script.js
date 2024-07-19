@@ -14,6 +14,9 @@ const hideNavElements = document.getElementsByClassName("hide-nav");
 const searchCancelButton = document.getElementById("search-cancel");
 let displayedNavElement;
 let searchCheck = true;
+const midPcWidth = 1400;
+const midTabWidth = 950;
+const lgMobileWidth = 860;
 
 // moreNav.addEventListener("click", function () {
 //     hiddenNav.classList.toggle("show-hidden");
@@ -33,7 +36,7 @@ document.addEventListener("click", function (event) {
 });
 function handleResize() {
     let windowWidth = window.innerWidth;
-    if (windowWidth > 950 || windowWidth < 860) {
+    if (windowWidth > midTabWidth || windowWidth < lgMobileWidth) {
         hiddenNav.style.display = "none";
     }
 }
@@ -47,7 +50,7 @@ searchNav.addEventListener("click", function () {
             hideNavElements[i].style.display = "none";
         }
     }
-    if (window.matchMedia("(min-width: 861px)").matches) {
+    if (window.innerWidth > lgMobileWidth) {
         mainLogo.style.display = "flex";
     } else {
         mainLogo.style.display = "none";
@@ -80,7 +83,7 @@ window.addEventListener("scroll", function () {
 });
 
 function handleViewportChange1(event) {
-    if (window.innerWidth <= 1400) {
+    if (window.innerWidth <= midPcWidth) {
         // Change the text when the viewport width is less than or equal to 1400px
         searchNav.firstChild.textContent = "";
         cartNav.firstChild.textContent = "";
@@ -92,17 +95,17 @@ function handleViewportChange1(event) {
         signInNav.style.display = "flex";
     }
 }
-// if (window.innerWidth <= 860) {
+// if (window.innerWidth <= lgMobileViewWidth) {
 //     menuHamburger.style.display = "flex";
 // }
 function handleViewportChange2(event) {
-    if (window.innerWidth <= 860) {
+    if (window.innerWidth <= lgMobileWidth) {
         navBar.style.display = "none";
         allProducts.style.display = "none";
         searchCancelButton.style.order = "-3";
         searchCancelButton.innerHTML =
             '<img src="icons/arrowhead_left.svg" alt="Search cancel icon">';
-        if (window.innerWidth <= 860 && searchCheck === true) {
+        if (window.innerWidth <= lgMobileWidth && searchCheck === true) {
             menuHamburger.style.display = "flex";
         }
     } else {
