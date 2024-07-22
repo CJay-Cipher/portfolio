@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playing with GRID</title>
+    <title>Document</title>
 
     <style>
         * {
@@ -12,83 +12,44 @@
         }
 
         .container {
-            width: 90%;
-            margin-inline: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: center;
         }
 
         .box {
-            padding: 10px;
-            border: 2px solid;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            margin: 20px;
         }
 
-        .box img {
-            width: 100%;
+        .container div:last-child {
+            background-color: red;
+        }
+
+        .container div:nth-child(1) {
+            background-color: blue;
+        }
+
+        .container div:nth-child(2) {
+            background-color: pink;
+        }
+
+        @media (max-width: 600px) {
+            .body {
+                background-color: yellow;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet conseci temporibpossimus nisi aut inventore aspernatur expedita maxime odit
-                sint recusandae soluta nam consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sequi temporibus magnam quae explicabo
-                minima optio possimus nisi aut inventore aspernatur expedita maxime odit sint recusandae soluta nam
-                consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. magnam quae explicabo minima optio possimus
-                nisi aut inventore aspernatur expedita maxime odit sint recusandae soluta nam consectetur doloremque!
-            </p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet conseco possimus nisi aut inventore aspernatur expedita maxime odit sint
-                recusandae soluta nam consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sequi temporibus magnam quae explicabo
-                minima optio possimus nisi aut inventore aspernatur expedita maxime odit sint recusandae soluta nam
-                consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sequi temporibus magnam quae explicabo
-                minima optio possimus nisi aut inventore aspernatur expedita maxime odit sint recusandae soluta nam
-                consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, sequi temporibus magnam quae explicabo
-                minima optio possimus nisi aut inventore aspernatur expedita maxime odit sint recusandae soluta nam
-                consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsumquae explicabo minima optioe soluta nam consectetur doloremque!</p>
-        </div>
-        <div class="box">
-            <img src="images/articles/article_1.jpeg" alt="">
-            <h1>BOX 1</h1>
-            <p>Lorem ipsum dolor sit, amet conseco possimus nisi aut inventore aspernatur expedita maxime odit sint
-                recusandae soluta nam consectetur doloremque!</p>
-        </div>
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
     </div>
 </body>
 
