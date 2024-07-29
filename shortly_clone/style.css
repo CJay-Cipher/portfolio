@@ -735,6 +735,9 @@ footer {
         gap: 30px;
         /* border: 3px solid yellow; */
     }
+    .logo-list img {
+        width: 25px;
+    }
 }
 
 @media (max-width: 530px) {
@@ -867,7 +870,7 @@ footer {
     }
 
     .logo-list img {
-        width: 30px;
+        width: 20px;
     }
 }
 

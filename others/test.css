@@ -1,0 +1,270 @@
+:root {
+    --main-color: #8a8a8a;
+    --border-hover-color: #464646;
+    --button-hover-bg-color: #f4f4f4;
+
+    --pseudo-width1: 0;
+    --pseudo-width2: 0;
+    --pseudo-width3: 0;
+    --pseudo-width4: 0;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fb;
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #f7f8fb;
+    overflow: hidden;
+    /* border: 2px solid blue */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 5px 5px 15px #e4e4e4;
+}
+.card button {
+    cursor: pointer;
+    width: max-content;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+}
+.card-one {
+    width: 500px;
+    padding: 3% 5% 1%;
+    top: 10%;
+    z-index: 1;
+    transition: top 0.5s linear, width 0.5s linear;
+    /* margin-top: 10svh; */
+}
+
+.card-one * {
+    transition: width 0.3s linear, font-size 0.3s linear;
+}
+.card-one h1 {
+    font-size: 22px;
+    text-align: center;
+    line-height: 0.05;
+    color: var(--main-color);
+}
+.head-section,
+.chart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red */
+}
+.head-section h2 {
+    color: #007ab8;
+    font-size: 20px;
+    flex: 1;
+}
+
+.head-section button {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--main-color);
+    /* font-weight: 600; */
+    line-height: 0.2;
+    border: 0.2px solid var(--main-color);
+}
+
+.head-section button:hover {
+    color: var(--border-hover-color);
+    border-color: var(--border-hover-color);
+    background-color: var(--button-hover-bg-color);
+}
+
+.chart-section {
+    position: relative;
+    /* border: 2px solid blue; */
+}
+
+.chart-section li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+}
+
+.pie-chart {
+    flex: 1;
+    height: 100%;
+    /* width: 70%; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* border: 2px solid green; */
+}
+.chart-value {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.chart-value > * {
+    margin: 0;
+}
+.my-chart {
+    height: 25svh;
+}
+
+.size {
+    font-size: 16px;
+}
+
+.legend li::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: -15px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.legend li:nth-child(1)::before {
+    background-color: var(--legend1);
+}
+
+.legend li:nth-child(2)::before {
+    background-color: var(--legend2);
+}
+
+.legend li:nth-child(3)::before {
+    background-color: var(--legend3);
+}
+
+.legend li:nth-child(4)::before {
+    background-color: var(--legend4);
+}
+
+.legend-values {
+    font-weight: 700;
+}
+
+.report-button {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+.more-btn {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    border-radius: 50px;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    /* background-color: yellow; */
+}
+
+.more-btn:hover,
+.more-btn:active {
+    color: var(--border-hover-color);
+    border-color: var(--border-hover-color);
+    background-color: var(--button-hover-bg-color);
+}
+
+/* cart-two --------------------------------- */
+.card-two {
+    width: 500px;
+    padding: 2% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    /* opacity: 0; */
+    top: 110%;
+    /* display: none; */
+    transition: top 1s ease-out;
+    /* border: 2px soli red; */
+}
+
+.card-two > button {
+    align-self: flex-end;
+    font-size: 28px;
+    padding: 0 10px;
+}
+
+.card-two > button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+.card-two h3 {
+    font-size: 13px;
+}
+.bar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    /* border: 2px solid red; */
+}
+.values {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+}
+.values h3:first-child {
+    flex: 1;
+}
+.values h3:last-child {
+    color: #007ab8;
+}
+
+.values::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    margin-top: 37px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    /* border: 0.5px solid black; */
+}
+
+.values::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    margin-top: 37px;
+    border-radius: 10px;
+    transition: width 2s ease-out;
+}
+
+.values:nth-child(1)::after {
+    width: var(--pseudo-width1);
+    background-color: #36a2eb;
+}
+.values:nth-child(2)::after {
+    width: var(--pseudo-width2);
+    background-color: #000;
+}
+.values:nth-child(3)::after {
+    width: var(--pseudo-width3);
+    background-color: #6c36eb;
+}
+.values:nth-child(4)::after {
+    width: var(--pseudo-width4);
+    background-color: #eb36d9;
+}
