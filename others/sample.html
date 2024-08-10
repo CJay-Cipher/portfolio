@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+            background: #bababa;
+        }
+
+        .wrapper {
+            width: 700px;
+            margin-inline: auto;
+            border: 2px solid white;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .gallary {
+            display: flex;
+            justify-content: center;
+            gap: .55rem;
+            pointer-events: none;
+        }
+
+        /* body::before {
+            content: "";
+            position: absolute;
+            left: 300px;
+            height: 200px;
+            width: 700px;
+            background-color: white;
+            z-index: -1;
+            transform: perspective(900px) rotateY(80deg) scale(0.8);
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            right: 300px;
+            height: 200px;
+            width: 700px;
+            background-color: white;
+            z-index: -1;
+            transform: perspective(900px) rotateY(-80deg) scale(0.8);
+        } */
+
+        .image {
+            flex: 1;
+            aspect-ratio: 2 /1.5;
+            pointer-events: auto;
+            cursor: pointer;
+            -webkit-box-reflect: below 3px linear-gradient(transparent, #a4a4a424);
+            transition: 0.3s;
+        }
+
+        .image img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 2 / 1.5;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #000;
+        }
+
+        .image:hover {
+            transform: scale(1.2);
+        }
+
+        .gallary:hover> :not(:hover) {
+            margin-inline: 1.5rem;
+            transform: perspective(400px) rotateY(30deg) scale(0.8);
+        }
+
+        .image:hover~.image {
+            transform: perspective(400px) rotateY(-30deg) scale(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="gallary">
+            <div class="image"><img src="../portfolio/iil/image/dice_game_big.png" alt=""></div>
+            <div class="image"><img src="../portfolio/iil/image/sports_car_page_big.png" alt=""></div>
+            <div class="image"><img src="../portfolio/iil/image/microsoft_clone_big.png" alt=""></div>
+            <div class="image"><img src="../portfolio/iil/image/shortly_clone_big.png" alt=""></div>
+            <div class="image"><img src="../portfolio/iil/image/dice_game_big.png" alt=""></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
