@@ -3,9 +3,9 @@
     --default-dark-color: #000;
     --default-light-color: #fff;
     --first-font-color: #5a24d9;
-    --second-font-color: #a2a2a2;
+    --second-font-color: #9189a4;
     --third-font-color: #290b5d;
-    --first-bg-color: #f1f1f1;
+    --first-bg-color: #f5ebfc;
     --second-bg-color: #e74dfb;
     --third-bg-color: #a78bea;
 
@@ -13,6 +13,7 @@
     --special-color-2: #e43bfa;
     --special-color-3: #2bd0d0;
     --special-color-4: #1743e3;
+    --special-color-5: #e31717;
 
     /* ----- DIMENTION ------ */
     --main-img-width: 30rem;
@@ -59,7 +60,7 @@ header {
     background: linear-gradient(
         to right,
         var(--first-font-color),
-        var(--default-light-color) 20%
+        var(--first-bg-color) 20%
     );
 }
 /* header a {
@@ -387,6 +388,7 @@ header > * {
 #about {
     min-height: 100svh;
     display: flex;
+    background-color: #000;
     /* justify-content: center;
     align-items: center; */
     /* border: 2px solid blue; */
@@ -398,6 +400,8 @@ header > * {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
+    padding: 20px;
 }
 .img-container .hexagon {
     position: relative;
@@ -405,13 +409,52 @@ header > * {
     justify-content: center;
     width: 450px;
     height: 550px;
-    margin-top: 50px;
-    /* border: 2px solid #000; */
+    /* margin-top: 50px; */
+    z-index: 1;
+    border: 2px solid red;
 }
+.img-container::before,
+.img-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: -20px; */
+    /* padding: 10px; */
+    clip-path: polygon(
+        40% 0%,
+        60% 0%,
+        95% 11%,
+        100% 16%,
+        100% 70%,
+        95% 80%,
+        52% 100%,
+        48% 100%,
+        5% 80%,
+        0% 70%,
+        0 16%,
+        5% 11%
+    );
+    /* z-index: -1; */
+    background-image: conic-gradient(
+        var(--first-font-color),
+        var(--second-bg-color),
+        var(--default-light-color),
+        var(--first-font-color)
+    );
+    animation: bounce var(--bounce-animation-duration) ease-in-out infinite;
+    animation-delay: 2s;
+    /* border: 2px solid red; */
+}
+.img-container::before {
+    /* padding: 10px; */
+    backdrop-filter: blur(50px);
+}
+
 .img-container .hexagon::after {
     content: "";
     position: absolute;
-    bottom: -3rem;
+    bottom: -5rem;
     width: 100%;
     height: 2.5rem;
     /* background-color: #000; */
@@ -436,13 +479,14 @@ header > * {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--first-font-color);
+    /* background-color: var(--first-font-color); */
     background: radial-gradient(
         var(--first-font-color),
         var(--default-light-color)
     );
-    transition: 0.5s;
-    animation: bounce var(--bounce-animation-duration) ease-in-out infinite;
+    background-size: 100%;
+    animation: bounce var(--bounce-animation-duration) ease-in-out infinite,
+        profileColorSwap 20s linear infinite alternate;
     animation-delay: 2s;
     clip-path: polygon(
         40% 0%,
@@ -461,6 +505,7 @@ header > * {
     /* clip-path: polygon(50% 0, 100% 10%, 100% 75%, 50% 100%, 0 75%, 0 10%); */
     box-shadow: 0px 0px 60px 0px rgba(33, 2, 2, 0.5);
 }
+
 .img-container .hexagon:hover .shape {
     /* transform: translateY(-2rem); */
     animation-play-state: paused;
@@ -475,7 +520,7 @@ header > * {
     transform: translateY(27px) scale(0.9);
 }
 
-/* ------------- gradient animation ------------- */
+/* ------------- cicles background animation ------------- */
 .bg-container {
     margin: 0;
     padding: 0;
@@ -589,8 +634,7 @@ header > * {
         /* background: radial-gradient(bg-circle, cyan, blue); */
     }
 }
-
-/* ---------------------------------------- */
+/* ---------------------------------------------------- */
 
 #about > div {
     /* margin: 7rem; */
@@ -914,51 +958,37 @@ footer p {
     box-shadow: 1px 1px 15px var(--default-light-color);
 }
 
-/* =============== TEST SECTION ================ */
-.big-bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 70vh; */
-    padding: 10rem;
-    border: 2px solid red;
+/* =============== ANIMATION SECTION ================ */
+@keyframes profileColorSwap {
+    25% {
+        background: radial-gradient(
+            var(--special-color-4),
+            var(--default-light-color)
+        );
+        /* background-position: top right; */
+    }
+    50% {
+        background: radial-gradient(
+            var(--special-color-5),
+            var(--default-light-color)
+        );
+        /* background-position: center; */
+    }
+    75% {
+        background: radial-gradient(
+            var(--special-color-2),
+            var(--default-light-color)
+        );
+        /* background-position: bottom left; */
+    }
+    100% {
+        background: radial-gradient(
+            var(--special-color-1),
+            var(--default-light-color)
+        );
+        /* background-position: bottom right; */
+    }
 }
-.containers {
-    width: 500px;
-    height: 500px;
-    transform: rotate(45deg);
-    background-color: #be7cfc;
-    /* position: relative; */
-    /* background-color: #fff; */
-}
-.containers img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
-.boxs-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    gap: 20px;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    /* transform: rotate(45deg); */
-    /* background-color: white; */
-}
-.containers .boxs {
-    width: 20%;
-    height: 500px;
-    /* margin: 0 10px; */
-    border-radius: 50px;
-    background: transparent;
-    border: 2px solid black;
-}
-
 @keyframes shadowEffect {
     10% {
         opacity: 0.75;

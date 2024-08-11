@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Switches</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .big-bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+            padding: 10rem;
+            background-color: #ebf5fc;
+        }
+
+        .big-bg ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 440px;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            padding: 50px;
+            background-color: #ebf5fc;
+            box-shadow: -2px -2px 5px #fff,
+                3px 3px 5px #0000001a;
+            position: relative;
+        }
+
+        .big-bg ul li {
+            position: relative;
+            list-style: none;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .big-bg input {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .big-bg .icon-box {
+            width: 130px;
+            height: 130px;
+            box-shadow: -2px -2px 5px #fff,
+                3px 3px 5px #0000001a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: linear-gradient(to bottom right, #dee8f0, #ffffff); */
+            border-radius: 10px;
+        }
+
+        .big-bg .icon-box i {
+            font-size: 40px;
+            color: #575757;
+        }
+
+        .big-bg input:checked~.icon-box {
+            background-color: #fafeff;
+            border: 1px solid #ffffff;
+            box-shadow: inset -3px -3px 5px #fff,
+                inset 5px 5px 20px #0000001a,
+                inset 3px 3px 5px #0000001a;
+        }
+
+        .big-bg input:checked~.icon-box i {
+            transform: scale(0.95);
+            color: #3b3b3b;
+        }
+    </style>
+
+    <div class="big-bg">
+        <ul>
+            <li>
+                <input type="checkbox" name="">
+                <div class="icon-box">
+                    <i class='bx bxs-plane-alt'></i>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" name="">
+                <div class="icon-box">
+                    <i class='bx bxs-phone-call'></i>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" name="">
+                <div class="icon-box">
+                    <i class='bx bxs-moon'></i>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" name="">
+                <div class="icon-box">
+                    <i class='bx bx-wifi'></i>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" name="">
+                <div class="icon-box">
+                    <i class='bx bx-volume-full'></i>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" name="">
+                <div class="icon-box">
+                    <i class='bx bx-bluetooth'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
