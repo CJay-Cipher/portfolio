@@ -55,3 +55,20 @@ window.addEventListener("scroll", function () {
         button.style.visibility = "hidden";
     }
 });
+
+const moreAboutMe = document.querySelector(".more-about-me");
+const moreText = document.querySelector(".more-text");
+const aboutContentP = document.querySelector(".about-content > p");
+const readMoreText = moreAboutMe.querySelector("a");
+
+moreAboutMe.addEventListener("click", function () {
+    moreText.classList.toggle("hide");
+
+    if (aboutContentP.style.height === "8rem") {
+        aboutContentP.style.height = "3rem";
+        readMoreText.textContent = "Read More";
+    } else {
+        aboutContentP.style.height = "8rem";
+        readMoreText.textContent = "Read Less";
+    }
+});
