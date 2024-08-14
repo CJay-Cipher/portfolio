@@ -12,65 +12,54 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
-    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div id="main-logo">
-            <img src="iil/logo/logo2.png" id="logo-img" alt="My Logo">
-            <div class="logo-text">
-                <a href="#home">Portfolio</a>
-            </div>
-        </div>
-
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <button class="menu-icon"><i class='bx bx-menu'></i></button>
-    </header>
-
     <div id="container">
-        <section id="home" class="show-section">
-            <div class="box-content">
-                <div class="text-content">
-                    <h3>Hello, my name is</h3>
-                    <h1>CJay Valentine</h1>
-                    <h3><span>I'm a</span> <span>Frontend Developer</span></h3>
-                    <p>I specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
-                        JavaScript.
-                        With a passion for crafting visually appealing designs and ensuring seamless user experiences, I
-                        thrive on turning ideas into engaging web applications that delight users.</p>
-                    <div class="socials">
-                        <a href=""><i class='bx bxl-linkedin'></i></a>
-                        <a href=""><i class='bx bxl-github'></i></a>
-                        <a href=""><i class='bx bx-envelope'></i></a>
-                        <!-- <i class='bx bxl-linkedin-square'></i> -->
-                        <!-- <i class='bx bxs-envelope'></i> -->
-                    </div>
+        <header>
+            <div id="main-logo">
+                <img src="iil/logo/logo2.png" id="logo-img" alt="My Logo">
+                <div class="logo-text">
+                    <a href="#home">Portfolio</a>
                 </div>
             </div>
 
-            <div class="img-container">
-                <div class="hexagon">
-                    <div class="shape">
-                        <img src="iil/image/my_photo_no_bg.png" alt="">
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="menu-icon"><i class='bx bx-menu'></i></button>
+        </header>
+
+        <div id="body-container">
+            <section id="home" class="show-section">
+                <div class="box-content">
+                    <div class="text-content">
+                        <h3>Hello, my name is</h3>
+                        <h1>CJay Valentine</h1>
+                        <div class="my-title">
+                            <span>
+                                <h3>I'm a</h3>
+                            </span>
+                            <span>
+                                <h3>Frontend Developer</h3>
+                            </span>
+                        </div>
+
+                        <p>I specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
+                            JavaScript.</p>
+                        <div class="socials">
+                            <a href="#sd"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#sdfs"><i class='bx bxl-github'></i></a>
+                            <a href="#sefsd"><i class='bx bx-envelope'></i></a>
+                            <!-- <i class='bx bxl-linkedin-square'></i> -->
+                            <!-- <i class='bx bxs-envelope'></i> -->
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="about">
-            <div class="about-container">
-                <!-- <div class="img-section">
-                    <div class="home-img">
-                        <img src="iil/image/my_photo_no_bg.png" alt="home-image">
-                    </div>
-                    <div class="shadow"></div>
-                </div> -->
                 <div class="img-container">
                     <div class="hexagon">
                         <div class="shape">
@@ -78,179 +67,194 @@
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="about-content text-content">
-                    <h1>About Me</h1>
-                    <h3>Frontend Developer</h3>
-                    <p>I specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
-                        JavaScript.<br>
-                        <span class="more-text hide">I have a passion for crafting visually appealing designs and
-                            ensuring seamless user
-                            experiences, I
-                            thrive on turning ideas into engaging web applications that delight users.</span>
-                    </p>
-                    <button class="more-about-me">
-                        <a href="#sda">Read More</a>
-                    </button>
-                </div>
-            </div>
+            <section id="about">
+                <div class="about-container">
+                    <!-- <div class="img-section">
+                        <div class="home-img">
+                            <img src="iil/image/my_photo_no_bg.png" alt="home-image">
+                        </div>
+                        <div class="shadow"></div>
+                    </div> -->
+                    <div class="img-container">
+                        <div class="hexagon">
+                            <div class="shape">
+                                <img src="iil/image/my_photo_no_bg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
 
-        </section>
-
-        <section id="portfolio">
-            <h1>Latest Projects</h1>
-            <div class="projects">
-                <article class="box">
-                    <img src="iil/image/microsoft_clone_big.png" class="box-img" alt="Project Image">
-                    <div class="project-text-content">
-                        <!-- <h3>Hello, my name is</h3> -->
-                        <h1>Microsoft Landing Page Clone</h1>
-                        <!-- <h3><span>I'm a</span> <span>Frontend Developer</span></h3> -->
+                    <div class="about-content text-content">
+                        <h1>About Me</h1>
+                        <h3>Frontend Developer</h3>
                         <p>I specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
-                            JavaScript.
-                            With a passion for crafting visually appealing designs and ensuring seamless user
-                            experiences, I
-                            thrive on.</p>
-                        <div class="project-options">
-                            <a href="">View Live</a>
-                            <a href="">Demo</a>
-                            <a href="">Source Code</a>
-                        </div>
+                            JavaScript.<br>
+                            <span class="more-text hide">I have a passion for crafting visually appealing designs and
+                                ensuring seamless user
+                                experiences, I
+                                thrive on turning ideas into engaging web applications that delight users.</span>
+                        </p>
+                        <button class="more-about-me">
+                            <a href="#sda">Read More</a>
+                        </button>
                     </div>
-                </article>
+                </div>
 
-                <article class="box">
-                    <img src="iil/image/shortly_clone_big.png" class="box-img" alt="Project Image">
-                    <div class="project-text-content">
-                        <h1>Link Shortner Landing Page</h1>
-                        <p>specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
-                            JavaScript.</p>
-                        <div class="project-options">
-                            <a href="">View Live</a>
-                            <a href="">Demo</a>
-                            <a href="">Source Code</a>
-                        </div>
-                    </div>
-                </article>
+            </section>
 
-                <article class="box">
-                    <img src="iil/image/dice_game_big.png" class="box-img" alt="Project Image">
-                    <div class="project-text-content">
-                        <h1>Dice Game</h1>
-                        <p>User-friendly interfaces using HTML, CSS, and JavaScript.
-                            With a passion for crafting visually appealing designs and ensuring seamless user
-                            experiences.</p>
-                        <div class="project-options">
-                            <a href="">View Live</a>
-                            <a href="">Demo</a>
-                            <a href="">Source Code</a>
+            <section id="portfolio">
+                <h2>Latest Projects</h2>
+                <div class="projects">
+                    <article class="box">
+                        <img src="iil/image/microsoft_clone_big.png" class="box-img" alt="Project Image">
+                        <div class="project-text-content">
+                            <!-- <h3>Hello, my name is</h3> -->
+                            <h3>Microsoft Landing Page Clone</h3>
+                            <!-- <h3><span>I'm a</span> <span>Frontend Developer</span></h3> -->
+                            <p>I specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
+                                JavaScript.
+                                With a passion for crafting visually appealing designs and ensuring seamless user
+                                experiences, I
+                                thrive on.</p>
+                            <div class="project-options">
+                                <a href="">View Live</a>
+                                <a href="">Demo</a>
+                                <a href="">Source Code</a>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="box">
-                    <img src="iil/image/sports_car_page_big.png" class="box-img" alt="Project Image">
-                    <div class="project-text-content">
-                        <h1>Sport Car Home Page</h1>
-                        <p>specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
-                            JavaScript.</p>
-                        <div class="project-options">
-                            <a href="">View Live</a>
-                            <a href="">Demo</a>
-                            <a href="">Source Code</a>
+                    <article class="box">
+                        <img src="iil/image/shortly_clone_big.png" class="box-img" alt="Project Image">
+                        <div class="project-text-content">
+                            <h3>Link Shortner Landing Page</h3>
+                            <p>specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
+                                JavaScript.</p>
+                            <div class="project-options">
+                                <a href="">View Live</a>
+                                <a href="">Demo</a>
+                                <a href="">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="box">
+                        <img src="iil/image/dice_game_big.png" class="box-img" alt="Project Image">
+                        <div class="project-text-content">
+                            <h3>Dice Game</h3>
+                            <p>User-friendly interfaces using HTML, CSS, and JavaScript.
+                                With a passion for crafting visually appealing designs and ensuring seamless user
+                                experiences.</p>
+                            <div class="project-options">
+                                <a href="">View Live</a>
+                                <a href="">Demo</a>
+                                <a href="">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="box">
+                        <img src="iil/image/sports_car_page_big.png" class="box-img" alt="Project Image">
+                        <div class="project-text-content">
+                            <h3>Sport Car Home Page</h3>
+                            <p>specialize in creating interactive and user-friendly interfaces using HTML, CSS, and
+                                JavaScript.</p>
+                            <div class="project-options">
+                                <a href="">View Live</a>
+                                <a href="">Demo</a>
+                                <a href="">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- <hr style="margin: 4rem 10rem 0;"> -->
+
+            <section id="contact">
+                <form class="contact-container" onsubmit="sendEmail(event)">
+                    <h2>Send me a message</h2>
+                    <div class="row1">
+                        <div class="col">
+                            <div class="contact-input-box">
+                                <input type="text" id="first-name" required="required">
+                                <span class="contact-text">First Name</span>
+                                <span class="contact-line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="contact-input-box">
+                                <input type="text" id="last-name" required="required">
+                                <span class="contact-text">Last Name</span>
+                                <span class="contact-line"></span>
+                            </div>
                         </div>
                     </div>
-                </article>
-            </div>
+
+                    <div class="row1">
+                        <div class="col">
+                            <div class="contact-input-box">
+                                <input type="text" id="email-address" required="required">
+                                <span class="contact-text">Email</span>
+                                <span class="contact-line"></span>
+                            </div>
+                        </div>
+                        <!-- <div class="col">
+                            <div class="contact-input-box">
+                                <input type="text">
+                                <span class="contact-text">Mobile</span>
+                                <span class="contact-line"></span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="row1">
+                        <div class="col">
+                            <div class="contact-input-box textarea">
+                                <textarea id="contact-message" required="required"></textarea>
+                                <span class="contact-text">Type your message here...</span>
+                                <span class="contact-line"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="col">
+                            <input type="submit" value="Send" class="submit-message">
+                        </div>
+                    </div>
+                </form>
+        </div>
         </section>
-        <hr style="border: 1px solid #000; margin: 4rem 10rem 0;">
 
-        <section id="contact">
-            <div class="contact-container">
-                <h2>Send me a message</h2>
-                <div class="row1">
-                    <div class="col">
-                        <div class="contact-input-box">
-                            <input type="text" name="" required="required">
-                            <span class="contact-text">First Name</span>
-                            <span class="contact-line"></span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="contact-input-box">
-                            <input type="text" name="" required="required">
-                            <span class="contact-text">Last Name</span>
-                            <span class="contact-line"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row1">
-                    <div class="col">
-                        <div class="contact-input-box">
-                            <input type="text" name="" required="required">
-                            <span class="contact-text">Email</span>
-                            <span class="contact-line"></span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="contact-input-box">
-                            <input type="text" name="" required="required">
-                            <span class="contact-text">Mobile</span>
-                            <span class="contact-line"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row1">
-                    <div class="col">
-                        <div class="contact-input-box textarea">
-                            <textarea required="required"></textarea>
-                            <span class="contact-text">Type your message here...</span>
-                            <span class="contact-line"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row1">
-                    <div class="col">
-                        <input type="submit" value="Send" class="submit-message">
-                    </div>
-                </div>
+        <a href="#home" class="head-to-top">
+            <i class='bx bx-chevrons-up'></i>
+        </a>
+        <footer>
+            <p>Copyrights © 2024 by CJay | All rights reserved</p>
+            <div class="footer-socials">
+                <a href=""><i class='bx bxl-linkedin'></i></a>
+                <a href=""><i class='bx bxl-github'></i></a>
+                <a href=""><i class='bx bx-envelope'></i></a>
+                <!-- <i class='bx bxl-linkedin-square'></i> -->
+                <!-- <i class='bx bxs-envelope'></i> -->
             </div>
+        </footer>
     </div>
-    </section>
-    </div>
-    <a href="#home" class="head-to-top">
-        <i class='bx bx-chevrons-up'></i>
-    </a>
-    <footer>
-        <p>Copyrights © 2024 by CJay | All rights reserved</p>
-        <div class="footer-socials">
-            <a href=""><i class='bx bxl-linkedin'></i></a>
-            <a href=""><i class='bx bxl-github'></i></a>
-            <a href=""><i class='bx bx-envelope'></i></a>
-            <!-- <i class='bx bxl-linkedin-square'></i> -->
-            <!-- <i class='bx bxs-envelope'></i> -->
+
+    <div id="loader"></div>
+    <div id="message-success">
+        <div id="report-cancel">
+            <i class='bx bx-x'></i>
         </div>
-    </footer>
-
-    <div class="testing">
-        <div class="test-container">
-            <div class="test-img">
-                <img src="iil/image/my_photo.png" alt="">
-            </div>
-            <div class="main-test-box">
-                <div class="test-box"></div>
-                <div class="test-box"></div>
-                <div class="test-box"></div>
-                <div class="test-box"></div>
-                <div class="test-box"></div>
-            </div>
-        </div>
-
-
+        <h4>Message delivered<br>successfully<br>✅</h4>
     </div>
+
+
+
+    <script src="script.js"></script>
+    <script src="contactform.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 
