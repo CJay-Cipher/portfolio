@@ -4,7 +4,7 @@
     --default-light-color: #fff;
     --first-font-color: #5a24d9;
     --second-font-color: #928d9f;
-    --third-font-color: #401689;
+    --third-font-color: #2d0a6a;
     /* --first-bg-color: #faf3ff; */
     --first-bg-color: #f5f8fa;
     --second-bg-color: #e74dfb;
@@ -27,12 +27,23 @@
 
     /* ----- ANIMATION ------ */
     --bounce-animation-duration: 8s;
+
+    /* ------- FONTS --------- */
+    --main-font-family: "poppins", "Segoe UI", "CJay-font", "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
+
+    /* ----- FONT SIZE -------- */
+    --h1-font-size: 4.8rem;
+    --h2-font-size: 3.5rem;
+    --h3-font-size: 2.6rem;
+    --h4-font-size: 1.4rem;
+    --p-font-size: 1.1rem;
 }
 
-/* @font-face {
-    font-family: "poppins regular";
-    src: url(Poppins/Poppins-Regular.ttf) format("truetype");
-} */
+@font-face {
+    font-family: "CJay-font";
+    src: url("font/Segoe\ UI.woff") format("woff");
+}
 
 * {
     margin: 0;
@@ -40,7 +51,8 @@
     box-sizing: border-box;
     text-decoration: none;
     color: var(--default-dark-color);
-    font-family: "poppins", "Segoe UI", sans-serif;
+    /* font-family: "poppins", "Segoe UI", sans-serif; */
+    font-family: var(--main-font-family);
     scroll-behavior: smooth;
 }
 
@@ -65,20 +77,20 @@ h3 {
 }
 
 h1 {
-    font-size: 4.8rem;
+    font-size: var(--h1-font-size);
 }
 h2 {
-    font-size: 3.5rem;
+    font-size: var(--h2-font-size);
 }
 h3 {
-    font-size: 2.6rem;
+    font-size: var(--h3-font-size);
 }
 h4 {
-    font-size: 1.4rem;
+    font-size: var(--h4-font-size);
     font-weight: 700;
 }
 p {
-    font-size: 1.1rem;
+    font-size: var(--p-font-size);
     font-weight: 400;
 }
 /*  NAVBAR section ------------------------------- */
@@ -240,13 +252,13 @@ header > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 9%;
+    padding: 0 9%;
     /* border: 10px solid red; */
 }
 
 .box-content {
     /* flex: 1; */
-    min-width: 60%;
+    min-width: 70%;
     overflow: hidden;
     padding: 0 3rem 3rem 0;
     margin-right: 5rem;
@@ -263,19 +275,34 @@ header > * {
     /* flex-direction: column; */
     /* border: 1px solid green; */
 }
-.text-content h1 {
+#name-text {
+    letter-spacing: 0.15rem;
+    /* font-weight: lighter; */
+    /* font-family: "Rubik Moonrocks"; */
     /* font-size: 4.8rem; */
     /* font-weight: 900; */
     /* text-shadow: 0 7px 0 var(--third-bg-color); */
     /* transform: translateZ(20px) perspective(400px) rotateY(40deg) scale(0.73); */
-    /* transform: perspective(400px) rotateY(40deg) scale(0.73); */
+    transform: rotateY(1deg);
+    /* transform: rotate(-28deg) skew(25deg); */
     /* perspective: 1000px; */
-    animation: slideLeft 2s;
+    /* animation: slideLeft 2s; */
+}
+#name-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: #41188381;
+    text-shadow: none;
+    filter: blur(5px);
+    z-index: -1;
 }
 
 .text-content > h3:first-child {
     /* transform: translateY(15px); */
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    font-size: 2rem;
     /* font-weight: 400; */
     /* color: var(--first-font-color); */
     /* opacity: 0.5; */
@@ -519,11 +546,11 @@ header > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
-    /* background: url("iil/image/bg-grid-lighter.svg");
+    border-radius: 20rem;
+    background: url("iil/image/bg-grid-lighter.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 
     /* box-shadow: -0.2px -0.2px 2px var(--second-font-color),
         -10px -10px 30px var(--default-light-color),
@@ -544,9 +571,10 @@ header > * {
 } */
 .about-content {
     /* margin-top: 7rem; */
-    padding: 1rem 5rem;
-    max-width: 50rem;
-    border: 2px solid blue;
+    margin-left: 5rem;
+    padding: 1rem;
+    width: 40rem;
+    /* border: 2px solid blue; */
 }
 .about-content h1 {
     color: var(--first-font-color);
@@ -558,23 +586,24 @@ header > * {
 /* Cursor */
 .typed-cursor {
     color: var(--default-dark-color);
-    font-size: 2.5rem;
+    font-size: var(--h3-font-size);
     font-weight: 300;
 }
 .about-content p {
     height: 3rem;
     overflow: hidden;
-    transition: 0.5s;
-    /* border-bottom: 2px solid blue; */
+    transition: 0.3s;
+    /* animation: borderBottom 0.5s; */
+    border-bottom: 0.1px solid transparent;
 }
 .hide {
     display: none;
     /* opacity: 0; */
-    /* transition: 0.4s; */
+    /* transition: 0.3s; */
 }
 
 .more-about-me {
-    margin-top: 4rem;
+    margin-top: 3vh;
     border: none;
     background-color: transparent;
     /* border: 2px solid blue; */
@@ -603,6 +632,18 @@ header > * {
     border: 1px solid #ffffff;
     box-shadow: inset -3px -3px 5px #fff, inset 3px 3px 5px #0000001a,
         inset 3px 3px 5px #0000001a;
+}
+
+@keyframes borderBottom {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--third-bg-color);
+    }
+    100% {
+        border-color: transparent;
+    }
 }
 
 /* --------------- profit image animation ------------------ */

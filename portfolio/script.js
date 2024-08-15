@@ -53,9 +53,11 @@ moreAboutMe.addEventListener("click", function () {
     if (aboutContentP.style.height === "8rem") {
         aboutContentP.style.height = "3rem";
         readMoreText.textContent = "Read More";
+        aboutContentP.style.animation = "none";
     } else {
         aboutContentP.style.height = "8rem";
         readMoreText.textContent = "Read Less";
+        aboutContentP.style.animation = "borderBottom 0.3s";
     }
 });
 
@@ -68,8 +70,12 @@ const typed1 = new Typed("#string-typing", {
     loop: true,
 });
 
-// var typed2 = new Typed("#element", {
-//     strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-//     typeSpeed: 50,
-//     loop: true,
-// });
+// window.onload = function () {
+//     window.scrollTo(0, 0);
+// };
+const nameText = document.getElementById("name-text");
+let shadow = "";
+for (let i = 0; i < 8; i++) {
+    shadow += (shadow ? "," : "") + i * 1 + "px " + i * 1 + "px 0 #eee8fd";
+}
+nameText.style.textShadow = shadow;
