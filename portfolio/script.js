@@ -32,13 +32,13 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", function () {
-    let button = document.querySelector(".head-to-top");
+    let moveToTop = document.getElementById("move-to-top");
     let threshold = 0.31; // % of the page height
     let pageHeight = document.documentElement.scrollHeight - window.innerHeight;
     if (window.scrollY > threshold * pageHeight) {
-        button.style.visibility = "visible";
+        moveToTop.style.display = "inline";
     } else {
-        button.style.visibility = "hidden";
+        moveToTop.style.display = "none";
     }
 });
 
@@ -58,3 +58,18 @@ moreAboutMe.addEventListener("click", function () {
         readMoreText.textContent = "Read Less";
     }
 });
+
+// ------------- for string typing animation --------------------
+const typed1 = new Typed("#string-typing", {
+    strings: ["Frontend Developer", "Programmer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
+
+// var typed2 = new Typed("#element", {
+//     strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+//     typeSpeed: 50,
+//     loop: true,
+// });
