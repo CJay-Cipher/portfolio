@@ -206,7 +206,7 @@ header > * {
 .navbar a::after {
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: -5px;
     left: 0;
     height: 5px;
     width: 0;
@@ -545,7 +545,7 @@ header > * {
     margin: 7%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     border-radius: 20rem;
     background: url("iil/image/bg-grid-lighter.svg");
     background-size: cover;
@@ -570,7 +570,7 @@ header > * {
     box-shadow: inset -5px -5px 15px #fff, inset 5px 5px 15px #0000001a;
 } */
 .about-content {
-    /* margin-top: 7rem; */
+    margin-top: 15vh;
     margin-left: 5rem;
     padding: 1rem;
     width: 40rem;
@@ -587,14 +587,20 @@ header > * {
 .typed-cursor {
     color: var(--default-dark-color);
     font-size: var(--h3-font-size);
-    font-weight: 300;
+    font-weight: 400;
 }
 .about-content p {
     height: 3rem;
+    margin-top: 1vh;
     overflow: hidden;
     transition: 0.3s;
     /* animation: borderBottom 0.5s; */
     border-bottom: 0.1px solid transparent;
+}
+.styled-text {
+    /* color: var(--third-font-color); */
+    font-weight: 600;
+    /* font-style: italic; */
 }
 .hide {
     display: none;
@@ -603,7 +609,7 @@ header > * {
 }
 
 .more-about-me {
-    margin-top: 3vh;
+    margin-top: 5vh;
     border: none;
     background-color: transparent;
     /* border: 2px solid blue; */
@@ -817,7 +823,7 @@ header > * {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 3.5rem;
-    pointer-events: none;
+    /* pointer-events: none; */
     /* border: 2px solid blue; */
 }
 
@@ -836,7 +842,7 @@ header > * {
     border: 1px solid transparent;
     transition: 0.4s ease-in-out;
     background-color: var(--default-light-color);
-    pointer-events: auto;
+    /* pointer-events: auto; */
     /* border: 2px solid red; */
 }
 
