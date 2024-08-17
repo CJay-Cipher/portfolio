@@ -1,0 +1,312 @@
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: "Peralta", serif;
+    color: white;
+
+    background-image: url("bg_images/bg_image1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 98svh;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid lime; */
+}
+
+.main-body {
+    background-image: url("bg_images/bg_image2.jpg");
+}
+
+.background-img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23, 23, 59);
+    /* Adjust the value between 0 (fully transparent) and 1 (fully opaque) */
+    opacity: 0.8;
+    /* Ensure it's positioned behind the content */
+    z-index: -1;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.title,
+.outcome,
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    /* height: 20%; */
+    font-family: "Rubik Moonrocks", sans-serif;
+    font-weight: lighter;
+    margin: 0;
+    padding: 40px 0;
+    align-items: center;
+    color: cyan;
+    /* border: 3px solid lime; */
+}
+
+.info {
+    /* font-family: sans-serif; */
+    color: gray;
+    font-size: 15px;
+}
+
+.outcome {
+    /* height: 70%; */
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px solid skyblue; */
+}
+
+.dice-area {
+    /* height: 55%; */
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    /* border: 3px solid lime; */
+}
+
+.player-one,
+.player-two {
+    flex: 1;
+}
+
+.dice {
+    /* height: 85%; */
+    display: flex;
+    justify-content: center;
+    /* border: 3px solid yellow; */
+}
+
+.dice > img {
+    width: 220px;
+    /* height: 220px; */
+    margin: 20px;
+    /* border: 2px solid red; */
+}
+
+#result {
+    margin: 15px;
+    color: cyan;
+    display: none;
+    font-size: 50px;
+    /* border: 2px solid red; */
+}
+
+/* loading ring -----------------*/
+#lds-dual-ring,
+#lds-dual-ring:after {
+    box-sizing: border-box;
+}
+
+#lds-dual-ring {
+    display: none;
+    width: 80px;
+    height: 80px;
+}
+
+#lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6.4px solid currentColor;
+    border-color: currentColor transparent currentColor transparent;
+    animation: lds-dual-ring 0.5s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loading ring -----------------*/
+
+#start-game {
+    padding: 10px 30px;
+}
+
+#my-button {
+    /* Button styles */
+    text-align: center;
+    font-family: "Comic Neue", cursive;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 18px 50px;
+    margin-top: 40px;
+    border-radius: 40px;
+}
+
+#my-button:hover {
+    /* Hover styles */
+    background-color: #0056b3;
+}
+
+#my-button:focus {
+    /* Focus styles */
+    outline: none;
+    box-shadow: 0 0 0 2px cyan, 0 0 0 4px #007bff;
+}
+
+#my-button:active {
+    /* Active/pressed styles */
+    background-color: #003c80;
+}
+
+.bottom {
+    /* height: 50px; */
+    margin-top: auto;
+    display: flex;
+    /* border: 2px solid white; */
+}
+
+.bottom > * {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.bottom > div {
+    margin-left: 10px;
+}
+
+.bottom p {
+    justify-content: flex-end;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    font-size: small;
+    letter-spacing: 3px;
+}
+
+.my-name {
+    font-family: "Comic Neue", cursive;
+    color: cyan;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+}
+
+#bg-color-swap {
+    background-color: #007bff97;
+    color: #ffffffa4;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 3px 12px;
+}
+
+#bg-color-swap:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#bg-color-swap:active {
+    background-color: #003c80;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 800px) {
+    .title {
+        font-size: 70px;
+    }
+
+    .dice-area h2 {
+        font-size: 30px;
+    }
+
+    #result {
+        font-size: 35px;
+    }
+
+    .dice > img {
+        width: 200px;
+        /* height: 200px; */
+        margin: 10px 30px;
+        /* border: 2px solid green; */
+    }
+
+    #my-button {
+        font-size: 20px;
+        padding: 12px 35px;
+    }
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .info {
+        font-size: 10px;
+    }
+
+    .dice-area h2 {
+        font-size: 20px;
+    }
+
+    #result {
+        font-size: 25px;
+    }
+
+    .dice > img {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        /* border: 2px solid green; */
+    }
+
+    #start-game {
+        font-size: 12px;
+    }
+
+    /* #lds-dual-ring {
+        width: 50px;
+        height: 50px;
+    } */
+
+    #my-button {
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+
+    .bottom > p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .my-name {
+        font-size: 12px;
+        letter-spacing: 1.1px;
+    }
+}

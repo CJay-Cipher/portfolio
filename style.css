@@ -817,7 +817,7 @@ header > * {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 3.5rem;
-    /* pointer-events: none; */
+    pointer-events: none;
     /* border: 2px solid blue; */
 }
 
@@ -836,7 +836,7 @@ header > * {
     border: 1px solid transparent;
     transition: 0.4s ease-in-out;
     background-color: var(--default-light-color);
-    /* pointer-events: auto; */
+    pointer-events: auto;
     /* border: 2px solid red; */
 }
 
