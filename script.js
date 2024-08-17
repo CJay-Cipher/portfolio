@@ -63,7 +63,7 @@ moreAboutMe.addEventListener("click", function () {
 
 // ------------- for string typing animation --------------------
 const typed1 = new Typed("#string-typing", {
-    strings: ["Frontend Developer", "Programmer"],
+    strings: ["Web Developer", "Software Engineer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,

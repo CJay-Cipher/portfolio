@@ -307,7 +307,7 @@ header > * {
     /* color: var(--first-font-color); */
     /* opacity: 0.5; */
     position: relative;
-    top: 19px;
+    /* top: 19px; */
     animation: slideRight 1s;
     /* border: 1px solid green; */
 }
@@ -617,7 +617,7 @@ header > * {
 .more-about-me a {
     color: var(--first-font-color);
     font-size: 1rem;
-    /* font-weight: 500; */
+    font-weight: 500;
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     /* border: 1px solid var(--first-font-color); */
@@ -1164,6 +1164,7 @@ footer {
     background-color: var(--first-font-color);
 }
 footer p {
+    font-size: 0.8rem;
     text-align: center;
     color: var(--default-light-color);
     /* border: 2px solid #fff; */
@@ -1175,7 +1176,7 @@ footer p {
     margin: 0.2rem;
 }
 .footer-socials i {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--default-light-color);
     padding: 0.4em;
     border-radius: 50%;
@@ -1184,7 +1185,7 @@ footer p {
 }
 .footer-socials i:hover,
 .footer-socials i:active {
-    font-size: 1.5rem;
+    /* font-size: 1.1rem; */
     color: var(--first-font-color);
     background-color: var(--fourth-bg-color);
     box-shadow: 1px 1px 15px var(--default-light-color);
