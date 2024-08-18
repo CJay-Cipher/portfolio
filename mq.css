@@ -1,0 +1,210 @@
+@media (max-width: 1400px) {
+    :root {
+        --h1-font-size: 3.8rem;
+        --h2-font-size: 2.6rem;
+        --h3-font-size: 1.9rem;
+        --h4-font-size: 1.3rem;
+        /* --p-font-size: 0.7rem; */
+    }
+    h1,
+    h2,
+    h3 {
+        font-weight: 800;
+    }
+
+    #about {
+        padding: 5%;
+    }
+
+    .about-container {
+        /* padding: 0 7%; */
+    }
+    .about-content {
+        margin-left: 4rem;
+        /* width: auto; */
+        flex: 1;
+    }
+    #portfolio .projects {
+        pointer-events: none;
+    }
+    .box {
+        width: 40%;
+        margin: 3%;
+        padding: 1.5%;
+        border-radius: 5px;
+        pointer-events: auto;
+        box-shadow: none;
+        background-color: var(--default-light-color);
+        background-color: transparent;
+    }
+    /* .box:hover {
+        padding: 1.5%;
+    } */
+
+    .box-img {
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px #0000003e;
+        /* border-bottom: 2px solid var(--third-bg-color); */
+    }
+    .project-text-content {
+        padding: 0;
+        padding-top: 1.5rem;
+    }
+
+    .box:hover,
+    .box:active {
+        transform: scale(1.09);
+    }
+    .projects:hover > :not(:hover),
+    .projects:active > :not(:active) {
+        margin-inline: 2rem;
+        transform: none;
+    }
+
+    .box:hover ~ .box,
+    .box:active ~ .box {
+        transform: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --h1-font-size: 3rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.3rem;
+        --h4-font-size: 1rem;
+        --p-font-size: 0.9rem;
+    }
+    /* #body-container section {
+        height: auto;
+    } */
+
+    .navbar a {
+        margin: 0 1.2rem;
+        font-size: 1rem;
+    }
+
+    .about-container {
+        /* padding: 0 8%; */
+        /* height: auto;
+        padding: 20vh; */
+    }
+    .about-content {
+        width: auto;
+        /* margin-left: 3rem;
+        width: 25rem; */
+        /* border: 2px solid blue; */
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --h1-font-size: 3rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.3rem;
+        --h4-font-size: 1rem;
+        --p-font-size: 0.9rem;
+    }
+    /* #body-container section {
+        height: auto;
+    } */
+
+    header {
+        padding-right: 2%;
+        /* gap: 2%; */
+    }
+    .logo-text a {
+        font-size: 1.4rem;
+    }
+    .navbar {
+        display: none;
+    }
+    /* .navbar a {
+        font-size: 0.9rem;
+    } */
+    .menu-icon {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 3%;
+        /* background-color: red; */
+    }
+    .menu-icon i {
+        display: flex;
+    }
+    #home {
+        background: url("iil/image/bg-grid-lighter.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #about {
+        padding: 0 5%;
+        background-image: none;
+    }
+    #about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("iil/image/bg-grid-lighter.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scaleY(-1);
+    }
+    .about-container {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: none;
+        /* padding: 0 8%; */
+        /* height: auto;
+        padding: 20vh; */
+    }
+    .about-content {
+        width: auto;
+        padding: 2%;
+        /* margin-left: 3rem;
+        width: 25rem; */
+        /* border: 2px solid blue; */
+    }
+    /* .about-content > p {
+        height: 25%;
+    } */
+
+    .img-container .hexagon {
+        width: 25vh;
+        height: 35vh;
+    }
+}
+
+@media (max-width: 800px) {
+    #main-logo {
+        margin-left: 3%;
+    }
+    .logo-text a {
+        font-size: 1.2rem;
+    }
+    .text-content {
+        padding: 0;
+    }
+    .about-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        min-height: 100svh;
+        /* gap: 15vh; */
+    }
+    .about-content {
+        margin: 0;
+        padding: 0;
+    }
+    .img-container {
+        order: 1;
+        margin-bottom: 12vh;
+    }
+}
