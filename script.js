@@ -82,7 +82,7 @@ menuHamburger.addEventListener("click", function (event) {
 });
 
 menuCancel.addEventListener("click", function () {
-    hiddenMenu.style.right = "-300px";
+    hiddenMenu.style.right = "-500px";
 });
 
 document.addEventListener("click", function (event) {
@@ -90,6 +90,6 @@ document.addEventListener("click", function (event) {
         !event.target.closest(".hidden-menu") ||
         event.target.closest(".hidden-menu a")
     ) {
-        hiddenMenu.style.right = "-300px";
+        hiddenMenu.style.right = "-500px";
     }
 });

@@ -31,8 +31,8 @@
     --bounce-animation-duration: 8s;
 
     /* ------- FONTS --------- */
-    --main-font-family: "Segoe UI", "CJay-font", "Helvetica Neue", Helvetica,
-        Arial, sans-serif;
+    --main-font-family: "poppins", "Segoe UI", "CJay-font", "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
 
     /* ----- FONT SIZE -------- */
     --h1-font-size: 4.8rem;
@@ -244,26 +244,27 @@ header > * {
 
 .hidden-menu {
     position: fixed;
-    width: 18rem;
-    height: 60vh;
+    width: 20rem;
+    height: 90vh;
     flex-direction: column;
     align-items: flex-start;
     /* justify-content: center; */
     top: 0;
     right: 0;
-    right: -300px;
-    padding: 0.9rem;
-    padding-top: 4rem;
-    background-color: var(--fourth-bg-color);
+    right: -500px;
+    padding: 4rem 0 0.9rem 0.9rem;
+    background: #eee8fd94;
     border: 1px solid var(--second-font-color);
     border-radius: 5px 0 0 30px;
-    transition: 0.7s;
+    transition: right 0.7s ease-out;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
 }
+
 .hidden-menu .menu-cancel {
     position: absolute;
     top: 0;
     right: 0;
-    /* width: 100%; */
 }
 .hidden-menu .menu-cancel i {
     padding: 0.5rem 0.8rem;
@@ -284,10 +285,11 @@ header > * {
     align-items: center;
     text-align: start;
     margin: 0.5rem 0;
-    margin-right: 2rem;
-    border-radius: 24px;
+    /* margin-right: 2rem; */
+    border-radius: 28px 0 0 28px;
     padding: 1rem;
     padding-left: 2rem;
+    transition: 0.3s;
     /* cursor: pointer; */
     /* border: 2px solid red; */
 }
@@ -357,9 +359,9 @@ header > * {
 #name-text {
     letter-spacing: 0.15rem;
     /* font-weight: lighter; */
-    /* font-family: "Rubik Moonrocks"; */
+    font-family: "Rubik Moonrocks";
     /* font-size: 4.8rem; */
-    /* font-weight: 900; */
+    font-weight: 400;
     /* text-shadow: 0 7px 0 var(--third-bg-color); */
     /* transform: translateZ(20px) perspective(400px) rotateY(40deg) scale(0.73); */
     transform: rotateY(1deg);
@@ -367,7 +369,7 @@ header > * {
     /* perspective: 1000px; */
     animation: slideLeft 2s;
 }
-#name-text::before {
+/* #name-text::before {
     content: attr(data-text);
     position: absolute;
     top: 8px;
@@ -376,7 +378,7 @@ header > * {
     text-shadow: none;
     filter: blur(5px);
     z-index: -1;
-}
+} */
 
 .text-content > h3:first-child {
     /* transform: translateY(15px); */
