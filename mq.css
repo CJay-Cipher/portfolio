@@ -6,9 +6,6 @@
         --h4-font-size: 1.2rem;
         /* --p-font-size: 0.7rem; */
     }
-    /* #portfolio > h2 {
-        margin-top: 2.7rem;
-    } */
     #portfolio .projects {
         pointer-events: none;
         margin-top: 2rem;
@@ -46,7 +43,7 @@
     }
     .projects:hover > :not(:hover),
     .projects:active > :not(:active) {
-        margin-inline: 2rem;
+        margin-inline: 2.8rem;
         transform: none;
     }
 
@@ -119,7 +116,7 @@
 
     .project-text-content {
         padding: 0 5%;
-        padding-bottom: 1.5rem;
+        /* padding-bottom: 1.5rem; */
         justify-content: center;
     }
     .project-options > .source-code {
@@ -212,14 +209,10 @@
         display: none;
     }
     .menu-icon {
-        flex: 1;
         display: flex;
-        justify-content: flex-end;
-        margin: 0 3%;
-        /* background-color: red; */
     }
-    .menu-icon i {
-        display: flex;
+    .box {
+        box-shadow: 3px 3px 10px #63636328;
     }
     .box-content {
         margin: 5%;
@@ -327,6 +320,9 @@
     .logo-text a {
         font-size: 1.2rem;
     }
+    .menu-icon i {
+        font-size: 2rem;
+    }
     .text-content > h3:first-child {
         letter-spacing: 0.05rem;
         /* font-size: 2rem; */
@@ -344,10 +340,6 @@
     .about-container {
         flex-wrap: nowrap;
         flex-direction: column;
-        /* padding: 0; */
-        /* min-height: 100svh; */
-        /* gap: 15vh; */
-        /* border: 2px solid blue; */
     }
     .about-content {
         margin: 0;
@@ -359,6 +351,36 @@
     }
     .about-content p {
         max-height: var(--min-about-text-height);
+    }
+
+    .box {
+        padding: 5%;
+        width: 90%;
+        box-shadow: none;
+        /* border: 2px solid red; */
+    }
+    .box:hover,
+    .box:active {
+        transform: scale(1);
+    }
+    #portfolio .projects {
+        margin-top: 0;
+    }
+    #portfolio .projects .box {
+        margin: 2% 0;
+        box-shadow: none;
+    }
+    .box-img {
+        margin-bottom: 1.7vh;
+        box-shadow: 5px 5px 10px #6363637a;
+    }
+    .box:hover .box-img {
+        transform: scale(1.05);
+    }
+
+    .project-text-content {
+        padding: 1%;
+        background-color: transparent;
     }
 
     .contact-container .row1 .col {
@@ -393,9 +415,11 @@
     .box-content {
         margin: 0;
     }
-    .box {
-        width: 80%;
-        margin: 3vh;
+    #portfolio .projects .box {
+        margin: 5% 0;
+    }
+    #portfolio > h2 {
+        letter-spacing: 0.05rem;
     }
     .project-options a {
         font-size: 0.8rem;
@@ -409,7 +433,7 @@
     }
     #move-to-top i {
         font-size: 2.1rem;
-        padding: 0.4rem;
+        padding: 0;
     }
     .contact-container .contact-input-box .contact-text {
         font-size: 0.85rem;
