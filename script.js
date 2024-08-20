@@ -70,3 +70,26 @@ for (let i = 0; i < 8; i++) {
     shadow += (shadow ? "," : "") + i * 1 + "px " + i * 1 + "px 0 #eee8fd";
 }
 nameText.style.textShadow = shadow;
+
+const menuHamburger = document.querySelector(".menu-icon i");
+const hiddenMenu = document.querySelector(".hidden-menu");
+const menuCancel = document.querySelector(".menu-cancel i");
+
+menuHamburger.addEventListener("click", function (event) {
+    hiddenMenu.style.right = "-7%";
+    hiddenMenu.style.display = "flex";
+    event.stopPropagation(); // Prevent the click event from propagating to the document
+});
+
+menuCancel.addEventListener("click", function () {
+    hiddenMenu.style.right = "-105%";
+});
+
+document.addEventListener("click", function (event) {
+    if (
+        !event.target.closest(".menu-icon") &&
+        !event.target.closest(".hidden-menu")
+    ) {
+        hiddenMenu.style.right = "-105%";
+    }
+});
