@@ -131,6 +131,7 @@
         /* --h3-font-size: 1.3rem; */
         --h4-font-size: 1rem;
         /* --p-font-size: 0.9rem; */
+        --min-about-text-height: 6vh;
         --max-about-text-height: 25vh;
         --header-height: 3.2rem;
     }
@@ -191,7 +192,7 @@
         --h3-font-size: 1.3rem;
         /* --h4-font-size: 1rem; */
         --p-font-size: 0.9rem;
-        --min-about-text-height: 8vh;
+        --min-about-text-height: 5vh;
         /* --max-about-text-height: 25vh; */
     }
     /* #body-container section {
@@ -236,8 +237,8 @@
         background-position: center;
     } */
     #about {
-        max-height: 70vh;
-        padding: 0 5%;
+        max-height: 80vh;
+        /* padding: 0 8%; */
         background: transparent;
         /* z-index: 2; */
     }
@@ -249,13 +250,14 @@
         background: none;
         height: 70vh;
         /* gap: 15%; */
+        padding: 0 0 0 10%;
         /* border: 2px solid blue; */
     }
     .about-content {
-        width: auto;
-        padding: 0;
-        /* margin-left: 3rem;
-        width: 25rem; */
+        width: 100%;
+        /* width: 25rem; */
+        /* margin: 0; */
+        margin: 0 1rem 0 3.5rem;
         /* border: 2px solid blue; */
     }
     .about-content h1 {
@@ -271,8 +273,10 @@
         height: 28vh;
     }
     .more-about-me {
-        margin-top: 2vh;
+        /* margin-top: 5vh; */
         padding: 0.4rem 0.9rem;
+        box-shadow: -1px -1px 5px #fff, 5px 5px 10px #0000001a,
+            inset 0px 0px 1px #0000001d;
     }
     .more-about-me a {
         font-size: 0.8rem;
@@ -309,8 +313,8 @@
         --h1-font-size: 2.4rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.1rem;
-        --h4-font-size: 1rem;
-        --p-font-size: 0.8rem;
+        /* --h4-font-size: 1rem; */
+        --p-font-size: 0.9rem;
         --min-about-text-height: 5vh;
         /* --max-about-text-height: 25vh; */
     }
@@ -340,6 +344,7 @@
     .about-container {
         flex-wrap: nowrap;
         flex-direction: column;
+        padding: 0 15% 0 8%;
     }
     .about-content {
         margin: 0;
@@ -347,10 +352,18 @@
     }
     .img-container {
         /* order: 1; */
+        padding: 7px;
         margin-bottom: 12vh;
+    }
+    .img-container::after {
+        padding: 25px;
     }
     .about-content p {
         max-height: var(--min-about-text-height);
+    }
+
+    #portfolio > h2 {
+        letter-spacing: 0.05rem;
     }
 
     .box {
@@ -409,17 +422,27 @@
         --h3-font-size: 1.1rem;
         /* --h4-font-size: 0.9rem; */
         /* --p-font-size: 0.7rem; */
-        --min-about-text-height: 6vh;
+        --min-about-text-height: 7vh;
         --header-height: 2.9rem;
     }
     .box-content {
         margin: 0;
     }
+    .about-container {
+        padding: 0 5%;
+    }
+    .img-container {
+        padding: 5px;
+    }
+    .img-container::after {
+        padding: 20px;
+    }
+    .img-container .hexagon {
+        width: 18vh;
+        height: 25vh;
+    }
     #portfolio .projects .box {
         margin: 5% 0;
-    }
-    #portfolio > h2 {
-        letter-spacing: 0.05rem;
     }
     .project-options a {
         font-size: 0.8rem;

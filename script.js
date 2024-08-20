@@ -86,11 +86,10 @@ menuCancel.addEventListener("click", function () {
 });
 
 document.addEventListener("click", function (event) {
-    // if (
-    //     !event.target.closest(".menu-icon") &&
-    //     !event.target.closest(".hidden-menu")
-    // ) {
-    //     hiddenMenu.style.right = "-300px";
-    // }
-    hiddenMenu.style.right = "-300px";
+    if (
+        !event.target.closest(".hidden-menu") ||
+        event.target.closest(".hidden-menu a")
+    ) {
+        hiddenMenu.style.right = "-300px";
+    }
 });

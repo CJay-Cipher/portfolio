@@ -245,15 +245,15 @@ header > * {
 .hidden-menu {
     position: fixed;
     width: 18rem;
-    height: 25rem;
-    /* display: none; */
+    height: 60vh;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    /* justify-content: center; */
     top: 0;
     right: 0;
     right: -300px;
     padding: 0.9rem;
+    padding-top: 4rem;
     background-color: var(--fourth-bg-color);
     border: 1px solid var(--second-font-color);
     border-radius: 5px 0 0 30px;
@@ -711,7 +711,7 @@ header > * {
 }
 .about-content p,
 .more-text {
-    transition: 0.4s linear;
+    transition: max-height 0.3s linear;
 }
 .about-content p.expanded {
     max-height: var(--max-about-text-height);
