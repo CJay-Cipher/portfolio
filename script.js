@@ -48,17 +48,8 @@ const aboutContentP = document.querySelector(".about-content > p");
 const readMoreText = moreAboutMe.querySelector("a");
 
 moreAboutMe.addEventListener("click", function () {
+    aboutContentP.classList.toggle("expanded");
     moreText.classList.toggle("hide");
-
-    if (aboutContentP.style.height === "18vh") {
-        aboutContentP.style.height = "7vh";
-        readMoreText.textContent = "Read More";
-        // aboutContentP.style.animation = "none";
-    } else {
-        aboutContentP.style.height = "18vh";
-        readMoreText.textContent = "Read Less";
-        // aboutContentP.style.animation = "borderBottom 0.3s";
-    }
 });
 
 // ------------- for string typing animation --------------------
