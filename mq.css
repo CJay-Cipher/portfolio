@@ -195,9 +195,6 @@
         --min-about-text-height: 5vh;
         /* --max-about-text-height: 25vh; */
     }
-    /* #body-container section {
-        height: auto;
-    } */
 
     header {
         padding-right: 2%;
@@ -206,9 +203,61 @@
     .logo-text a {
         font-size: 1.4rem;
     }
-    .navbar {
+
+    .navbar a::after {
         display: none;
     }
+    .navbar {
+        position: fixed;
+        width: clamp(200px, 50%, 350px);
+        height: clamp(400px, 90vh, 700px);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 0;
+        /* right: 0; */
+        right: -500px;
+        padding: 0.5rem 0 0.9rem 0.7rem;
+        background: var(--side-nav-bg-color);
+        border-left: 1px solid var(--second-font-color);
+        border-bottom: 1px solid var(--second-font-color);
+        border-radius: 0 0 0 30px;
+        transition: right 0.5s ease-out;
+        overflow: hidden;
+        /* z-index: 1; */
+        backdrop-filter: blur(15px);
+    }
+    .navbar a {
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: start;
+        margin: 0.3rem 0;
+        border-radius: 28px 0 0 28px;
+        padding: 1rem;
+        padding-left: 2rem;
+        transition: 0.3s;
+        order: 1;
+    }
+    .navbar .night-mode {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    .navbar a:hover {
+        background-color: var(--default-light-color);
+    }
+    .show-side-navbar {
+        right: 0;
+    }
+
+    .cancel-side-menu {
+        position: fixed;
+        top: -5px;
+        right: 15px;
+    }
+
     .menu-icon {
         display: flex;
     }

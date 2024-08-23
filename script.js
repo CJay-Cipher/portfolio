@@ -1,10 +1,22 @@
 const navbarLinks = document.querySelectorAll(".navbar a");
+let lastScrollTop = 0;
+const header = document.querySelector("header");
 
 // Add event listener for scroll event
 window.addEventListener("scroll", () => {
-    // Get the current scroll position
-    const scrollPosition = window.pageYOffset;
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        header.style.top = "-50px"; // Adjust the height as needed
+    } else {
+        // Scrolling up
+        header.style.top = "0"; // Adjust the height as needed
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+
+    const scrollPosition = window.scrollY; // Get the current scroll position
     // Loop through the navbar links
     let prevActiveLink = null;
     navbarLinks.forEach((link) => {
@@ -64,32 +76,46 @@ const typed1 = new Typed("#string-typing", {
 // window.onload = function () {
 //     window.scrollTo(0, 0);
 // };
-const nameText = document.getElementById("name-text");
-let shadow = "";
-for (let i = 0; i < 8; i++) {
-    shadow += (shadow ? "," : "") + i * 1 + "px " + i * 1 + "px 0 #eee8fd";
-}
-nameText.style.textShadow = shadow;
 
-const menuHamburger = document.querySelector(".menu-icon i");
-const hiddenMenu = document.querySelector(".hidden-menu");
-const menuCancel = document.querySelector(".menu-cancel i");
+// const nameText = document.getElementById("name-text");
+// let shadow = "";
+// for (let i = 0; i < 8; i++) {
+//     shadow += (shadow ? "," : "") + i * 1 + "px " + i * 1 + "px 0 #eee8fd";
+// }
+// nameText.style.textShadow = shadow;
 
-menuHamburger.addEventListener("click", function (event) {
-    hiddenMenu.style.right = "0";
-    hiddenMenu.style.display = "flex";
-    event.stopPropagation(); // Prevent the click event from propagating to the document
-});
+const menuHamburger = document.querySelector(".menu-icon");
+const menuHamburgerIcon = document.querySelector(".menu-icon i");
+const navbar = document.querySelector(".navbar");
 
-menuCancel.addEventListener("click", function () {
-    hiddenMenu.style.right = "-500px";
-});
+menuHamburgerIcon.addEventListener("click", function (event) {
+    navbar.classList.toggle("show-side-navbar");
+    // Close navbar when clicking outside
+    document.addEventListener("click", function (event) {
+        const isClickInsideNavbar = navbar.contains(event.target);
+        const isClickOnMenuIcon = menuHamburgerIcon.contains(event.target);
 
-document.addEventListener("click", function (event) {
-    if (
-        !event.target.closest(".hidden-menu") ||
-        event.target.closest(".hidden-menu a")
-    ) {
-        hiddenMenu.style.right = "-500px";
+        if (!isClickInsideNavbar && !isClickOnMenuIcon) {
+            navbar.classList.remove("show-side-navbar");
+            menuHamburgerIcon.className = "bx bx-menu"; // Reset menu icon if needed
+        }
+    });
+    menuHamburger.classList.toggle("cancel-side-menu");
+    if (menuHamburgerIcon.classList.contains("bx-x")) {
+        menuHamburgerIcon.className = "bx bx-menu";
+    } else {
+        menuHamburgerIcon.className = "bx bx-x";
     }
 });
+
+function toggleIcon() {
+    document.body.classList.toggle("night-mode-colors");
+    const iconElement = document.querySelector(".night-mode .switch-mode i");
+    if (iconElement.classList.contains("bx-sun")) {
+        iconElement.style.transform = "translateX(0)";
+        iconElement.className = "bx bxs-moon";
+    } else {
+        iconElement.className = "bx bx-sun";
+        iconElement.style.transform = "translateX(95%)";
+    }
+}
