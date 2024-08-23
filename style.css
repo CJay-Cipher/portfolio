@@ -14,7 +14,7 @@
     --greencheck: #00d26a;
     --neutral-color: #eb87ff;
     --dark-shadow-color: #0000002d;
-    --side-nav-bg-color: #eee8fd94;
+    --nav-bg-color: #eee8fd94;
 
     --special-color-1: #fa843b;
     --special-color-2: #e43bfa;
@@ -76,7 +76,7 @@
     --greencheck: #00d26a;
     --neutral-color: #eb87ff;
     --dark-shadow-color: #0000002d;
-    --side-nav-bg-color: #eee8fd94;
+    --nav-bg-color: #eee8fd94;
 
     --special-color-1: #fa843b;
     --special-color-2: #e43bfa;
@@ -88,7 +88,7 @@
     /* ----- COLOR ------ */
     --default-dark-color: #fff;
     --default-light-color: #2d0a6a;
-    --first-font-color: #b494ff;
+    --first-font-color: #e7a6ff;
     --second-font-color: #eee8fd;
     --third-font-color: #fff;
     /* --first-bg-color: #faf3ff; */
@@ -100,7 +100,7 @@
     --greencheck: #00d26a;
     --neutral-color: #eb87ff;
     --dark-shadow-color: #fff;
-    --side-nav-bg-color: #2d0a6a94;
+    --nav-bg-color: #2d0a6a94;
 
     --special-color-1: #fa843b;
     --special-color-2: #e43bfa;
@@ -155,7 +155,7 @@ header {
     height: var(--header-height);
     z-index: 100;
     background: var(--first-bg-color);
-    transition: top 1s;
+    transition: top 0.7s;
 }
 
 header > * {
