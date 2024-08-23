@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
 
     if (scrollTop > lastScrollTop) {
         // Scrolling down
-        header.style.top = "-50px"; // Adjust the height as needed
+        header.style.top = "-100px"; // Adjust the height as needed
     } else {
         // Scrolling up
         header.style.top = "0"; // Adjust the height as needed
@@ -112,7 +112,7 @@ function toggleIcon() {
     document.body.classList.toggle("night-mode-colors");
     const iconElement = document.querySelector(".night-mode .switch-mode i");
     if (iconElement.classList.contains("bx-sun")) {
-        iconElement.style.transform = "translateX(0)";
+        iconElement.style.transform = "translateX(-5px)";
         iconElement.className = "bx bxs-moon";
     } else {
         iconElement.className = "bx bx-sun";

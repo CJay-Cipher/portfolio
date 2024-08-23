@@ -3,7 +3,7 @@
         --h1-font-size: 4.1rem;
         --h2-font-size: 3.1rem;
         --h3-font-size: 2.5rem;
-        --h4-font-size: 1.2rem;
+        --h4-font-size: 1rem;
         /* --p-font-size: 0.7rem; */
     }
     #portfolio .projects {
@@ -60,8 +60,11 @@
         /* flex-wrap: wrap; */
         /* gap: 0.6rem; */
     }
-    .project-options > .source-code {
+    /* .project-options .live-demo {
         order: -1;
+    } */
+    .project-options > .source-code {
+        order: 1;
         border-radius: 0;
         margin: 0;
         border-radius: 5px;
@@ -72,7 +75,7 @@
         --h1-font-size: 3.8rem;
         --h2-font-size: 2.6rem;
         --h3-font-size: 1.9rem;
-        --h4-font-size: 1.1rem;
+        /* --h4-font-size: 1rem; */
         /* --p-font-size: 0.7rem; */
     }
     h1,
@@ -81,8 +84,8 @@
         font-weight: 800;
     }
     .socials a {
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 2.75rem;
+        width: 2.75rem;
     }
     .socials a i {
         font-size: 1.1rem;
@@ -129,7 +132,7 @@
         /* --h1-font-size: 3rem; */
         /* --h2-font-size: 2rem; */
         /* --h3-font-size: 1.3rem; */
-        --h4-font-size: 1rem;
+        /* --h4-font-size: 0.8rem; */
         /* --p-font-size: 0.9rem; */
         --min-about-text-height: 6vh;
         --max-about-text-height: 25vh;
@@ -190,7 +193,7 @@
         --h1-font-size: 3rem;
         --h2-font-size: 2rem;
         --h3-font-size: 1.3rem;
-        /* --h4-font-size: 1rem; */
+        /* --h4-font-size: 0.8rem; */
         --p-font-size: 0.9rem;
         --min-about-text-height: 5vh;
         /* --max-about-text-height: 25vh; */
@@ -209,6 +212,7 @@
     }
     .navbar {
         position: fixed;
+        margin-right: 0;
         width: clamp(200px, 50%, 350px);
         height: clamp(400px, 90vh, 700px);
         flex-direction: column;
@@ -218,7 +222,7 @@
         /* right: 0; */
         right: -500px;
         padding: 0.5rem 0 0.9rem 0.7rem;
-        background: var(--side-nav-bg-color);
+        background: var(--nav-bg-color);
         border-left: 1px solid var(--second-font-color);
         border-bottom: 1px solid var(--second-font-color);
         border-radius: 0 0 0 30px;
@@ -268,13 +272,13 @@
         margin: 5%;
     }
     .socials a {
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
         margin-right: 1.2rem;
     }
-    .socials a i {
+    /* .socials a i {
         font-size: 0.8rem;
-    }
+    } */
     .socials a::before,
     .socials a::after {
         padding: 3px;
@@ -355,6 +359,10 @@
         top: 2%;
         left: 87%;
     }
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 720px) {
@@ -362,7 +370,7 @@
         --h1-font-size: 2.4rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.1rem;
-        /* --h4-font-size: 1rem; */
+        /* --h4-font-size: 0.8rem; */
         --p-font-size: 0.9rem;
         --min-about-text-height: 5vh;
         /* --max-about-text-height: 25vh; */
@@ -469,7 +477,7 @@
         --h1-font-size: 2rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.1rem;
-        /* --h4-font-size: 0.9rem; */
+        /* --h4-font-size: 0.8rem; */
         /* --p-font-size: 0.7rem; */
         --min-about-text-height: 7vh;
         --header-height: 2.9rem;
