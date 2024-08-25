@@ -949,7 +949,7 @@ header > * {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translateY(27px) scale(0.9);
+    transform: translateY(70px) scale(0.9);
 }
 /* -------------------------------------------------- */
 
