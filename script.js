@@ -72,6 +72,12 @@ const typed1 = new Typed("#string-typing", {
     backDelay: 1000,
     loop: true,
 });
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        var cursor = document.querySelector(".typed-cursor");
+        cursor.style.display = "inline"; // Display the cursor after 3 seconds
+    }, 3000); // 3 seconds delay
+});
 
 // window.onload = function () {
 //     window.scrollTo(0, 0);

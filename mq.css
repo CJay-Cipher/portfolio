@@ -1,9 +1,9 @@
 @media (max-width: 1610px) {
     :root {
-        --h1-font-size: 4.1rem;
-        --h2-font-size: 3.1rem;
-        --h3-font-size: 2.5rem;
-        --h4-font-size: 1rem;
+        --h1-font-size: 3.5rem;
+        --h2-font-size: 2.7rem;
+        --h3-font-size: 2.1rem;
+        --h4-font-size: 0.9rem;
         /* --p-font-size: 0.7rem; */
     }
     #portfolio .projects {
@@ -72,9 +72,9 @@
 }
 @media (max-width: 1460px) {
     :root {
-        --h1-font-size: 3.8rem;
-        --h2-font-size: 2.6rem;
-        --h3-font-size: 1.9rem;
+        --h1-font-size: 3.1rem;
+        --h2-font-size: 2.3rem;
+        --h3-font-size: 1.8rem;
         /* --h4-font-size: 1rem; */
         /* --p-font-size: 0.7rem; */
     }
@@ -92,7 +92,7 @@
     }
     .socials a::before,
     .socials a::after {
-        padding: 4px;
+        padding: 2.7px;
     }
 
     #about {
@@ -129,22 +129,34 @@
 
 @media (max-width: 1230px) {
     :root {
-        /* --h1-font-size: 3rem; */
-        /* --h2-font-size: 2rem; */
-        /* --h3-font-size: 1.3rem; */
-        /* --h4-font-size: 0.8rem; */
+        /* --h1-font-size: 3.1rem; */
+        /* --h2-font-size: 2.3rem; */
+        /* --h3-font-size: 1.8rem; */
+        /* --h4-font-size: 1rem; */
         /* --p-font-size: 0.9rem; */
         --min-about-text-height: 6vh;
         --max-about-text-height: 25vh;
-        --header-height: 3.2rem;
+        --header-height: 2.7rem;
     }
     /* #body-container section {
         height: auto;
     } */
 
     .navbar a {
-        margin: 0 1.2rem;
-        font-size: 1rem;
+        margin: 0 0.8rem;
+        font-size: 0.8rem;
+    }
+    .navbar .switch-mode {
+        width: 33px;
+        height: 11px;
+    }
+    .navbar .switch-mode i {
+        width: 19px;
+        height: 19px;
+        font-size: 9px;
+    }
+    .img-container .hexagon .shape img {
+        transform: translateY(50px) scale(0.9);
     }
     #about {
         padding: 0;
@@ -155,9 +167,9 @@
         border: none;
         box-shadow: none;
     }
-    .box-content {
+    /* .box-content {
         margin: 7%;
-    }
+    } */
     .about-content {
         width: auto;
         /* border: 2px solid blue; */
@@ -204,7 +216,7 @@
         /* gap: 2%; */
     }
     .logo-text a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .navbar a::after {
@@ -232,8 +244,8 @@
         backdrop-filter: blur(15px);
     }
     .navbar a {
-        font-size: 1.1rem;
-        font-weight: 500;
+        /* font-size: 0.8rem; */
+        /* font-weight: 500; */
         width: 100%;
         display: flex;
         align-items: center;
@@ -268,9 +280,9 @@
     .box {
         box-shadow: 3px 3px 10px #63636328;
     }
-    .box-content {
+    /* .box-content {
         margin: 5%;
-    }
+    } */
     .socials a {
         height: 2.5rem;
         width: 2.5rem;
@@ -281,14 +293,15 @@
     } */
     .socials a::before,
     .socials a::after {
-        padding: 3px;
+        padding: 2.5px;
     }
-    /* #home {
-        background: url("iil/image/bg-grid-lighter.svg");
+    #home {
+        padding: 8%;
+        /* background: url("iil/image/bg-grid-lighter.svg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
-    } */
+        background-position: center; */
+    }
     #about {
         max-height: 80vh;
         /* padding: 0 8%; */
@@ -379,19 +392,26 @@
         margin-left: 3%;
     }
     .logo-text a {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .menu-icon i {
         font-size: 1.9rem;
+    }
+    .socials a::before,
+    .socials a::after {
+        padding: 2px;
+    }
+    .img-container .hexagon .shape img {
+        transform: translateY(40px) scale(0.9);
     }
     .text-content > h3:first-child {
         letter-spacing: 0.05rem;
         /* font-size: 2rem; */
     }
 
-    .box-content {
+    /* .box-content {
         margin: 2%;
-    }
+    } */
     .text-content {
         padding: 2rem;
     }
@@ -478,12 +498,29 @@
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.1rem;
         /* --h4-font-size: 0.8rem; */
-        /* --p-font-size: 0.7rem; */
+        --p-font-size: 0.8rem;
         --min-about-text-height: 7vh;
-        --header-height: 2.9rem;
+        --header-height: 2.3rem;
     }
-    .box-content {
+    #home {
+        padding: 2%;
+    }
+    /* .box-content {
         margin: 0;
+    } */
+    .socials a {
+        height: 2.1rem;
+        width: 2.1rem;
+        margin-right: 1rem;
+    }
+    .socials a i {
+        font-size: 0.85rem;
+        border-radius: 50%;
+        border: 0.5px solid var(--main-font-color);
+    }
+    .socials a::before,
+    .socials a::after {
+        padding: 1.5px;
     }
     .about-container {
         padding: 0 5%;
@@ -522,5 +559,12 @@
         padding: 0.2rem 1.2rem;
         font-size: 0.8rem;
         font-weight: 500;
+    }
+    .footer-socials i {
+        font-size: 0.9rem;
+    }
+    footer p {
+        font-size: 0.7rem;
+        font-weight: 300;
     }
 }
