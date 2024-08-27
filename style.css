@@ -5,7 +5,7 @@
     --first-font-color: #5a24d9;
     --second-font-color: #928d9f;
     --third-font-color: #2d0a6a;
-    --fourth-font-color: #1743e3;
+    --button-bg-color: #ae8cff;
 
     --first-bg-color: #f5f8fa;
     --second-bg-color: #c0abf0;
@@ -14,7 +14,7 @@
 
     --greencheck: #00d26a;
     --neutral-color: #fff;
-    --dark-shadow-color: #0000002d;
+    --dark-shadow-color: #00000052;
     --main-font-color: #5a24d9;
     --nav-bg-color: #eee8fd94;
 
@@ -25,7 +25,7 @@
     --special-color-5: #e31717;
 
     /* ----- DIMENTION ------ */
-    --header-height: 3rem;
+    --header-height: 3.2rem;
     --main-img-width: 30rem;
     --main-img-height: 30rem;
     --project-img-width: 60%;
@@ -69,7 +69,7 @@
     --first-font-color: #5a24d9;
     --second-font-color: #928d9f;
     --third-font-color: #2d0a6a;
-    --fourth-font-color: #1743e3;
+    --button-bg-color: #8553fc;
 
     --first-bg-color: #f5f8fa;
     --second-bg-color: #c0abf0;
@@ -78,7 +78,7 @@
 
     --greencheck: #00d26a;
     --neutral-color: #fff;
-    --dark-shadow-color: #0000002d;
+    --dark-shadow-color: #00000052;
     --main-font-color: #5a24d9;
     --nav-bg-color: #eee8fd94;
 
@@ -95,7 +95,7 @@
     --first-font-color: #36187e;
     --second-font-color: #eee8fd;
     --third-font-color: #c0abf0;
-    --fourth-font-color: #ffffff;
+    --button-bg-color: #5a24d9;
 
     --first-bg-color: #250d5e;
     --second-bg-color: #330e89;
@@ -104,7 +104,7 @@
 
     --greencheck: #00d26a;
     --neutral-color: #fff;
-    --dark-shadow-color: #fff;
+    --dark-shadow-color: transparent;
     --main-font-color: #f823f4;
     --nav-bg-color: #2d0a6a94;
 
@@ -119,6 +119,7 @@ body {
         var(--first-bg-color),
         var(--default-light-color)
     );
+    background: var(--default-light-color);
 }
 
 /* #container { */
@@ -247,7 +248,7 @@ header > * {
 .navbar a {
     margin: 0 1.2rem;
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.15rem;
     color: var(--default-dark-color);
     position: relative;
@@ -456,7 +457,7 @@ header > * {
     /* flex: 1; */
     isolation: isolate;
     display: flex;
-    margin-top: 3vh;
+    margin-top: 5vh;
     /* border: 2px solid red; */
 }
 .socials a {
@@ -647,6 +648,7 @@ header > * {
 /* ===================== ABOUT SECTION ====================== */
 #about {
     min-height: 100svh;
+    padding: 0 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -676,15 +678,15 @@ header > * {
 }
 .about-container {
     margin-top: var(--header-height);
+    padding: 1%;
     /* width: 100%; */
-    padding: 0 10%;
-    height: 70svh;
+    /* height: 70svh; */
     /* margin: 8%; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     /* background: url("iil/image/bg-grid-lighter.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -697,12 +699,13 @@ header > * {
         var(--default-light-color)
     ); */
     z-index: 1;
+    /* border: 2px solid red; */
 }
 
 .about-content {
     /* margin-top: 15vh; */
     margin-left: 5rem;
-    /* padding: 1rem; */
+    padding: 0.5rem;
     width: 40rem;
     /* border: 2px solid blue; */
 }
@@ -766,34 +769,38 @@ header > * {
     }
 } */
 .more-about-me {
+    cursor: pointer;
     margin-top: 3vh;
     border: none;
     /* background-color: transparent; */
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     /* border: 1px solid var(--first-font-color); */
-    background-color: var(--fourth-bg-color);
-    box-shadow: -2px -2px 5px var(--neutral-color), 5px 5px 10px #0000001a,
-        inset 0px 0px 1px #0000001d;
+    background-color: var(--button-bg-color);
+    /* box-shadow: -2px -2px 5px var(--neutral-color), 5px 5px 10px #0000001a,
+        inset 0px 0px 1px #0000001d; */
     /* border: 2px solid blue; */
 }
 .more-about-me a {
     color: var(--default-dark-color);
     font-size: 1rem;
     font-weight: 500;
+    background: transparent;
 }
 
 .more-about-me:hover {
-    background-color: var(--first-bg-color);
+    color: var(--default-light-color);
+    background-color: var(--fourth-bg-color);
     /* border: 1px solid #ffffff; */
     /* box-shadow: inset -3px -3px 50px #fff, inset 5px 5px 20px #0000001a,
         inset 3px 3px 5px #0000001a; */
 }
-.more-about-me:active {
-    background-color: var(--third-bg-color);
-    color: var(--third-bg-color);
-    border: 1px solid var(--default-light-color);
-    box-shadow: inset -1px -1px 5px #fff, inset 3px 3px 20px #0000001a;
+.more-about-me:active,
+.more-about-me:active a {
+    color: var(--default-light-color);
+    background-color: var(--main-font-color);
+    /* border: 1px solid var(--default-light-color); */
+    /* box-shadow: inset -1px -1px 5px #fff, inset 3px 3px 20px #0000001a; */
 }
 /* .more-about-me:active ~ .about-content p {
     height: var(--max-about-text-height);
@@ -1072,12 +1079,12 @@ header > * {
     gap: 0.6rem;
 }
 .project-options a {
-    margin-right: 0.9rem;
-    font-size: 1rem;
+    margin-right: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 500;
     text-align: center;
     /* width: max-content; */
-    color: var(--fourth-font-color);
+    color: var(--default-dark-color);
     /* padding: 0.2rem 0.4rem ; */
     padding: 0.05rem 0.4rem 0.2rem 0;
     /* border-left: 1px solid var(--default-dark-color);
@@ -1200,7 +1207,11 @@ header > * {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    background: url("iil/image/bg-grid-lighter.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .contact-container {
     width: 80%;
@@ -1253,7 +1264,7 @@ header > * {
     line-height: 3rem;
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--main-font-color);
+    color: var(--default-dark-color);
     padding: 0 1rem;
     display: block;
     transition: 0.3s;
@@ -1273,7 +1284,7 @@ header > * {
     display: block;
     width: 100%;
     height: 0.1rem;
-    background-color: var(--fourth-bg-color);
+    /* background-color: var(--fourth-bg-color); */
     border-bottom: 1px solid var(--default-dark-color);
     transition: 0.3s;
     /* border-radius: 0.1rem; */
@@ -1309,21 +1320,25 @@ header > * {
 }
 .contact-container .submit-message {
     border: none;
-    padding: 0.4rem 2.2rem;
+    padding: 0.3rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
     cursor: pointer;
     outline: none;
-    background-color: var(--main-font-color);
-    color: var(--default-light-color);
-    font-size: 1.2rem;
-    font-weight: 600;
+    background-color: var(--button-bg-color);
+    color: var(--default-dark-color);
     border-radius: 0.2rem;
-    border: 3px solid transparent;
+    border: 1px solid transparent;
 }
-.contact-container .submit-message:hover,
+.contact-container .submit-message:hover {
+    /* background-color: var(--fourth-bg-color); */
+    /* color: var(--third-font-color); */
+    border-color: var(--default-dark-color);
+}
 .contact-container .submit-message:active {
-    background-color: var(--fourth-bg-color);
-    color: var(--third-font-color);
-    border-color: var(--main-font-color);
+    color: var(--default-light-color);
+    background-color: var(--main-font-color);
 }
 /* ===================== FOOTER SECTION ====================== */
 
@@ -1354,7 +1369,7 @@ footer {
     align-items: center;
     /* flex-wrap: wrap; */
     gap: 0.5rem;
-    background-color: var(--first-font-color);
+    /* background-color: var(--first-font-color); */
 }
 /* .footer-socials {
     margin-bottom: 1rem;
@@ -1368,14 +1383,14 @@ footer {
     padding: 0.6em;
     border-radius: 50%;
     border: 1px solid transparent;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .footer-socials i:hover,
 .footer-socials i:active {
     /* border-color: var(--default-dark-color); */
-    color: var(--default-dark-color);
-    background-color: var(--fourth-bg-color);
-    box-shadow: 1px 1px 15px var(--default-light-color);
+    color: var(--default-light-color);
+    background-color: var(--main-font-color);
+    box-shadow: 1px 1px 15px var(--main-font-color);
 }
 footer p {
     font-size: 0.9rem;
