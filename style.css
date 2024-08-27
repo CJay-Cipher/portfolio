@@ -24,6 +24,12 @@
     --special-color-4: #1743e3;
     --special-color-5: #e31717;
 
+    /* ----- for bg effect ----- */
+    --color1: #bc5e7033;
+    --color2: #613f9c21;
+    --color3: #ab4bb834;
+    --color4: #653fbe47;
+
     /* ----- DIMENTION ------ */
     --header-height: 3.2rem;
     --main-img-width: 30rem;
@@ -69,7 +75,7 @@
     --first-font-color: #5a24d9;
     --second-font-color: #928d9f;
     --third-font-color: #2d0a6a;
-    --button-bg-color: #8553fc;
+    --button-bg-color: #ae8cff;
 
     --first-bg-color: #f5f8fa;
     --second-bg-color: #c0abf0;
@@ -87,6 +93,12 @@
     --special-color-3: #fa843b;
     --special-color-4: #1743e3;
     --special-color-5: #e31717;
+
+    /* ----- for bg effect ----- */
+    --color1: #82203476;
+    --color2: #2d0a6a;
+    --color3: #9d13b0;
+    --color4: #5a24d9;
 }
 .night-mode-colors {
     /* ----- COLOR ------ */
@@ -113,6 +125,12 @@
     --special-color-3: #fa973b;
     --special-color-4: #4c72fc;
     --special-color-5: #e31717;
+
+    /* ----- for bg effect ----- */
+    --color1: #82203476;
+    --color2: #2d0a6a;
+    --color3: #9e13b083;
+    --color4: #5a24d9;
 }
 body {
     background: linear-gradient(
@@ -122,11 +140,8 @@ body {
     background: var(--default-light-color);
 }
 
-/* #container { */
-/* position: relative; */
-/* background-color: var(--first-bg-color); */
-/* border: 5px solid red; */
-/* } */
+/* #container {
+} */
 
 body a {
     cursor: pointer;
@@ -155,6 +170,7 @@ p {
     font-size: var(--p-font-size);
     font-weight: 400;
 }
+
 /*  NAVBAR section ------------------------------- */
 header {
     display: flex;
@@ -248,7 +264,7 @@ header > * {
 .navbar a {
     margin: 0 1.2rem;
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.15rem;
     color: var(--default-dark-color);
     position: relative;
@@ -305,18 +321,13 @@ header > * {
         0 2px 5px #00000035;
     border: 1px solid #fff;
 }
-.navbar .switch-mode:hover i,
-.navbar .switch-mode:active i {
-    box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff,
-        0 0 10px var(--main-font-color);
-}
 .navbar .switch-mode i {
     width: 22px;
     height: 22px;
     font-size: 11px;
     border-radius: 50%;
     transform: translateX(-5px);
-    background-color: var(--fourth-bg-color);
+    background-color: var(--third-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,6 +336,12 @@ header > * {
     box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff,
         inset 0 0 2px #fff, 2px 0 5px #000000;
 }
+.navbar .switch-mode:hover i,
+.navbar .switch-mode:active i {
+    box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff,
+        0 0 10px var(--main-font-color);
+}
+
 .menu-icon {
     border: none;
     background-color: transparent;
@@ -350,6 +367,8 @@ header > * {
 
 /* ===================== HOME SECTION ====================== */
 #home {
+    width: 100%;
+    position: relative;
     min-height: 100svh;
     /* margin-top: var(--header-height); */
     padding: 12%;
@@ -437,7 +456,7 @@ header > * {
     letter-spacing: 0.2rem;
     animation: slideUp 1s, flicker 3s linear infinite;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 .text-content p {
     /* margin-top: 1.2rem; */
@@ -480,7 +499,7 @@ header > * {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    /* border: 0.5px solid var(--main-font-color); */
+    border: 0.5px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,12 +537,11 @@ header > * {
     /* border-color: transparent; */
     background-color: var(--second-bg-color);
     color: var(--main-font-color);
-    border-color: var(--main-font-color);
     /* box-shadow: 1px 1px 15px var(--first-font-color); */
 }
 .socials a:active i {
     /* color: var(--first-bg-color); */
-    border-color: transparent;
+    border-color: var(--main-font-color);
     box-shadow: inset -2px -2px 3px var(--default-light-color),
         inset 2px 2px 3px var(--first-font-color);
 }
@@ -582,7 +600,7 @@ header > * {
     /* background: linear-gradient(to bottom right, #fff, #905bd4); */
     background: linear-gradient(to bottom right, #fff, #fff, #e43bfa, #e43bfa);
     /* filter: blur(2px); */
-    animation: colorSwap 10s infinite;
+    /* animation: colorSwap 10s infinite; */
     /* border: 10px solid var(--first-font-color); */
 }
 
@@ -872,7 +890,7 @@ header > * {
 .img-container::after {
     padding: 30px;
     filter: blur(50px);
-    background: radial-gradient(var(--first-font-color), transparent 65%);
+    background: radial-gradient(var(--main-font-color), transparent 65%);
 }
 @keyframes spinHexBorder {
     0% {
@@ -925,13 +943,9 @@ header > * {
     width: 100%;
     height: 100%;
     background-color: var(--first-font-color);
-    background: radial-gradient(
-        var(--main-font-color),
-        var(--default-light-color)
-    );
+    background: radial-gradient(var(--main-font-color), var(--first-bg-color));
     /* background-size: 500%; */
-    animation: bounce var(--bounce-animation-duration) ease-in-out infinite,
-        profileColorSwap 20s linear infinite alternate;
+    animation: bounce var(--bounce-animation-duration) ease-in-out infinite;
     animation-delay: 2s;
     clip-path: polygon(
         40% 0%,
@@ -970,6 +984,7 @@ header > * {
 #portfolio {
     width: 100%;
     padding: 2rem 2%;
+    position: relative;
     /* background: url("iil/image/bg-grid-lighter.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -987,6 +1002,7 @@ header > * {
     color: var(--default-dark-color);
 }
 #portfolio .projects {
+    z-index: 2;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1473,36 +1489,7 @@ footer p {
 }
 
 /* =============== ANIMATION SECTION ================ */
-@keyframes profileColorSwap {
-    25% {
-        /* background: radial-gradient(
-            var(--second-bg-color),
-            var(--default-light-color)
-        ); */
-        background-position: top right;
-    }
-    50% {
-        /* background: radial-gradient(
-            var(--third-bg-color),
-            var(--default-light-color)
-        ); */
-        background-position: center;
-    }
-    75% {
-        /* background: radial-gradient(
-            var(--second-bg-color),
-            var(--default-light-color)
-        ); */
-        background-position: bottom left;
-    }
-    100% {
-        /* background: radial-gradient(
-            var(--first-font-color),
-            var(--default-light-color)
-        ); */
-        background-position: bottom right;
-    }
-}
+
 @keyframes shadowEffect {
     10% {
         opacity: 0.75;
@@ -1543,24 +1530,6 @@ footer p {
     100% {
         opacity: 1;
         transform: scale(1);
-    }
-}
-
-@keyframes colorSwap {
-    0% {
-        background: linear-gradient(to top left, #fff, #fff, #e43bfa);
-    }
-    25% {
-        background: linear-gradient(to top right, #fff, #fff, #7c4fe5);
-    }
-    50% {
-        background: linear-gradient(to center, #fff, #fff, #e43bfa);
-    }
-    75% {
-        background: linear-gradient(to bottom right, #fff, #fff, #b62f79);
-    }
-    100% {
-        background: linear-gradient(to bottom left, #fff, #fff, #692fb6);
     }
 }
 
@@ -1693,13 +1662,10 @@ footer p {
     0% {
         opacity: 0;
     }
-    30% {
+    20% {
         opacity: 1;
     }
-    60% {
-        opacity: 1;
-    }
-    80% {
+    95% {
         opacity: 1;
     }
     100% {

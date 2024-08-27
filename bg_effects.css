@@ -1,40 +1,31 @@
 /* ------------- cicles background animation ------------- */
-.bg-container {
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(bg-circle, rgb(10, 10, 92), rgb(0, 0, 0));
-    height: 100svh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
 .bg-circle {
     position: absolute;
     height: 50%;
     width: 50%;
+    pointer-events: none;
+    z-index: -1;
     /* border: 3px solid transparent; */
     border-radius: 50%;
-    animation: rotateLeft 50s linear infinite;
+    animation: rotateLeft 30s linear infinite;
 }
 
 .bg-circle:nth-child(1) {
-    /* top: 50%; */
     height: 70%;
     width: 70%;
-    border: 1px solid var(--color1);
+    /* border: 1px solid var(--color1); */
     animation-delay: 0s;
 }
 
 .bg-circle:nth-child(2) {
     left: 50%;
-    border: 1px solid var(--color2);
+    /* border: 1px solid var(--color2); */
     animation-delay: -5.5s;
 }
 
 .bg-circle:nth-child(3) {
     top: 50%;
-    border: 1px solid var(--color3);
+    /* border: 1px solid var(--color3); */
     animation-delay: -11.5s;
 }
 
@@ -43,7 +34,7 @@
     width: 80%;
     top: 20%;
     left: 30%;
-    border: 1px solid var(--color4);
+    /* border: 1px solid var(--color4); */
     animation-delay: -16.5s;
 }
 
@@ -95,9 +86,9 @@
     background-color: var(--color4);
 }
 
-.bg-circle::before {
+/* .bg-circle::before {
     background-color: yellow;
-}
+} */
 
 @keyframes rotateLeft {
     0% {
@@ -112,4 +103,3 @@
         /* background: radial-gradient(bg-circle, cyan, blue); */
     }
 }
-/* ---------------------------------------------------- */

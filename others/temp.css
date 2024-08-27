@@ -1,8 +1,8 @@
 :root {
-    --color1: #82207c76;
-    --color2: #0c0cc7;
-    --color3: #105077;
-    --color4: #4d14a8;
+    --color1: #82203476;
+    --color2: #2d0a6a;
+    --color3: #9d13b0;
+    --color4: #5a24d9;
 
     --title-color: #ffffff;
     --list-color: #62d1f3;
@@ -11,7 +11,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #09001f;
     color: #ffffff;
     font-family: sans-serif;
 }
@@ -87,7 +87,7 @@ body {
 .bg-container {
     margin: 0;
     padding: 0;
-    background: radial-gradient(bg-circle, rgb(10, 10, 92), rgb(0, 0, 0));
+    /* background: radial-gradient(bg-circle, rgb(10, 10, 92), rgb(0, 0, 0)); */
     height: 100svh;
     width: 100%;
     position: relative;
