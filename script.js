@@ -1,20 +1,21 @@
 const navbarLinks = document.querySelectorAll(".navbar a");
-let lastScrollTop = 0;
 const header = document.querySelector("header");
+let timer;
+
+function resetHeaderPosition() {
+    header.style.top = "-100px";
+}
+function showHeaderOnScroll() {
+    header.style.top = "0";
+    clearTimeout(timer); // Clear the timer if scrolling occurs
+    timer = setTimeout(resetHeaderPosition, 5000); // Reset header position after 5 seconds of no scrolling
+}
+// Set an initial timer when the page loads
+timer = setTimeout(resetHeaderPosition, 5000);
 
 // Add event listener for scroll event
 window.addEventListener("scroll", () => {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        header.style.top = "-100px"; // Adjust the height as needed
-    } else {
-        // Scrolling up
-        header.style.top = "0"; // Adjust the height as needed
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    showHeaderOnScroll(); // show navbar on scroll
 
     const scrollPosition = window.scrollY; // Get the current scroll position
     // Loop through the navbar links
