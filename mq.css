@@ -312,8 +312,6 @@
     .more-about-me {
         /* margin-top: 5vh; */
         padding: 0.4rem 0.9rem;
-        box-shadow: -1px -1px 5px #fff, 5px 5px 10px #0000001a,
-            inset 0px 0px 1px #0000001d;
     }
     .more-about-me a {
         font-size: 0.8rem;
