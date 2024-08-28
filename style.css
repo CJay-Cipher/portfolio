@@ -1,34 +1,34 @@
 :root {
     /* ----- COLOR ------ */
-    --default-dark-color: #000;
-    --default-light-color: #fff;
-    --first-font-color: #5a24d9;
-    --second-font-color: #928d9f;
-    --third-font-color: #2d0a6a;
-    --button-bg-color: #ae8cff;
+    --default-dark-color: #fff;
+    --default-light-color: #09001f;
+    --first-font-color: #36187e;
+    --second-font-color: #eee8fd;
+    --third-font-color: #c0abf0;
+    --button-bg-color: #5a24d9;
 
-    --first-bg-color: #f5f8fa;
-    --second-bg-color: #c0abf0;
-    --third-bg-color: #fff;
-    --fourth-bg-color: #eee8fd;
+    --first-bg-color: #250d5e;
+    --second-bg-color: #330e89;
+    --third-bg-color: #4c15cd;
+    --fourth-bg-color: #2d0a6a;
 
     --greencheck: #00d26a;
     --neutral-color: #fff;
-    --dark-shadow-color: #00000052;
-    --main-font-color: #5a24d9;
-    --nav-bg-color: #eee8fd94;
+    --dark-shadow-color: transparent;
+    --main-font-color: #e942ff;
+    --nav-bg-color: #2d0a6a94;
 
-    --special-color-1: #e43bfa;
+    --special-color-1: #e31717;
     --special-color-2: #2bd0d0;
-    --special-color-3: #fa843b;
-    --special-color-4: #1743e3;
+    --special-color-3: #fa973b;
+    --special-color-4: #4c72fc;
     --special-color-5: #e31717;
 
     /* ----- for bg effect ----- */
-    --color1: #bc5e7033;
-    --color2: #613f9c21;
-    --color3: #ab4bb834;
-    --color4: #653fbe47;
+    --color1: #bf163848;
+    --color2: #131dd363;
+    --color3: #bc18d25f;
+    --color4: #5a24d988;
 
     /* ----- DIMENTION ------ */
     --header-height: 3.2rem;
@@ -95,10 +95,10 @@
     --special-color-5: #e31717;
 
     /* ----- for bg effect ----- */
-    --color1: #82203476;
-    --color2: #2d0a6a;
-    --color3: #9d13b0;
-    --color4: #5a24d9;
+    --color1: #cd35532e;
+    --color2: #2e1ae232;
+    --color3: #c934dd30;
+    --color4: #6638d32e;
 }
 .night-mode-colors {
     /* ----- COLOR ------ */
@@ -117,7 +117,7 @@
     --greencheck: #00d26a;
     --neutral-color: #fff;
     --dark-shadow-color: transparent;
-    --main-font-color: #f823f4;
+    --main-font-color: #ed67ff;
     --nav-bg-color: #2d0a6a94;
 
     --special-color-1: #ed67ff;
@@ -766,74 +766,34 @@ header > * {
     font-weight: 600;
     /* font-style: italic; */
 }
-/* .about-me-text-min-height {
-    height: var(--min-about-text-height);
-}
-.about-me-text-max-height {
-    height: var(--max-about-text-height);
-} */
 .hide {
     visibility: hidden;
-    /* opacity: 0; */
-    /* transition: 0.3s; */
 }
 
-/* @keyframes moreTextSlide {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-} */
 .more-about-me {
     cursor: pointer;
     margin-top: 3vh;
     border: none;
-    /* background-color: transparent; */
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
-    /* border: 1px solid var(--first-font-color); */
-    background-color: var(--button-bg-color);
-    /* box-shadow: -2px -2px 5px var(--neutral-color), 5px 5px 10px #0000001a,
-        inset 0px 0px 1px #0000001d; */
-    /* border: 2px solid blue; */
+    border: 1px solid transparent;
+    background-color: var(--first-font-color);
+}
+.more-about-me:hover {
+    border-color: var(--default-dark-color);
 }
 .more-about-me a {
-    color: var(--default-dark-color);
+    color: var(--neutral-color);
     font-size: 1rem;
     font-weight: 500;
     background: transparent;
 }
 
-.more-about-me:hover {
-    color: var(--default-light-color);
-    background-color: var(--fourth-bg-color);
-    /* border: 1px solid #ffffff; */
-    /* box-shadow: inset -3px -3px 50px #fff, inset 5px 5px 20px #0000001a,
-        inset 3px 3px 5px #0000001a; */
-}
 .more-about-me:active,
 .more-about-me:active a {
     color: var(--default-light-color);
     background-color: var(--main-font-color);
-    /* border: 1px solid var(--default-light-color); */
-    /* box-shadow: inset -1px -1px 5px #fff, inset 3px 3px 20px #0000001a; */
 }
-/* .more-about-me:active ~ .about-content p {
-    height: var(--max-about-text-height);
-} */
-/* @keyframes borderBottom {
-    0% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: var(--third-bg-color);
-    }
-    100% {
-        border-color: transparent;
-    }
-} */
 
 /* --------------- profit image animation ------------------ */
 
@@ -1342,8 +1302,8 @@ header > * {
     letter-spacing: 0.2rem;
     cursor: pointer;
     outline: none;
-    background-color: var(--button-bg-color);
-    color: var(--default-dark-color);
+    background-color: var(--first-font-color);
+    color: var(--neutral-color);
     border-radius: 0.2rem;
     border: 1px solid transparent;
 }

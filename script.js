@@ -115,7 +115,7 @@ menuHamburgerIcon.addEventListener("click", function (event) {
 });
 
 function toggleIcon() {
-    document.body.classList.toggle("night-mode-colors");
+    document.body.classList.toggle("light-mode-colors");
     const iconElement = document.querySelector(".night-mode .switch-mode i");
     if (iconElement.classList.contains("bx-sun")) {
         iconElement.style.transform = "translateX(-5px)";
