@@ -546,7 +546,7 @@ header > * {
         inset 2px 2px 3px var(--first-font-color);
 }
 .socials a:hover::before {
-    filter: blur(10px);
+    filter: blur(15px);
     /* box-shadow: 1px 1px 15px var(--main-font-color); */
 }
 .socials a:nth-child(1),
