@@ -1,24 +1,43 @@
 const navbarLinks = document.querySelectorAll(".navbar a");
 const header = document.querySelector("header");
 let timer;
+headerHover = false;
 
+header.addEventListener("mouseenter", function () {
+    headerHover = true;
+});
+header.addEventListener("mouseleave", function () {
+    headerHover = false;
+    timer = setTimeout(resetHeaderPosition, 2000);
+});
 function resetHeaderPosition() {
     if (window.scrollY === 0) {
         header.style.top = "0";
+    } else if (headerHover == true) {
+        header.style.top = "0";
+        // headerHover = false;
     } else {
         header.style.top = "-100px";
     }
 }
+
 function showHeaderOnScroll() {
     header.style.top = "0";
     clearTimeout(timer); // Clear the timer if scrolling occurs
-    timer = setTimeout(resetHeaderPosition, 5000); // Reset header position after 5 seconds of no scrolling
+    timer = setTimeout(resetHeaderPosition, 2000); // Reset after few seconds of no scrolling
 }
+
 // Set an initial timer when the page loads
-timer = setTimeout(resetHeaderPosition, 5000);
+timer = setTimeout(resetHeaderPosition, 2000);
 
 // Add event listener for scroll event
 window.addEventListener("scroll", () => {
+    if (window.scrollY != 0) {
+        header.classList.add("header-bg");
+    } else {
+        header.classList.remove("header-bg");
+        // header.style.backgroundColor = "red";
+    }
     showHeaderOnScroll(); // show navbar on scroll
 
     const scrollPosition = window.scrollY; // Get the current scroll position

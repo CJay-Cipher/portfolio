@@ -18,10 +18,10 @@
     --main-font-color: #f823f4;
     --nav-bg-color: #2d0a6a94;
 
-    --special-color-1: #e31717;
+    --special-color-1: #ff4866;
     --special-color-2: #2bd0d0;
-    --special-color-3: #fa973b;
-    --special-color-4: #4c72fc;
+    --special-color-3: #fa843b;
+    --special-color-4: #4a93f2;
     --special-color-5: #e31717;
 
     /* ----- for bg effect ----- */
@@ -51,6 +51,9 @@
     --h3-font-size: 2.6rem;
     --h4-font-size: 1.1rem;
     --p-font-size: 1.1rem;
+
+    /* ----- others ----- */
+    --hover-blur: 15px;
 }
 
 @font-face {
@@ -86,7 +89,7 @@
     --neutral-color: #fff;
     --dark-shadow-color: #00000052;
     --main-font-color: #5a24d9;
-    --nav-bg-color: #eee8fd94;
+    --nav-bg-color: #eee8fd;
 
     --special-color-1: #e43bfa;
     --special-color-2: #2bd0d0;
@@ -120,10 +123,10 @@
     --main-font-color: #ed67ff;
     --nav-bg-color: #2d0a6a94;
 
-    --special-color-1: #ed67ff;
+    --special-color-1: #ff4866;
     --special-color-2: #2bd0d0;
-    --special-color-3: #fa973b;
-    --special-color-4: #4c72fc;
+    --special-color-3: #fa843b;
+    --special-color-4: #4a93f2;
     --special-color-5: #e31717;
 
     /* ----- for bg effect ----- */
@@ -189,9 +192,17 @@ header::before {
     height: 100%;
     width: 100%;
     /* background: var(--nav-bg-color); */
-    backdrop-filter: blur(15px);
+    /* backdrop-filter: blur(var(--hover-blur)); */
     /* z-index: -1; */
 }
+header.header-bg::before {
+    backdrop-filter: blur(15px);
+    background: var(--nav-bg-color);
+}
+/* header:hover::before {
+    backdrop-filter: blur(var(--hover-blur));
+    background: var(--nav-bg-color);
+} */
 
 header > * {
     display: flex;
@@ -381,7 +392,7 @@ header > * {
     background-repeat: no-repeat;
     background-position: center;
     /* padding: 0 9%; */
-    /* border: 10px solid red; */
+    /* border: 2px solid red; */
 }
 
 .box-content {
@@ -985,7 +996,7 @@ header > * {
     /* padding: 1rem; */
     box-shadow: 3px 3px 10px #0000001e;
     /* border: 1px solid transparent; */
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, margin-inline 0.3s ease-in-out;
     background: linear-gradient(
         var(--third-bg-color),
         var(--default-light-color)
@@ -1193,6 +1204,7 @@ header > * {
     width: 80%;
     padding-top: 3rem;
     margin-top: 5rem;
+    /* border: 2px solid red; */
 }
 .contact-container h2 {
     width: 100%;
