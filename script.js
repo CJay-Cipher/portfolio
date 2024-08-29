@@ -3,7 +3,11 @@ const header = document.querySelector("header");
 let timer;
 
 function resetHeaderPosition() {
-    header.style.top = "-100px";
+    if (window.scrollY === 0) {
+        header.style.top = "0";
+    } else {
+        header.style.top = "-100px";
+    }
 }
 function showHeaderOnScroll() {
     header.style.top = "0";

@@ -518,7 +518,7 @@ header > * {
         var(--first-font-color),
         var(--main-font-color),
         var(--default-light-color),
-        var(--special-color-1),
+        var(--main-font-color),
         var(--first-font-color)
     );
     border-radius: 50%;
