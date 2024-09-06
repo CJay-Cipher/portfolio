@@ -11,7 +11,7 @@ header.addEventListener("mouseleave", function () {
     timer = setTimeout(resetHeaderPosition, 2000);
 });
 function resetHeaderPosition() {
-    if (window.scrollY === 0) {
+    if (window.scrollY <= 30) {
         header.style.top = "0";
     } else if (headerHover == true) {
         header.style.top = "0";
@@ -86,6 +86,10 @@ const readMoreText = moreAboutMe.querySelector("a");
 moreAboutMe.addEventListener("click", function () {
     aboutContentP.classList.toggle("expanded");
     moreText.classList.toggle("hide");
+    // Toggle button text
+    moreAboutMe.textContent = moreText.classList.contains("hide")
+        ? "Read More"
+        : "Read Less";
 });
 
 // ------------- for string typing animation --------------------

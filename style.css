@@ -782,6 +782,9 @@ header > * {
 }
 
 .more-about-me {
+    color: var(--neutral-color);
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
     margin-top: 3vh;
     border: none;
@@ -793,15 +796,8 @@ header > * {
 .more-about-me:hover {
     border-color: var(--default-dark-color);
 }
-.more-about-me a {
-    color: var(--neutral-color);
-    font-size: 1rem;
-    font-weight: 500;
-    background: transparent;
-}
 
-.more-about-me:active,
-.more-about-me:active a {
+.more-about-me:active {
     color: var(--default-light-color);
     background-color: var(--main-font-color);
 }
