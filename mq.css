@@ -308,6 +308,9 @@
     .skills {
         gap: 0.6rem;
     }
+    .skills .tools {
+        left: max(calc(50px * 10), 100%);
+    }
     .skills .tools img {
         width: 3rem;
         height: 3rem;
@@ -521,12 +524,15 @@
         width: auto;
         gap: 0.4rem;
     }
+    .skills .tools {
+        left: max(calc(35px * 10), 100%);
+    }
     .skills .tools img {
         width: 2rem;
         height: 2rem;
     }
     .skills .tools p {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
     #portfolio .projects .box {
         margin: 5% 0;

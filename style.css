@@ -752,8 +752,8 @@ header > * {
     gap: 1rem;
     width: max-content;
     padding: 1rem 0;
-    border-top: 1px solid var(--main-font-color);
-    border-bottom: 1px solid var(--main-font-color);
+    /* border-top: 1px solid var(--main-font-color);
+    border-bottom: 1px solid var(--main-font-color); */
     /* background-color: #37187e64;
     backdrop-filter: blur(10px); */
 }
@@ -781,6 +781,77 @@ header > * {
     width: max-content;
     text-align: center;
 }
+/* -------- SKILL ANIMAATION ------ */
+
+.wrapper {
+    height: 100px;
+    width: 90%;
+    /* max-width: 600px; */
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 15%,
+        rgba(0, 0, 0, 1) 85%,
+        rgba(0, 0, 0, 0)
+    );
+}
+
+@keyframes skillScrollLeft {
+    to {
+        left: -100px;
+    }
+}
+
+.tools {
+    position: absolute;
+    animation: skillScrollLeft 20s linear infinite;
+    left: max(calc(70px * 10), 100%);
+}
+.skills:hover .tools {
+    animation-play-state: paused;
+}
+
+.item1 {
+    animation-delay: calc(20s / 10 * (10 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(20s / 10 * (10 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(20s / 10 * (10 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(20s / 10 * (10 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(20s / 10 * (10 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(20s / 10 * (10 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(20s / 10 * (10 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(20s / 10 * (10 - 8) * -1);
+}
+.item9 {
+    animation-delay: calc(20s / 10 * (10 - 9) * -1);
+}
+.item10 {
+    animation-delay: calc(20s / 10 * (10 - 10) * -1);
+}
+/* ---------------------------------------------------- */
+
 #string-typing {
     display: inline;
     color: var(--main-font-color);
