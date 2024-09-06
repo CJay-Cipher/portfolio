@@ -138,14 +138,27 @@ menuHamburgerIcon.addEventListener("click", function (event) {
     }
 });
 
-function toggleIcon() {
-    document.body.classList.toggle("light-mode-colors");
+document.addEventListener("DOMContentLoaded", function () {
     const iconElement = document.querySelector(".night-mode .switch-mode i");
-    if (iconElement.classList.contains("bx-sun")) {
-        iconElement.style.transform = "translateX(-5px)";
-        iconElement.className = "bx bxs-moon";
-    } else {
+
+    // Check localStorage for the mode state
+    if (localStorage.getItem("isLightMode") === "true") {
+        document.body.classList.add("light-mode-colors");
         iconElement.className = "bx bx-sun";
         iconElement.style.transform = "translateX(95%)";
     }
-}
+
+    window.toggleIcon = function () {
+        document.body.classList.toggle("light-mode-colors");
+
+        if (iconElement.classList.contains("bx-sun")) {
+            iconElement.className = "bx bxs-moon";
+            iconElement.style.transform = "translateX(-5px)";
+            localStorage.setItem("isLightMode", "false"); // Save dark mode
+        } else {
+            iconElement.className = "bx bx-sun";
+            iconElement.style.transform = "translateX(95%)";
+            localStorage.setItem("isLightMode", "true"); // Save light mode
+        }
+    };
+});
