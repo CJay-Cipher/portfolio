@@ -36,7 +36,7 @@
     --main-img-height: 30rem;
     --project-img-width: 60%;
     --min-about-text-height: 8vh;
-    --max-about-text-height: 16vh;
+    --max-about-text-height: 27vh;
 
     /* ----- ANIMATION ------ */
     --bounce-animation-duration: 8s;
@@ -681,7 +681,6 @@ header > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     position: relative;
     /* background: url("iil/image/bg-grid-lighter.svg");
     background-size: cover;
@@ -690,10 +689,6 @@ header > * {
     /* padding: 0 5%; */
     /* background-color: #000; */
     /* border: 2px solid blue; */
-}
-#about h1 {
-    padding: 0;
-    color: var(--main-font-color);
 }
 #about::before {
     content: "";
@@ -744,8 +739,12 @@ header > * {
     /* border: 2px solid blue; */
 }
 
+.about-content h1 {
+    padding: 0;
+    color: var(--main-font-color);
+}
 .about-content h3 {
-    margin-top: 0.7vh;
+    margin-top: 0;
 }
 .skills {
     display: flex;
@@ -868,7 +867,7 @@ header > * {
 }
 .about-content p {
     max-height: var(--min-about-text-height);
-    /* margin-top: 2vh; */
+    margin-top: 2vh;
     overflow: hidden;
     /* animation: borderBottom 0.3s; */
     /* border-bottom: 0.1px solid transparent; */

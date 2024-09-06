@@ -131,8 +131,8 @@
         /* --h3-font-size: 1.8rem; */
         /* --h4-font-size: 1rem; */
         /* --p-font-size: 0.9rem; */
-        --min-about-text-height: 6vh;
-        --max-about-text-height: 25vh;
+        --min-about-text-height: 10vh;
+        --max-about-text-height: 35vh;
         --header-height: 2.7rem;
     }
     /* #body-container section {
@@ -163,12 +163,9 @@
         /* border: 2px solid blue; */
     }
     .more-about-me {
+        font-size: 1rem;
         padding: 0.5rem 1.1rem;
     }
-    .more-about-me a {
-        font-size: 1rem;
-    }
-
     .img-container .hexagon {
         width: 24vh;
         height: 35vh;
@@ -201,8 +198,8 @@
         --h3-font-size: 1.3rem;
         /* --h4-font-size: 0.8rem; */
         --p-font-size: 0.9rem;
-        --min-about-text-height: 7vh;
-        /* --max-about-text-height: 25vh; */
+        --min-about-text-height: 8vh;
+        --max-about-text-height: 37vh;
     }
 
     header {
@@ -325,10 +322,8 @@
     }
     .more-about-me {
         /* margin-top: 5vh; */
-        padding: 0.4rem 0.9rem;
-    }
-    .more-about-me a {
         font-size: 0.8rem;
+        padding: 0.4rem 0.9rem;
     }
     #portfolio .projects .box {
         flex-direction: column;
@@ -361,7 +356,7 @@
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
     :root {
         --h1-font-size: 2.4rem;
         --h2-font-size: 1.5rem;
@@ -369,7 +364,7 @@
         /* --h4-font-size: 0.8rem; */
         --p-font-size: 0.9rem;
         --min-about-text-height: 5vh;
-        /* --max-about-text-height: 25vh; */
+        /* --max-about-text-height: 37vh; */
     }
     #main-logo {
         margin-left: 3%;
@@ -479,7 +474,7 @@
         --h3-font-size: 1.1rem;
         /* --h4-font-size: 0.8rem; */
         --p-font-size: 0.8rem;
-        --min-about-text-height: 8vh;
+        --min-about-text-height: 9vh;
         --header-height: 2.3rem;
     }
     #home {
