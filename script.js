@@ -11,7 +11,7 @@ header.addEventListener("mouseleave", function () {
     timer = setTimeout(resetHeaderPosition, 2000);
 });
 function resetHeaderPosition() {
-    if (window.scrollY <= 30) {
+    if (window.scrollY === 0) {
         header.style.top = "0";
     } else if (headerHover == true) {
         header.style.top = "0";

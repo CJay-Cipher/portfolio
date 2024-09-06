@@ -201,7 +201,7 @@
         --h3-font-size: 1.3rem;
         /* --h4-font-size: 0.8rem; */
         --p-font-size: 0.9rem;
-        --min-about-text-height: 6vh;
+        --min-about-text-height: 7vh;
         /* --max-about-text-height: 25vh; */
     }
 
@@ -304,6 +304,17 @@
     /* .about-content > p {
         height: 25%;
     } */
+
+    .skills {
+        gap: 0.6rem;
+    }
+    .skills .tools img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .skills .tools p {
+        font-size: 0.6rem;
+    }
 
     .img-container .hexagon {
         width: 20vh;
@@ -503,6 +514,19 @@
     .img-container .hexagon {
         width: 18vh;
         height: 25vh;
+    }
+    .skills {
+        /* justify-content: center; */
+        flex-wrap: wrap;
+        width: auto;
+        gap: 0.4rem;
+    }
+    .skills .tools img {
+        width: 2rem;
+        height: 2rem;
+    }
+    .skills .tools p {
+        font-size: 0.6rem;
     }
     #portfolio .projects .box {
         margin: 5% 0;
