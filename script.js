@@ -78,6 +78,42 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// page section scroll transition
+document.querySelectorAll(".navbar a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        const startPosition = window.scrollY;
+        const targetPosition =
+            targetElement.getBoundingClientRect().top + startPosition;
+        const distance = targetPosition - startPosition;
+        const duration = 1000; // Duration in ms
+        let startTime = null;
+
+        function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1); // Progress between 0 and 1
+
+            const ease = easeInOutQuad(progress); // Apply the ease in-out function
+
+            window.scrollTo(0, startPosition + distance * ease);
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        requestAnimationFrame(animation);
+    });
+});
+
 const moreAboutMe = document.querySelector(".more-about-me");
 const moreText = document.querySelector(".more-text");
 const aboutContentP = document.querySelector(".about-content > p");

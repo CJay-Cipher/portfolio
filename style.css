@@ -69,7 +69,7 @@
     color: var(--default-dark-color);
     /* font-family: "poppins", "Segoe UI", sans-serif; */
     font-family: var(--main-font-family);
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 .light-mode-colors {
     /* ----- COLOR ------ */
@@ -136,10 +136,10 @@
     --color4: #5a24d9;
 }
 body {
-    background: linear-gradient(
+    /* background: linear-gradient(
         var(--first-bg-color),
         var(--default-light-color)
-    );
+    ); */
     background: var(--default-light-color);
 }
 
