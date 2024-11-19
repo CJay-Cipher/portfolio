@@ -37,7 +37,7 @@ main button {
 main .title {
     text-align: center;
     font-weight: 300;
-    margin-top: 5vh;
+    margin: 2vh 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,6 +183,7 @@ main .top #game-sections button:hover {
 .main-body .player-pick,
 .main-body .computer-pick {
     width: 200px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -391,6 +392,21 @@ main .top #game-sections button:hover {
     color: #555;
 }
 
+/* ================ FOOTER SECTION ================ */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #838383;
+}
+footer .my-name {
+    font-size: 13px;
+    color: var(--first-bg-color);
+    letter-spacing: 1px;
+}
+
 @keyframes shakeRight {
     10%,
     30%,
@@ -439,17 +455,76 @@ main .top #game-sections button:hover {
         /* border: 1px solid orange; */
     }
 
-    main .title img {
-        width: 24px;
-        border-radius: 50%;
-    }
-
     main .top .result {
         justify-content: space-evenly;
     }
 
+    main .title img {
+        width: 24px;
+        border-radius: 50%;
+    }
+    main .top .result .score {
+        width: 120px;
+        margin: 2vh 5%;
+    }
+
+    /* .main-body .player-pick,
+    .main-body .computer-pick {
+        width: 200px;
+    } */
+
+    .main-body .player-pick .pick-img img,
+    .main-body .computer-pick .pick-img img {
+        width: 90px;
+        margin: 15px;
+    }
+
     .main-body .output {
         order: 1;
+    }
+}
+@media (max-width: 450px) {
+    main .top h2 {
+        font-size: 17px;
+    }
+    /* main .top #game-sections {
+        padding: 0;
+    } */
+    main .top .result .score > h4 {
+        padding-top: 5px;
+        font-size: 10.5px;
+    }
+
+    main .top .result .score > h1 {
+        font-size: 40px;
+    }
+    main .top #game-sections button {
+        font-size: 12px;
+    }
+    main .top .result .score {
+        width: 100px;
+        margin: 2vh 1%;
+    }
+
+    .main-body .player-pick,
+    .main-body .computer-pick {
+        width: 100px;
+    }
+
+    .main-body .player-pick .pick-img img,
+    .main-body .computer-pick .pick-img img {
+        width: 70px;
+        margin: 8px;
+    }
+
+    footer {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+    footer .my-name {
+        font-size: 9px;
+        color: var(--first-bg-color);
+        letter-spacing: 1px;
     }
 }
 
