@@ -35,13 +35,14 @@ var userIndex = 0;
 var userSelection = rock;
 var comSelection = rock;
 var maxRounds = 0;
+var startCheck = false;
 
 for (let x = 0; x < gameType.length; x++) {
     gameType[x].addEventListener("click", function () {
         roundSelect.style.display = "none";
         scoreBoard.style.display = "block";
-        playOutput.style.display = "flex";
         startText.style.display = "flex";
+        startCheck = true;
         if (x == 0) {
             maxRounds = 3;
         } else if (x == 1) {
@@ -61,6 +62,9 @@ userImage.addEventListener("click", function () {
     userImage.src = allImages[userIndex];
     userSelection = selections[userIndex];
     startText.style.display = "none";
+    if (startCheck) {
+        playOutput.style.display = "flex";
+    }
     // console.log(userIndex);
 });
 
