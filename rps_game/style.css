@@ -19,13 +19,13 @@ body {
 }
 
 main {
-    /* border: 1px solid cyan; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     --third-bg-color: var(--second-bg-color);
     background: radial-gradient(circle at top, var(--first-bg-color), var(--second-bg-color), var(--dark-bg-color));
+    /* border: 1px solid cyan; */
 }
 
 main button {
@@ -112,8 +112,6 @@ main .top .result .score {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* box-shadow: 2px 2px 10px #041336, inset 2px 2px 2px #85a5f1, inset -2px -2px 2px #1f47a6; */
-
     background-color: #fafeff;
     border: 1px solid #ffffff;
     box-shadow: inset -3px -3px 5px #fff, inset 5px 5px 20px #0000001a, inset 3px 3px 5px #0000001a;
@@ -285,7 +283,6 @@ main .top #game-sections button:hover {
 }
 
 .main-body .output #play-btn:hover {
-    /* color: var(--first-bg-color); */
     background-color: var(--second-bg-color);
     border: 1px solid var(--first-bg-color);
 }
@@ -315,7 +312,6 @@ main .top #game-sections button:hover {
 
 .bottom .rules:hover,
 .bottom .reset-score:hover {
-    /* color: var(--first-bg-color); */
     background-color: var(--second-bg-color);
     border: 1px solid var(--first-bg-color);
 }
@@ -507,11 +503,6 @@ footer .my-name {
         margin: 2vh 5%;
     }
 
-    /* .main-body .player-pick,
-    .main-body .computer-pick {
-        width: 200px;
-    } */
-
     .main-body .player-pick .pick-img img,
     .main-body .computer-pick .pick-img img {
         width: 90px;
@@ -526,9 +517,6 @@ footer .my-name {
     main .top h2 {
         font-size: 17px;
     }
-    /* main .top #game-sections {
-        padding: 0;
-    } */
     main .top .result .score > h4 {
         padding-top: 5px;
         font-size: 10.5px;

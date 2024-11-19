@@ -1,7 +1,6 @@
 const pageMain = document.querySelector("main");
 const mainBody = document.querySelector(".main-body");
 const playOutput = document.querySelector(".main-body .output");
-// const loader = document.querySelector(".loader");
 const scoreBoard = document.getElementById("score-board");
 const roundSelect = document.getElementById("rounds-select");
 const gameType = document.querySelectorAll(".game-type");
@@ -35,6 +34,7 @@ var userIndex = 0;
 var userSelection = rock;
 var comSelection = rock;
 var maxRounds = 0;
+let comIndex = 0;
 var startCheck = false;
 
 for (let x = 0; x < gameType.length; x++) {
@@ -52,9 +52,6 @@ for (let x = 0; x < gameType.length; x++) {
         }
     });
 }
-// startText.addEventListener("click", function () {
-//     startText.style.display = "block";
-// });
 // Assuming userImage, userBgColor, bgColors, and allImages are defined elsewhere in your code
 userImage.addEventListener("click", function () {
     userIndex = (userIndex + 1) % allImages.length;
@@ -65,40 +62,24 @@ userImage.addEventListener("click", function () {
     if (startCheck) {
         playOutput.style.display = "flex";
     }
-    // console.log(userIndex);
 });
 
-// Call the function to see the updated userIndex value
-// console.log(userIndex);
-
-// game section =============================
-
-// console.log(selections);
-let comIndex = 0;
-// console.log(comSelection);
-
 playButton.addEventListener("click", function () {
-    // computerBg.style.display = "none";
     userImage.style.animation = "shakeRight 2s linear infinite";
     userImage.style.animationPlayState = "running";
     computerImage.style.animation = "shakeLeft 2s linear infinite";
     computerImage.style.animationPlayState = "running";
-    // loader.style.display = "grid";
     resultMessage.style.visibility = "hidden";
+
     // Function to run after a 1-second delay
     function delayedFunction() {
-        // console.log("This message will be displayed after a 2-second delay.");
-
-        // console.log(userIndex);
         comIndex = Math.floor(Math.random() * 3);
         comSelection = selections[comIndex];
         userImage.style.animation = "none";
-        // userImage.style.animationPlayState = "paused";
         computerImage.style.animation = "none";
         computerBg.style.backgroundColor = bgColors[comIndex];
         computerImage.src = allImages[comIndex];
         computerBg.style.display = "flex";
-        // loader.style.display = "none";
         resultMessage.style.visibility = "visible";
 
         if (userSelection == paper && comSelection == rock) {
