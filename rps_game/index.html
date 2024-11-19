@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <main>
+        <h1 class="title">
+            <span><img src="src/rock_img.jpeg" alt=""> ROCK </span>
+            <span><img src="src/paper_img.jpeg" alt=""> PAPER </span>
+            <span><img src="src/scissors_img.jpeg" alt=""> SCISSORS</span>
+        </h1>
+        <section class="top">
+            <div id="score-board">
+                <h2>Score Board</h2>
+                <div class="result">
+                    <div class="score player">
+                        <h4>PLAYER</h4>
+                        <h1 id="player-score">0</h1>
+                    </div>
+                    <div class="score computer">
+                        <h4>COMPUTER</h4>
+                        <h1 id="computer-score">0</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="rounds-select">
+                <h2>Select Game Type</h2>
+                <div id="game-sections">
+                    <button class="game-type">Game of 3</button>
+                    <button class="game-type">Game of 5</button>
+                    <button class="game-type">Game of 7</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-body">
+            <div class="player-pick">
+                <h5>PLAYER</h5>
+                <div class="pick-img" id="user-bg">
+                    <img id="user-pick-image" src="src/rock_img.jpeg" alt="">
+                </div>
+            </div>
+            <div class="output">
+                <h1 id="result-message">YOU WIN</h1>
+                <button id="play-btn">PLAY</button>
+            </div>
+            <div class="computer-pick">
+                <h5>COMPUTER</h5>
+                <!-- <div class="loader"></div> -->
+                <div class="pick-img" id="computer-bg">
+                    <img id="computer-pick-image" src="src/rock_img.jpeg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="bottom">
+            <button class="rules">RULES</button>
+            <button class="reset-score">RESET GAME</button>
+        </section>
+    </main>
+    <div id="final-result">
+        <div class="box-message">
+            <img src="src/close_icon.svg" class="close-btn" alt="close-button">
+            <h3>YOU ARE THE</h3>
+            <h1>WINNER</h1>
+            <button id="play-again-btn">PLAY AGAIN</button>
+        </div>
+    </div>
+    <div id="rules">
+        <img src="src/close_icon.svg" class="close-btn" alt="close-button">
+        <h1>Rock Paper Scissors Rules</h1>
+        <p>Rock defeats Scissors</p>
+        <p>Scissors defeats Paper</p>
+        <p>Paper defeats Rock</p>
+        <p>If both players choose the same shape, it's a tie.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
