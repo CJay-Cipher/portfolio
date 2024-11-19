@@ -210,6 +210,7 @@ main .top #game-sections button:hover {
 
 .main-body .player-pick .pick-img {
     /* background-color: #00A4E3; */
+    position: relative;
     background-color: #6bb85d;
 }
 
@@ -219,6 +220,10 @@ main .top #game-sections button:hover {
 
 .main-body .player-pick .pick-img:hover {
     scale: 1.1;
+}
+.main-body .player-pick .pick-img:hover .start-text {
+    animation: none;
+    display: none;
 }
 
 .main-body .player-pick .pick-img img,
@@ -231,8 +236,8 @@ main .top #game-sections button:hover {
 
 .main-body .player-pick .pick-img img {
     transform: rotate(90deg) scaleX(-1);
-    animation: shakeRight 2s infinite;
-    animation-play-state: paused;
+    /* animation: shakeRight 2s infinite; */
+    /* animation-play-state: paused; */
 }
 
 .main-body .computer-pick .pick-img img {
@@ -241,6 +246,33 @@ main .top #game-sections button:hover {
     animation-delay: 0.2s;
     animation-play-state: paused;
 }
+.main-body .player-pick .pick-img .start-text {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #fd95f894;
+    width: 100%;
+    height: 100%;
+    margin: 25px;
+    text-align: center;
+    /* backdrop-filter: blur(10px); */
+    border-radius: 50%;
+    pointer-events: none;
+    color: var(--second-bg-color);
+}
+.main-body .player-pick .pick-img h5 {
+    font-weight: 600;
+    font-size: 18px;
+    animation: shake 2s linear infinite;
+}
+/* .main-body .player-pick .pick-img .start-text:hover {
+    background-color: transparent;
+}
+.main-body .player-pick .pick-img .start-text:hover h5 {
+    animation: none;
+    display: none;
+} */
 
 .main-body .output {
     width: 300px;
@@ -406,6 +438,30 @@ footer .my-name {
     color: var(--first-bg-color);
     letter-spacing: 1px;
 }
+@keyframes shake {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateY(5px);
+    }
+    33% {
+        transform: rotate(5deg);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateY(-5px);
+    }
+    66% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
 
 @keyframes shakeRight {
     10%,
@@ -515,6 +571,9 @@ footer .my-name {
     .main-body .computer-pick .pick-img img {
         width: 70px;
         margin: 8px;
+    }
+    .main-body .player-pick .pick-img h5 {
+        font-size: 12px;
     }
 
     footer {

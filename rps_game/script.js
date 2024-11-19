@@ -5,6 +5,7 @@ const playOutput = document.querySelector(".main-body .output");
 const scoreBoard = document.getElementById("score-board");
 const roundSelect = document.getElementById("rounds-select");
 const gameType = document.querySelectorAll(".game-type");
+const startText = document.querySelector(".start-text");
 const userImage = document.getElementById("user-pick-image");
 const computerImage = document.getElementById("computer-pick-image");
 const userBg = document.getElementById("user-bg");
@@ -39,7 +40,8 @@ for (let x = 0; x < gameType.length; x++) {
     gameType[x].addEventListener("click", function () {
         roundSelect.style.display = "none";
         scoreBoard.style.display = "block";
-        playOutput.style.display = " flex";
+        playOutput.style.display = "flex";
+        startText.style.display = "flex";
         if (x == 0) {
             maxRounds = 3;
         } else if (x == 1) {
@@ -49,12 +51,16 @@ for (let x = 0; x < gameType.length; x++) {
         }
     });
 }
+// startText.addEventListener("click", function () {
+//     startText.style.display = "block";
+// });
 // Assuming userImage, userBgColor, bgColors, and allImages are defined elsewhere in your code
 userImage.addEventListener("click", function () {
     userIndex = (userIndex + 1) % allImages.length;
     userBg.style.backgroundColor = bgColors[userIndex];
     userImage.src = allImages[userIndex];
     userSelection = selections[userIndex];
+    startText.style.display = "none";
     // console.log(userIndex);
 });
 
