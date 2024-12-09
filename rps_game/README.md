@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors Game
 
-![Rock-Paper-Scissors](iil/image/rock-paper-scissors.jpg)
+![Rock-Paper-Scissors](src/rock-paper-scissors.jpg)
 
 ## Overview
 
