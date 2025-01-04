@@ -4,7 +4,11 @@ body {
     padding: 0;
     margin: 0;
 }
-
+button,
+a,
+li {
+    cursor: pointer;
+}
 h1 {
     font-size: 100px;
     /* font-weight: bolder; */
@@ -22,6 +26,9 @@ p {
     font-size: 15px;
 }
 
+/* button:hover {
+    background-color: #22b6b6;
+} */
 .container {
     height: auto;
     /* border: 3px solid rgb(18, 61, 92); */
@@ -49,24 +56,41 @@ p {
 
 #logo > img {
     width: auto;
-    height: 50px;
+    height: 45px;
     padding: 10px 0 0 0px;
 }
 
+.nav-links {
+    flex: 2;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 1px solid red; */
+}
 .nav-text {
-    flex: 0.3;
+    padding: 5px 20px;
+    border-radius: 30px;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
     color: rgba(0, 0, 0, 0.491);
     letter-spacing: -0.03em;
     /* border: 2px solid; */
     text-align: center;
 }
+.nav-text:hover {
+    background-color: #eff1f7;
+}
 
 #login-button {
-    flex: 1.5;
-    text-align: right;
-    margin-right: 20px;
+    /* flex: 1.5; */
+    text-align: center;
+    /* margin-left: 30%; */
+    margin-right: 10px;
+    border: none;
+    min-width: 150px;
+    font-size: 20px;
+    padding: 15px 10px;
+
     /* border: 2px solid; */
 }
 
@@ -112,16 +136,17 @@ p {
 }
 
 #head-text > h1 {
+    font-size: 80px;
     line-height: 1.1;
     margin-bottom: 0;
 }
 
 #head-text > p {
-    font-size: 30px;
+    font-size: 25px;
     max-width: 700px;
     margin-top: 0;
     /* margin-right: 60px; */
-    font-weight: 500;
+    font-weight: 300;
     color: rgba(0, 0, 0, 0.39);
     /* border: 3px solid red; */
 }
@@ -140,7 +165,8 @@ p {
 
 .get-started-button {
     /* border: 2px solid rgb(222, 49, 27); */
-    padding: 20px 50px;
+    /* margin-top: 40px; */
+    padding: 15px 50px;
     border-radius: 50px;
     border: none;
     background-color: #2bd0d0;
@@ -235,7 +261,7 @@ p {
     font-size: 1.5em;
     letter-spacing: 0.03em;
     padding: 20px 0;
-    font-weight: 600;
+    font-weight: 300;
     color: rgba(0, 0, 0, 0.39);
     /* border: 3px solid red; */
 }
@@ -286,7 +312,7 @@ p {
 
 .box p {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
     color: rgba(0, 0, 0, 0.34);
     margin: 0;
     /* border: 2px solid red; */
@@ -361,7 +387,7 @@ footer {
     letter-spacing: 1.1px;
     /* font-family: "Permanent Marker", cursive; */
     font-family: "Fira Sans", sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     /* text-align: center; */
     margin: 0;
     padding-left: 32%;
@@ -397,7 +423,7 @@ footer {
 }
 
 .column-title {
-    font-weight: bolder;
+    font-weight: bold;
     color: white;
     padding-bottom: 10px;
 }
@@ -425,6 +451,16 @@ footer {
     width: 40px;
 }
 
+#signup-button:hover,
+.get-started-button:hover,
+.search-button:hover {
+    background-color: #22b6b6;
+}
+#signup-button:active,
+.get-started-button:active,
+.search-button:active {
+    background-color: #6adfdf;
+}
 @media (max-width: 1400px) {
     .container {
         display: flex;
@@ -507,6 +543,10 @@ footer {
         margin-bottom: 0;
     }
 
+    .search-input {
+        border: none;
+        outline: none;
+    }
     .search-input,
     .search-button {
         font-size: 16px;
@@ -573,7 +613,7 @@ footer {
 
     .box p {
         font-size: 18px;
-        font-weight: 500;
+        /* font-weight: 500; */
     }
 
     section > div {
@@ -642,7 +682,41 @@ footer {
         /* border: 3px solid purple; */
     }
 
+    .nav-links {
+        /* display: none; */
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 400px;
+        left: 20%;
+        top: -460px;
+        padding-top: 60px;
+        border-radius: 0 0 50px 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #d5ffffe7;
+        /* border: 1px solid red; */
+        transition: 0.5s;
+    }
     .nav-text {
+        color: #000;
+        font-size: 24px;
+        padding: 10px 20px;
+        width: 90%;
+        border-radius: 0 30px 30px 0;
+        text-align: start;
+    }
+    a.nav-text:hover {
+        color: #fff;
+        background-color: #2bd0d0;
+    }
+
+    a.nav-text:active {
+        color: #fff;
+        background-color: #25acac;
+    }
+    #login-button,
+    #signup-button {
         display: none;
     }
 
@@ -655,7 +729,11 @@ footer {
 
     .menu-hamburger {
         display: flex;
+        z-index: 3;
         margin-right: 20px;
+    }
+    .menu-hamburger:active ~ .nav-links {
+        background-color: red;
     }
 
     #head-section {
