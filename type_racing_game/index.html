@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --move-car: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .background {
+            height: 100vh;
+            overflow: hidden;
+            background-color: #acffff;
+        }
+
+        .background .outside {
+            height: 75vh;
+            border: 2px solid #000;
+            position: relative;
+        }
+
+        .background .outside img {
+            position: fixed;
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .background .outside img:active {
+            scale: 1.1;
+        }
+
+        .background .outside #move-up {
+            top: 50%;
+            left: 80%;
+        }
+
+        .background .outside #move-down {
+            top: 60%;
+            left: 80%;
+        }
+
+        .background .outside .outside-one {
+            height: 100%;
+            width: 100%;
+            background-image: url("src/sky.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            /* border: 2px solid yellow; */
+        }
+
+        .background .outside .outside-two {
+            height: 50%;
+            width: 100%;
+            background-image: url("src/tree-removebg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            /* border: 2px solid blue; */
+        }
+
+        .background .track {
+            height: 25vh;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+
+        .background .track .track-background {
+            position: absolute;
+            height: 100%;
+            width: 5000%;
+            background-image: url("src/track.jpeg");
+            animation: trackSlide 100s linear infinite;
+        }
+
+        .background .track .car {
+            position: absolute;
+            top: var(--move-car);
+            transition: 0.3s ease-in-out;
+        }
+
+        .background .track .car img:nth-child(1) {
+            position: absolute;
+            height: 50px;
+            top: 50px;
+            left: 100px;
+        }
+
+        .background .track .car img:nth-child(2) {
+            position: absolute;
+            height: 35px;
+            top: 67px;
+            left: 120px;
+            animation: wheelSpin 0.5s linear infinite;
+        }
+
+        .background .track .car img:nth-child(3) {
+            position: absolute;
+            height: 35px;
+            top: 69px;
+            left: 209px;
+            animation: wheelSpin 0.5s linear infinite;
+        }
+
+        @keyframes trackSlide {
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes wheelSpin {
+            100% {
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="outside">
+            <div class="outside-one"></div>
+            <div class="outside-two"></div>
+            <img id="move-up" src="src/up-square-svgrepo-com.svg" alt="">
+            <img id="move-down" src="src/down-square-svgrepo-com.svg" alt="">
+        </div>
+        <div class="track">
+            <div class="track-background"></div>
+            <div class="car">
+                <img src="src/car-removebg-preview.png" alt="">
+                <img src="src/wheel1-removebg-preview.png" alt="">
+                <img src="src/wheel2-removebg-preview.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let moveUpBtn = document.getElementById("move-up")
+        let moveDownBtn = document.getElementById("move-down")
+        const car = document.querySelector(".car")
+
+        moveUpBtn.addEventListener("click", function () {
+            // Get the current value of the CSS variable
+            let currentMove = getComputedStyle(car).getPropertyValue('top');
+
+            // Update the value of the CSS variable by subtracting 10px
+            car.style.setProperty('--move-car', `calc(${currentMove} - 50px)`);
+        })
+        moveDownBtn.addEventListener("click", function () {
+            // Get the current value of the CSS variable
+            let currentMove = getComputedStyle(car).getPropertyValue('top');
+
+            // Update the value of the CSS variable by subtracting 10px
+            car.style.setProperty('--move-car', `calc(${currentMove} + 50px)`);
+        })
+    </script>
+</body>
+
+</html>

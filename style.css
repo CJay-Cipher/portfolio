@@ -42,8 +42,7 @@
     --bounce-animation-duration: 8s;
 
     /* ------- FONTS --------- */
-    --main-font-family: "poppins", "Segoe UI", "CJay-font", "Helvetica Neue",
-        Helvetica, Arial, sans-serif;
+    --main-font-family: "poppins", "Segoe UI", "CJay-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     /* ----- FONT SIZE -------- */
     --h1-font-size: 4.8rem;
@@ -69,7 +68,7 @@
     color: var(--default-dark-color);
     /* font-family: "poppins", "Segoe UI", sans-serif; */
     font-family: var(--main-font-family);
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 .light-mode-colors {
     /* ----- COLOR ------ */
@@ -295,11 +294,7 @@ header > * {
     height: 5px;
     width: 0;
     border-radius: 10px;
-    background: linear-gradient(
-        to right,
-        var(--second-bg-color),
-        var(--main-font-color)
-    );
+    background: linear-gradient(to right, var(--second-bg-color), var(--main-font-color));
     transition: width 0.2s ease;
 }
 .navbar a:active,
@@ -328,8 +323,7 @@ header > * {
     border-radius: 30px;
     background-color: var(--neutral-color);
     cursor: pointer;
-    box-shadow: inset -2px -2px 2px #fff, inset 2px 2px 2px #0000007e,
-        0 2px 5px #00000035;
+    box-shadow: inset -2px -2px 2px #fff, inset 2px 2px 2px #0000007e, 0 2px 5px #00000035;
     border: 1px solid #fff;
 }
 .navbar .switch-mode i {
@@ -344,13 +338,11 @@ header > * {
     align-items: center;
     transition: 0.3s;
     border: 0.5px solid var(--second-bg-color);
-    box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff,
-        inset 0 0 2px #fff, 2px 0 5px #000000;
+    box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff, inset 0 0 2px #fff, 2px 0 5px #000000;
 }
 .navbar .switch-mode:hover i,
 .navbar .switch-mode:active i {
-    box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff,
-        0 0 10px var(--main-font-color);
+    box-shadow: inset -2px -2px 2px #0000002d, inset 2px 2px 2px #fff, 0 0 10px var(--main-font-color);
 }
 
 .menu-icon {
@@ -553,8 +545,7 @@ header > * {
 .socials a:active i {
     /* color: var(--first-bg-color); */
     border-color: var(--main-font-color);
-    box-shadow: inset -2px -2px 3px var(--default-light-color),
-        inset 2px 2px 3px var(--first-font-color);
+    box-shadow: inset -2px -2px 3px var(--default-light-color), inset 2px 2px 3px var(--first-font-color);
 }
 .socials a:hover::before {
     filter: blur(15px);
@@ -622,11 +613,7 @@ header > * {
     height: var(--main-img-height);
     padding: 1.2rem;
     border-radius: 50%;
-    background: conic-gradient(
-        var(--third-font-color),
-        var(--third-bg-color),
-        var(--third-font-color)
-    );
+    background: conic-gradient(var(--third-font-color), var(--third-bg-color), var(--third-font-color));
     z-index: -1;
     animation: rotateRight 5s linear infinite;
     box-shadow: 0 0 30px #777;
@@ -670,8 +657,7 @@ header > * {
     margin-top: auto;
     background: radial-gradient(rgba(0, 0, 0, 2), transparent, transparent);
     filter: blur(8px);
-    animation: shadowEffect var(--bounce-animation-duration) ease-in-out
-        infinite;
+    animation: shadowEffect var(--bounce-animation-duration) ease-in-out infinite;
 }
 
 /* ===================== ABOUT SECTION ====================== */
@@ -789,13 +775,7 @@ header > * {
     /* max-width: 600px; */
     position: relative;
     overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 15%,
-        rgba(0, 0, 0, 1) 85%,
-        rgba(0, 0, 0, 0)
-    );
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
 
 @keyframes skillScrollLeft {
@@ -807,48 +787,51 @@ header > * {
 .tools {
     position: absolute;
     animation: skillScrollLeft 20s linear infinite;
-    left: max(calc(70px * 10), 100%);
+    left: max(calc(70px * 11), 100%);
 }
 .skills:hover .tools {
     animation-play-state: paused;
 }
 
 .item1 {
-    animation-delay: calc(20s / 10 * (10 - 1) * -1);
+    animation-delay: calc(20s / 11 * (11 - 1) * -1);
 }
 
 .item2 {
-    animation-delay: calc(20s / 10 * (10 - 2) * -1);
+    animation-delay: calc(20s / 11 * (11 - 2) * -1);
 }
 
 .item3 {
-    animation-delay: calc(20s / 10 * (10 - 3) * -1);
+    animation-delay: calc(20s / 11 * (11 - 3) * -1);
 }
 
 .item4 {
-    animation-delay: calc(20s / 10 * (10 - 4) * -1);
+    animation-delay: calc(20s / 11 * (11 - 4) * -1);
 }
 
 .item5 {
-    animation-delay: calc(20s / 10 * (10 - 5) * -1);
+    animation-delay: calc(20s / 11 * (11 - 5) * -1);
 }
 
 .item6 {
-    animation-delay: calc(20s / 10 * (10 - 6) * -1);
+    animation-delay: calc(20s / 11 * (11 - 6) * -1);
 }
 
 .item7 {
-    animation-delay: calc(20s / 10 * (10 - 7) * -1);
+    animation-delay: calc(20s / 11 * (11 - 7) * -1);
 }
 
 .item8 {
-    animation-delay: calc(20s / 10 * (10 - 8) * -1);
+    animation-delay: calc(20s / 11 * (11 - 8) * -1);
 }
 .item9 {
-    animation-delay: calc(20s / 10 * (10 - 9) * -1);
+    animation-delay: calc(20s / 11 * (11 - 9) * -1);
 }
 .item10 {
-    animation-delay: calc(20s / 10 * (10 - 10) * -1);
+    animation-delay: calc(20s / 11 * (11 - 10) * -1);
+}
+.item11 {
+    animation-delay: calc(20s / 11 * (11 - 11) * -1);
 }
 /* ---------------------------------------------------- */
 
@@ -935,31 +918,10 @@ header > * {
     height: 100%;
     /* top: -20px; */
     /* padding: 10px; */
-    clip-path: polygon(
-        40% 0%,
-        60% 0%,
-        95% 11%,
-        100% 16%,
-        100% 70%,
-        95% 80%,
-        52% 100%,
-        48% 100%,
-        5% 80%,
-        0% 70%,
-        0 16%,
-        5% 11%
-    );
+    clip-path: polygon(40% 0%, 60% 0%, 95% 11%, 100% 16%, 100% 70%, 95% 80%, 52% 100%, 48% 100%, 5% 80%, 0% 70%, 0 16%, 5% 11%);
     /* z-index: 1; */
-    background: conic-gradient(
-        from var(--angle),
-        transparent,
-        var(--default-light-color),
-        var(--third-bg-color),
-        var(--first-font-color),
-        transparent 90%
-    );
-    animation: bounce var(--bounce-animation-duration) ease-in-out infinite,
-        spinHexBorder 7s linear infinite;
+    background: conic-gradient(from var(--angle), transparent, var(--default-light-color), var(--third-bg-color), var(--first-font-color), transparent 90%);
+    animation: bounce var(--bounce-animation-duration) ease-in-out infinite, spinHexBorder 7s linear infinite;
     animation-delay: 2s;
     /* border: 2px solid red; */
 }
@@ -1000,8 +962,7 @@ header > * {
     filter: blur(6px);
     border-radius: 50%;
     transition: 0.5s;
-    animation: shadowEffect var(--bounce-animation-duration) ease-in-out
-        infinite;
+    animation: shadowEffect var(--bounce-animation-duration) ease-in-out infinite;
     animation-delay: 2s;
 }
 /* .img-container .hexagon:hover::after {
@@ -1023,20 +984,7 @@ header > * {
     /* background-size: 500%; */
     animation: bounce var(--bounce-animation-duration) ease-in-out infinite;
     animation-delay: 2s;
-    clip-path: polygon(
-        40% 0%,
-        60% 0%,
-        95% 11%,
-        100% 16%,
-        100% 70%,
-        95% 80%,
-        52% 100%,
-        48% 100%,
-        5% 80%,
-        0% 70%,
-        0 16%,
-        5% 11%
-    );
+    clip-path: polygon(40% 0%, 60% 0%, 95% 11%, 100% 16%, 100% 70%, 95% 80%, 52% 100%, 48% 100%, 5% 80%, 0% 70%, 0 16%, 5% 11%);
     /* clip-path: polygon(50% 0, 100% 10%, 100% 75%, 50% 100%, 0 75%, 0 10%); */
     box-shadow: 0px 0px 60px 0px rgba(33, 2, 2, 0.5);
 }
@@ -1102,10 +1050,7 @@ header > * {
     box-shadow: 3px 3px 10px #0000001e;
     /* border: 1px solid transparent; */
     transition: transform 0.3s ease-in-out, margin-inline 0.3s ease-in-out;
-    background: linear-gradient(
-        var(--third-bg-color),
-        var(--default-light-color)
-    );
+    background: linear-gradient(var(--third-bg-color), var(--default-light-color));
     /* pointer-events: auto; */
     /* border: 2px solid red; */
 }
@@ -1223,11 +1168,7 @@ header > * {
     background-color: var(--special-color-1);
 }
 .box:nth-child(1) .project-options > .source-code:hover {
-    background: linear-gradient(
-        to right,
-        var(--special-color-1),
-        var(--first-font-color)
-    );
+    background: linear-gradient(to right, var(--special-color-1), var(--first-font-color));
 }
 
 .box:nth-child(2):hover,
@@ -1244,11 +1185,7 @@ header > * {
     background-color: var(--special-color-2);
 }
 .box:nth-child(2) .project-options > .source-code:hover {
-    background: linear-gradient(
-        to right,
-        var(--special-color-2),
-        var(--first-font-color)
-    );
+    background: linear-gradient(to right, var(--special-color-2), var(--first-font-color));
 }
 
 .box:nth-child(3):hover,
@@ -1266,11 +1203,7 @@ header > * {
     background-color: var(--special-color-3);
 }
 .box:nth-child(3) .project-options > .source-code:hover {
-    background: linear-gradient(
-        to right,
-        var(--special-color-3),
-        var(--first-font-color)
-    );
+    background: linear-gradient(to right, var(--special-color-3), var(--first-font-color));
 }
 
 .box:nth-child(4):hover,
@@ -1287,11 +1220,7 @@ header > * {
     background-color: var(--special-color-4);
 }
 .box:nth-child(4) .project-options > .source-code:hover {
-    background: linear-gradient(
-        to right,
-        var(--special-color-4),
-        var(--first-font-color)
-    );
+    background: linear-gradient(to right, var(--special-color-4), var(--first-font-color));
 }
 /* ===================== CONTACT SECTION ====================== */
 #contact {

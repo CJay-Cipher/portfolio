@@ -47,11 +47,7 @@ window.addEventListener("scroll", () => {
         const targetSection = document.querySelector(link.getAttribute("href"));
 
         // Check if the target section is in view
-        if (
-            targetSection.offsetTop <= scrollPosition + 250 &&
-            targetSection.offsetTop + targetSection.offsetHeight >
-                scrollPosition
-        ) {
+        if (targetSection.offsetTop <= scrollPosition + 250 && targetSection.offsetTop + targetSection.offsetHeight > scrollPosition) {
             // Add the 'active' class to the corresponding link
             link.classList.add("active");
 
@@ -77,71 +73,71 @@ window.addEventListener("scroll", function () {
         moveToTop.style.display = "none";
     }
 });
-// Smooth scroll to top functionality
-document.getElementById("move-to-top").addEventListener("click", function (e) {
-    e.preventDefault();
+// // Smooth scroll to top functionality
+// document.getElementById("move-to-top").addEventListener("click", function (e) {
+//     e.preventDefault();
 
-    const startPosition = window.scrollY;
-    const targetPosition = 0; // Target position is the top of the page
-    const distance = targetPosition - startPosition;
-    const duration = 1000; // Duration in ms
-    let startTime = null;
+//     const startPosition = window.scrollY;
+//     const targetPosition = 0; // Target position is the top of the page
+//     const distance = targetPosition - startPosition;
+//     const duration = 1000; // Duration in ms
+//     let startTime = null;
 
-    function easeInOutQuad(t) {
-        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-    }
+//     function easeInOutQuad(t) {
+//         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+//     }
 
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1); // Progress between 0 and 1
+//     function animation(currentTime) {
+//         if (startTime === null) startTime = currentTime;
+//         const timeElapsed = currentTime - startTime;
+//         const progress = Math.min(timeElapsed / duration, 1); // Progress between 0 and 1
 
-        const ease = easeInOutQuad(progress); // Apply the ease in-out function
+//         const ease = easeInOutQuad(progress); // Apply the ease in-out function
 
-        window.scrollTo(0, startPosition + distance * ease);
+//         window.scrollTo(0, startPosition + distance * ease);
 
-        if (timeElapsed < duration) {
-            requestAnimationFrame(animation);
-        }
-    }
+//         if (timeElapsed < duration) {
+//             requestAnimationFrame(animation);
+//         }
+//     }
 
-    requestAnimationFrame(animation);
-});
-// page section scroll transition
-document.querySelectorAll(".navbar a").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
+//     requestAnimationFrame(animation);
+// });
+// // page section scroll transition
+// document.querySelectorAll(".navbar a").forEach((anchor) => {
+//     anchor.addEventListener("click", function (e) {
+//         e.preventDefault();
+//         const targetId = this.getAttribute("href");
+//         const targetElement = document.querySelector(targetId);
 
-        const startPosition = window.scrollY;
-        const targetPosition =
-            targetElement.getBoundingClientRect().top + startPosition;
-        const distance = targetPosition - startPosition;
-        const duration = 1000; // Duration in ms
-        let startTime = null;
+//         const startPosition = window.scrollY;
+//         const targetPosition =
+//             targetElement.getBoundingClientRect().top + startPosition;
+//         const distance = targetPosition - startPosition;
+//         const duration = 1000; // Duration in ms
+//         let startTime = null;
 
-        function easeInOutQuad(t) {
-            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-        }
+//         function easeInOutQuad(t) {
+//             return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+//         }
 
-        function animation(currentTime) {
-            if (startTime === null) startTime = currentTime;
-            const timeElapsed = currentTime - startTime;
-            const progress = Math.min(timeElapsed / duration, 1); // Progress between 0 and 1
+//         function animation(currentTime) {
+//             if (startTime === null) startTime = currentTime;
+//             const timeElapsed = currentTime - startTime;
+//             const progress = Math.min(timeElapsed / duration, 1); // Progress between 0 and 1
 
-            const ease = easeInOutQuad(progress); // Apply the ease in-out function
+//             const ease = easeInOutQuad(progress); // Apply the ease in-out function
 
-            window.scrollTo(0, startPosition + distance * ease);
+//             window.scrollTo(0, startPosition + distance * ease);
 
-            if (timeElapsed < duration) {
-                requestAnimationFrame(animation);
-            }
-        }
+//             if (timeElapsed < duration) {
+//                 requestAnimationFrame(animation);
+//             }
+//         }
 
-        requestAnimationFrame(animation);
-    });
-});
+//         requestAnimationFrame(animation);
+//     });
+// });
 
 const moreAboutMe = document.querySelector(".more-about-me");
 const moreText = document.querySelector(".more-text");
@@ -152,9 +148,7 @@ moreAboutMe.addEventListener("click", function () {
     aboutContentP.classList.toggle("expanded");
     moreText.classList.toggle("hide");
     // Toggle button text
-    moreAboutMe.textContent = moreText.classList.contains("hide")
-        ? "Read More"
-        : "Read Less";
+    moreAboutMe.textContent = moreText.classList.contains("hide") ? "Read More" : "Read Less";
 });
 
 // ------------- for string typing animation --------------------
