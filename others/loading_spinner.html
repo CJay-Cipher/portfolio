@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Border</title>
+
+    <style>
+        /* ------------- ANIMATE BORDER ------------ */
+        :root {
+            --border-height: 95px;
+            --border-width: 95px;
+            --border-padding: 25px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .spinner-container {
+            background: #000;
+            height: 100Svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            z-index: -100;
+        }
+
+        /* .spinner-box {
+            border: 1px solid blue;
+        } */
+
+        .spinner-card {
+            width: var(--border-height);
+            height: var(--border-width);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            background-color: cyan;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner {
+            position: relative;
+            height: calc(var(--border-height) + var(--border-padding));
+            width: calc(var(--border-width) + var(--border-padding));
+            border-radius: 50%;
+            background: conic-gradient(transparent 15%, #044e97 50%, transparent 50%, transparent 65%, #ff6702 100%);
+            z-index: -2;
+            animation: spin 5s linear infinite;
+        }
+
+        .spinner::before,
+        .spinner::after {
+            content: "";
+            position: absolute;
+            height: calc(var(--border-padding) / 2);
+            width: calc(var(--border-padding) / 2);
+            border-radius: 50%;
+            left: 60px;
+            /* top: 4px; */
+            /* bottom: -4px; */
+            translate: -50% -50%;
+        }
+
+        .spinner::before {
+            left: 59.5px;
+            top: 6.5px;
+            background: conic-gradient(#ff6702 50%, transparent 50%, transparent 100%);
+        }
+
+        .spinner::after {
+            /* left: 59.5px; */
+            bottom: -5.5px;
+            background: conic-gradient(transparent 50%, #044e97 50%, #044e97 100%);
+        }
+
+        @keyframes spin {
+            0% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner-container">
+        <div class="spinner-box">
+            <div class="spinner-card"></div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+</body>
+
+</html>
