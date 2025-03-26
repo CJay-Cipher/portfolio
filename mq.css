@@ -266,6 +266,14 @@
   .menu-icon {
     display: flex;
   }
+  .menu-icon i {
+    cursor: default;
+    border-radius: 10px;
+  }
+
+  .menu-icon i:active {
+    background-color: var(--nav-bg-color);
+  }
   .socials a {
     height: 2.5rem;
     width: 2.5rem;
