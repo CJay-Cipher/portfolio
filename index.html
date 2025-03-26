@@ -1,343 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CJay Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mq.css">
-    <link rel="stylesheet" href="bg_effects.css">
-    <link rel="icon" type="image/x-icon" href="iil/favicon/logo.ico">
+    <link rel="stylesheet" href="mq.css" />
+    <!-- <link rel="stylesheet" href="bg_effects.css" /> -->
+    <link rel="icon" type="image/x-icon" href="iil/favicon/logo.ico" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Moonrocks&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <header>
-            <div id="main-logo">
-                <!-- <img src="iil/logo/logo2.png" id="logo-img" alt="My Logo"> -->
-                <div class="logo-text">
-                    <a href="#home">Portfolio</a>
-                </div>
+      <header>
+        <div id="main-logo">
+          <!-- <img src="iil/logo/logo2.png" id="logo-img" alt="My Logo"> -->
+          <div class="logo-text">
+            <a href="/">Portfolio</a>
+          </div>
+        </div>
+
+        <nav class="navbar">
+          <a href="#body-container" class="active">Home</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <div class="night-mode" id="mode-toggle">
+            <div class="switch-mode">
+              <i class="bx bxs-moon"></i>
+              <!-- <i class='bx bx-sun'></i> -->
             </div>
+          </div>
+        </nav>
+        <button class="menu-icon">
+          <i class="bx bx-menu"></i>
+        </button>
+      </header>
 
-            <nav class="navbar">
-                <a href="#body-container" class="active">Home</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <div class="night-mode">
-                    <div class="switch-mode" onclick="toggleIcon()">
-                        <i class='bx bxs-moon'></i>
-                        <!-- <i class='bx bx-sun'></i> -->
-                    </div>
-                </div>
-            </nav>
-            <button class="menu-icon">
-                <i class='bx bx-menu'></i>
-            </button>
-        </header>
+      <div id="body-container">
+        <section id="home">
+          <div class="box-content">
+            <div class="text-content">
+              <h3>Hello, my name is</h3>
+              <h1 id="name-text" data-text="CJAY NNABUEZE">CJAY NNABUEZE</h1>
+              <div class="my-title">
+                <span>
+                  <h3>I'm a</h3>
+                </span>
+                <span>
+                  <h3 id="string-typing"></h3>
+                </span>
+              </div>
 
-        <div id="body-container">
-            <section id="home">
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-
-                <div class="box-content">
-                    <div class="text-content">
-                        <h3>Hello, my name is</h3>
-                        <h1 id="name-text" data-text="CJAY NNABUEZE">CJAY NNABUEZE</h1>
-                        <div class="my-title">
-                            <span>
-                                <h3>I'm a</h3>
-                            </span>
-                            <span>
-                                <h3 id="string-typing"></h3>
-                            </span>
-                        </div>
-
-                        <!-- <p>I specialize in creating interactive and user-friendly interfaces using <span
+              <!-- <p>I specialize in creating interactive and user-friendly interfaces using <span
                                 class="styled-text">HTML</span class="styled-text">, <span
                                 class="styled-text">CSS</span>, and
                             <span class="styled-text">JavaScript</span>.
                         </p> -->
-                        <div class="socials">
-                            <a href="https://linkedin.com/in/chijioke-nnabueze-73435376" target="_blank"><i
-                                    class='bx bxl-linkedin'></i></a>
-                            <a href="https://github.com/CJay-Cipher" target="_blank"><i class='bx bxl-github'></i></a>
-                            <a href="mailto:nnabuezecjay@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
-                            <!-- <i class='bx bxl-linkedin-square'></i> -->
-                            <!-- <i class='bx bxs-envelope'></i> -->
-                        </div>
+              <div class="socials">
+                <a href="https://linkedin.com/in/chijioke-nnabueze-73435376" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/CJay-Cipher" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="mailto:nnabuezecjay@gmail.com" target="_blank"><i class="bx bx-envelope"></i></a>
+                <!-- <i class='bx bxl-linkedin-square'></i> -->
+                <!-- <i class='bx bxs-envelope'></i> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio-section">
+          <section id="portfolio">
+            <h2>Latest Projects</h2>
+            <div class="projects">
+              <article class="box">
+                <img src="iil/image/joehart-store.png" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Perfume E-commerce Website <br /><span style="color: orange; font-size: 13px; font-weight: 400; text-align: center"> --> In progress </span></h4>
+                  <p>
+                    This project is a perfume e-commerce store showcasing a wide range of exquisite fragrances for both men and women. Developed using Next.js,
+                    TypeScript, and Tailwind CSS for a modern and responsive front-end, with Node.js and Firebase powering the back-end. The project is currently in
+                    progress
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/joehart-store" target="_blank">Source Code</a>
                     </div>
+                    <a href="https://joehart-store.vercel.app/" target="_blank" class="source-code">View Live </a>
+                  </div>
                 </div>
-                <!-- 
-                <div class="img-container">
-                    <div class="hexagon">
-                        <div class="shape">
-                            <img src="iil/image/my_photo_no_bg2.png" alt="">
-                        </div>
+              </article>
+
+              <article class="box">
+                <img src="iil/image/instagram-clone-dark.png" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Instagram Clone - A Figma Design</h4>
+                  <p>
+                    This project is a responsive and interactive clone of an Instagram profile page, built using React with Vite. It mimics the layout and functionality
+                    of a typical Instagram profile, featuring a modern UI/UX and interactive components for user engagement. Please note that the API has limited request
+                    calls, which might affect testing.
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/Instagram-Clone" target="_blank">Source Code</a>
                     </div>
-                </div> -->
-            </section>
 
-            <section id="portfolio">
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <h2>Latest Projects</h2>
-                <div class="projects">
-                    <article class="box">
-                        <img src="iil/image/microsoft_clone_big.jpg" class="box-img" alt="Project Image">
-                        <div class="project-text-content">
-                            <!-- <h3>Hello, my name is</h3> -->
-                            <h4>Microsoft Landing Page Clone</h4>
-                            <!-- <h3><span>I'm a</span> <span>Frontend Developer</span></h3> -->
-                            <p>A responsive clone of the Microsoft.com landing page, this project demonstrates my
-                                expertise in HTML, CSS, and JavaScript. It features a sleek design and seamless
-                                navigation, showcasing my ability to create modern, user-friendly web experiences.</p>
-                            <div class="project-options">
-                                <div class="live-demo">
-                                    <a href="">Demo</a>
-                                    <a href="https://github.com/CJay-Cipher/portfolio/tree/main/microsoft_clone"
-                                        target="_blank">Source Code</a>
-                                </div>
-                                <a href="microsoft_clone/" target="_blank" class="source-code">View Live
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="box">
-                        <img src="iil/image/shortly_clone_big.jpg" class="box-img" alt="Project Image">
-                        <div class="project-text-content">
-                            <h4>Link Shortner Landing Page</h4>
-                            <p>A responsive link shortener application (one of my first frontend project) that
-                                highlights my skills in Front-end
-                                development. The sleek design ensures an intuitive experience.</p>
-                            <div class="project-options">
-                                <div class="live-demo">
-                                    <a href="">Demo</a>
-                                    <a href="https://github.com/CJay-Cipher/portfolio/tree/main/shortly_clone"
-                                        target="_blank">Source Code</a>
-                                </div>
-
-                                <a href="shortly_clone/" target="_blank" class="source-code">View Live
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="box">
-                        <img src="iil/image/rock-paper-scissors.jpg" class="box-img" alt="Project Image">
-                        <div class="project-text-content">
-                            <h4>Rock, Paper, Scissors Game</h4>
-                            <p>An interactive Rock, Paper, Scissors game where players engage in a classic showdown of
-                                strategy and luck. The Player select between rock, paper, or scissors, aiming to outwit
-                                their opponent with a simple click. The game provides an engaging interface with
-                                intuitive controls, creating a fun and competitive gaming experience.</p>
-                            <div class="project-options">
-                                <div class="live-demo">
-                                    <a href="">Demo</a>
-                                    <a href="https://github.com/CJay-Cipher/portfolio/tree/main/rps_game"
-                                        target="_blank">Source Code</a>
-                                </div>
-                                <a href="rps_game/" target="_blank" class="source-code">View Live
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="box">
-                        <img src="iil/image/sports_car_page_big.jpg" class="box-img" alt="Project Image">
-                        <div class="project-text-content">
-                            <h4>Sport Car Home Page</h4>
-                            <p>An animated car landing page featuring a sleek design with sections for home, about,
-                                reviews, and features. Captivating visuals and smooth animations create an engaging user
-                                experience, effectively showcasing the car dealership experience.</p>
-                            <div class="project-options">
-                                <div class="live-demo">
-                                    <a href="">Demo</a>
-                                    <a href="https://github.com/CJay-Cipher/portfolio/tree/main/car_landing_page"
-                                        target="_blank">Source Code</a>
-                                </div>
-                                <a href="car_landing_page/" target="_blank" class="source-code">View Live
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+                    <a href="https://instagram-clone-nine-plum.vercel.app/" target="_blank" class="source-code">View Live </a>
+                  </div>
                 </div>
-            </section>
+              </article>
 
-            <section id="about">
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
-                <div class="bg-circle"></div>
+              <article class="box">
+                <img src="iil/image/invoice_page.png" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Esemie Invoice Dashboard Page</h4>
+                  <p>
+                    This is an Invoice page that enables users to view their invoice history and streamline cash flow. Designed with responsiveness in mind, it ensures a
+                    seamless experience on all devices. This project was part of an assessment task, utilizing React, Tailwind CSS, TypeScript, and Zustand for state
+                    management.
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/Esemie_view_invoice_page" target="_blank">Source Code</a>
+                    </div>
+                    <a href="https://esemie-view-invoice-page.vercel.app/" target="_blank" class="source-code">View Live </a>
+                  </div>
+                </div>
+              </article>
 
-                <div class="about-container">
-                    <!-- <div class="img-section">
+              <article class="box">
+                <img src="iil/image/rock-paper-scissors.jpg" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Rock, Paper, Scissors Game</h4>
+                  <p>
+                    An interactive Rock, Paper, Scissors game where players engage in a classic showdown of strategy and luck. The Player select between rock, paper, or
+                    scissors, aiming to outwit their opponent with a simple click. The game provides an engaging interface with intuitive controls, creating a fun and
+                    competitive gaming experience.
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/portfolio/tree/main/rps_game" target="_blank">Source Code</a>
+                    </div>
+                    <a href="rps_game/" target="_blank" class="source-code">View Live </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="other-projects" id="toggleToOther"><button>View other mini Projects</button></div>
+          </section>
+
+          <section id="other-portfolio">
+            <!-- <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div> -->
+            <h2>Other Projects</h2>
+            <div class="projects">
+              <article class="box">
+                <img src="./iil/image/microsoft_clone_big.jpg" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Microsoft Landing Page Clone</h4>
+                  <p>
+                    A responsive clone of the Microsoft.com landing page, this project demonstrates my expertise in HTML, CSS, and JavaScript. It features a sleek design
+                    and seamless navigation, showcasing my ability to create modern, user-friendly web experiences.
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/portfolio/tree/main/microsoft_clone" target="_blank">Source Code</a>
+                    </div>
+                    <a href="./microsoft_clone/" target="_blank" class="source-code">View Live </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="box">
+                <img src="./iil/image/get_a_job_big.png" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Get Jobs Landing Page</h4>
+                  <p>
+                    This project showcases a responsive job recruitment platform that connects job seekers with opportunities in Nigeria. Developed using React and Vite,
+                    it features an intuitive design and user-friendly interface, allowing users to easily search for jobs, create profiles, and apply directly.
+                  </p>
+
+                  <p></p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/getajob-landing-page" target="_blank">Source Code</a>
+                    </div>
+
+                    <a href="https://getajob-landing-page.vercel.app/" target="_blank" class="source-code">View Live </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="box">
+                <img src="./iil/image/shortly_clone_big.jpg" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Link Shortner Landing Page</h4>
+                  <p>
+                    A responsive link shortener application (one of my first frontend project) that highlights my skills in Front-end development. The sleek design
+                    ensures an intuitive experience.
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/portfolio/tree/main/shortly_clone" target="_blank">Source Code</a>
+                    </div>
+
+                    <a href="./shortly_clone/" target="_blank" class="source-code">View Live </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="box">
+                <img src="./iil/image/sports_car_page_big.jpg" class="box-img" alt="Project Image" />
+                <div class="project-text-content">
+                  <h4>Sport Car Home Page</h4>
+                  <p>
+                    An animated car landing page featuring a sleek design with sections for home, about, reviews, and features. Captivating visuals and smooth animations
+                    create an engaging user experience, effectively showcasing the car dealership experience.
+                  </p>
+                  <div class="project-options">
+                    <div class="live-demo">
+                      <a href="">Demo</a>
+                      <a href="https://github.com/CJay-Cipher/portfolio/tree/main/car_landing_page" target="_blank">Source Code</a>
+                    </div>
+                    <a href="./car_landing_page/" target="_blank" class="source-code">View Live </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="other-projects" id="toggleToMain">
+              <button>Go back</button>
+            </div>
+          </section>
+        </section>
+
+        <section id="about">
+          <div class="about-container">
+            <!-- <div class="img-section">
                         <div class="home-img">
                             <img src="iil/image/my_photo_no_bg.png" alt="home-image">
                         </div>
                         <div class="shadow"></div>
                     </div> -->
-                    <div class="img-container">
-                        <div class="hexagon">
-                            <div class="shape">
-                                <img src="iil/image/cartoon-no_bg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-content">
-                        <h1>About Me</h1>
-                        <h3>Web Developer</h3>
-                        <div class="skills wrapper">
-                            <div class="tools item1">
-                                <img src="iil/icon/css.svg" alt="CSS3">
-                                <p>CSS3</p>
-                            </div>
-                            <div class="tools item2">
-                                <img src="iil/icon/javascript.svg" alt="JavaScript">
-                                <p>JavaScript</p>
-                            </div>
-                            <div class="tools item3">
-                                <img src="iil/icon/html.svg" alt="HTML5">
-                                <p>HTML5</p>
-                            </div>
-                            <div class="tools item4">
-                                <img src="iil/icon/react-native.svg" alt="React">
-                                <p>React</p>
-                            </div>
-                            <div class="tools item5">
-                                <img src="iil/icon/typescript1.svg" alt="Typescript">
-                                <p>Typescript</p>
-                            </div>
-                            <div class="tools item6">
-                                <img src="iil/icon/git.svg" alt="Git">
-                                <p>Git</p>
-                            </div>
-                            <div class="tools item7">
-                                <img src="iil/icon/github.svg" alt="GitHub">
-                                <p>GitHub</p>
-                            </div>
-                            <div class="tools item8">
-                                <img src="iil/icon/tailwind-css.svg" alt="Tailwind">
-                                <p>Tailwind</p>
-                            </div>
-                            <div class="tools item9">
-                                <img src="iil/icon/bootstrap.svg" alt="Bootstrap">
-                                <p>Bootstrap</p>
-                            </div>
-                            <div class="tools item10">
-                                <img src="iil/icon/jquery.svg" alt="JQuery">
-                                <p>JQuery</p>
-                            </div>
-                            <div class="tools item11">
-                                <img src="iil/icon/firebase.svg" alt="Firebase">
-                                <p>Firebase</p>
-                            </div>
-                        </div>
-                        <p>Versatile Web Developer with a proven track record of delivering custom solutions that
-                            enhance client <span class="styled-text">satisfaction</span>.<br>
-                            <span class="more-text hide"><br>An inquisitive and motivated Software Engineer, willing to
-                                utilize my skills in web development and programming, while continuously improving my
-                                skills and knowledge in this field. Possesses a proactive attitude and strong
-                                communication skills. A great problem solver and rational thinker, with excellent
-                                teamwork abilities in performing tasks.</span>
-                        </p>
-                        <button class="more-about-me">Read More</button>
-                    </div>
+            <div class="img-container">
+              <div class="hexagon">
+                <div class="shape">
+                  <img src="iil/image/cartoon-no_bg.png" alt="" />
                 </div>
+              </div>
+            </div>
 
-            </section>
-            <!-- <hr style="margin: 4rem 10rem 0;"> -->
+            <div class="about-content">
+              <h1>About Me</h1>
+              <h3>Web Developer</h3>
+              <div class="skills wrapper">
+                <div class="tools item1">
+                  <img src="iil/icon/css.svg" alt="CSS3" />
+                  <p>CSS3</p>
+                </div>
+                <div class="tools item2">
+                  <img src="iil/icon/javascript.svg" alt="JavaScript" />
+                  <p>JavaScript</p>
+                </div>
+                <div class="tools item3">
+                  <img src="iil/icon/html.svg" alt="HTML5" />
+                  <p>HTML5</p>
+                </div>
+                <div class="tools item4">
+                  <img src="iil/icon/react-native.svg" alt="React" />
+                  <p>React</p>
+                </div>
+                <div class="tools item5">
+                  <img src="iil/icon/typescript1.svg" alt="Typescript" />
+                  <p>Typescript</p>
+                </div>
+                <div class="tools item6">
+                  <img src="iil/icon/git.svg" alt="Git" />
+                  <p>Git</p>
+                </div>
+                <div class="tools item7">
+                  <img src="iil/icon/github.svg" alt="GitHub" />
+                  <p>GitHub</p>
+                </div>
+                <div class="tools item8">
+                  <img src="iil/icon/tailwind-css.svg" alt="Tailwind" />
+                  <p>Tailwind</p>
+                </div>
+                <div class="tools item9">
+                  <img src="iil/icon/bootstrap.svg" alt="Bootstrap" />
+                  <p>Bootstrap</p>
+                </div>
+                <div class="tools item10">
+                  <img src="iil/icon/jquery.svg" alt="JQuery" />
+                  <p>JQuery</p>
+                </div>
+                <div class="tools item11">
+                  <img src="iil/icon/firebase.svg" alt="Firebase" />
+                  <p>Firebase</p>
+                </div>
+              </div>
+              <p>
+                Versatile Web Developer with a proven track record of delivering custom solutions that enhance client <span class="styled-text">satisfaction</span>.<br />
+                <span class="more-text hide"
+                  ><br />An inquisitive and motivated Software Engineer, willing to utilize my skills in web development and programming, while continuously improving my
+                  skills and knowledge in this field. Possesses a proactive attitude and strong communication skills. A great problem solver and rational thinker, with
+                  excellent teamwork abilities in performing tasks.</span
+                >
+              </p>
+              <button class="more-about-me">Read More</button>
+            </div>
+          </div>
+        </section>
+        <!-- <hr style="margin: 4rem 10rem 0;"> -->
 
-            <section id="contact">
-                <form class="contact-container" onsubmit="sendEmail(event)">
-                    <h2>Send me a message</h2>
-                    <div class="row1">
-                        <div class="col">
-                            <div class="contact-input-box">
-                                <input type="text" id="first-name" required="required">
-                                <span class="contact-text">First Name</span>
-                                <span class="contact-line"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="contact-input-box">
-                                <input type="text" id="last-name" required="required">
-                                <span class="contact-text">Last Name</span>
-                                <span class="contact-line"></span>
-                            </div>
-                        </div>
-                    </div>
+        <section id="contact">
+          <form class="contact-container" onsubmit="sendEmail(event)">
+            <h2>Send me a message</h2>
+            <div class="row1">
+              <div class="col">
+                <div class="contact-input-box">
+                  <input type="text" id="first-name" required="required" />
+                  <span class="contact-text">First Name</span>
+                  <span class="contact-line"></span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="contact-input-box">
+                  <input type="text" id="last-name" required="required" />
+                  <span class="contact-text">Last Name</span>
+                  <span class="contact-line"></span>
+                </div>
+              </div>
+            </div>
 
-                    <div class="row1">
-                        <div class="col">
-                            <div class="contact-input-box">
-                                <input type="text" id="email-address" required="required">
-                                <span class="contact-text">Email</span>
-                                <span class="contact-line"></span>
-                            </div>
-                        </div>
-                        <!-- <div class="col">
+            <div class="row1">
+              <div class="col">
+                <div class="contact-input-box">
+                  <input type="text" id="email-address" required="required" />
+                  <span class="contact-text">Email</span>
+                  <span class="contact-line"></span>
+                </div>
+              </div>
+              <!-- <div class="col">
                             <div class="contact-input-box">
                                 <input type="text">
                                 <span class="contact-text">Mobile</span>
                                 <span class="contact-line"></span>
                             </div>
                         </div> -->
-                    </div>
-
-                    <div class="row1">
-                        <div class="col">
-                            <div class="contact-input-box textarea">
-                                <textarea id="contact-message" required="required"></textarea>
-                                <span class="contact-text">Type your message here...</span>
-                                <span class="contact-line"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row1">
-                        <div class="col">
-                            <input type="submit" value="Send" class="submit-message">
-                        </div>
-                    </div>
-                </form>
-            </section>
-        </div>
-
-        <a href="#home" id="move-to-top"><i class='bx bx-chevrons-up'></i></a>
-
-        <footer>
-            <div class="footer-socials">
-                <a href="https://linkedin.com/in/chijioke-nnabueze-73435376" target="_blank"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/CJay-Cipher" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="mailto:nnabuezecjay@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
-                <!-- <i class='bx bxl-linkedin-square'></i> -->
-                <!-- <i class='bx bxs-envelope'></i> -->
             </div>
-            <p>Copyrights © 2024 by CJay | All rights reserved</p>
-        </footer>
+
+            <div class="row1">
+              <div class="col">
+                <div class="contact-input-box textarea">
+                  <textarea id="contact-message" required="required"></textarea>
+                  <span class="contact-text">Type your message here...</span>
+                  <span class="contact-line"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row1">
+              <div class="col">
+                <input type="submit" value="Send" class="submit-message" />
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <a href="#home" id="move-to-top"><i class="bx bx-chevrons-up"></i></a>
+
+      <footer>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/chijioke-nnabueze-73435376" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/CJay-Cipher" target="_blank"><i class="bx bxl-github"></i></a>
+          <a href="mailto:nnabuezecjay@gmail.com" target="_blank"><i class="bx bx-envelope"></i></a>
+          <!-- <i class='bx bxl-linkedin-square'></i> -->
+          <!-- <i class='bx bxs-envelope'></i> -->
+        </div>
+        <p>Copyrights © 2024 by CJay | All rights reserved</p>
+      </footer>
     </div>
 
     <div id="loader"></div>
     <div id="message-success">
-        <div id="report-cancel">
-            <i class='bx bx-x'></i>
-        </div>
-        <h4>Message delivered<br>successfully<br>✅</h4>
+      <div id="report-cancel">
+        <i class="bx bx-x"></i>
+      </div>
+      <h4>Message delivered<br />successfully<br />✅</h4>
     </div>
 
     <!-- for string typing animation -->
@@ -349,7 +412,5 @@
 
     <!-- for contact email -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-</body>
-
+  </body>
 </html>
