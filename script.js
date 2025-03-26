@@ -1,7 +1,8 @@
 const navbarLinks = document.querySelectorAll(".navbar a");
 const header = document.querySelector("header");
 let timer;
-headerHover = false;
+var headerHover = false;
+var menuOpen = false;
 
 header.addEventListener("mouseenter", function () {
   headerHover = true;
@@ -13,9 +14,8 @@ header.addEventListener("mouseleave", function () {
 function resetHeaderPosition() {
   if (window.scrollY === 0) {
     header.style.top = "0";
-  } else if (headerHover == true) {
+  } else if (headerHover == true || menuOpen == true) {
     header.style.top = "0";
-    // headerHover = false;
   } else {
     header.style.top = "-100px";
   }
@@ -23,6 +23,7 @@ function resetHeaderPosition() {
 
 function showHeaderOnScroll() {
   header.style.top = "0";
+  menuOpen = false;
   clearTimeout(timer); // Clear the timer if scrolling occurs
   timer = setTimeout(resetHeaderPosition, 2000); // Reset after few seconds of no scrolling
 }
@@ -190,6 +191,7 @@ const navbar = document.querySelector(".navbar");
 
 menuHamburgerIcon.addEventListener("click", function (event) {
   navbar.classList.toggle("show-side-navbar");
+  menuOpen = true;
   // Close navbar when clicking outside
   document.addEventListener("click", function (event) {
     const isClickInsideNavbar = navbar.contains(event.target);
@@ -203,6 +205,7 @@ menuHamburgerIcon.addEventListener("click", function (event) {
   menuHamburger.classList.toggle("cancel-side-menu");
   if (menuHamburgerIcon.classList.contains("bx-x")) {
     menuHamburgerIcon.className = "bx bx-menu";
+    menuOpen = false;
   } else {
     menuHamburgerIcon.className = "bx bx-x";
   }
@@ -237,13 +240,13 @@ const otherportfolio = document.getElementById("other-portfolio");
 const mainBtn = document.getElementById("toggleToMain");
 const otherBtn = document.getElementById("toggleToOther");
 
-otherportfolio.style.display = "none";
+otherportfolio.style.transform = "translateX(0)";
 mainBtn.addEventListener("click", function () {
-  mainPortfolio.style.display = "block";
-  otherportfolio.style.display = "none";
+  otherportfolio.style.transform = "translateX(0)";
+  mainPortfolio.style.transform = "translateX(0)";
 });
 
 otherBtn.addEventListener("click", function () {
-  otherportfolio.style.display = "block";
-  mainPortfolio.style.display = "none";
+  mainPortfolio.style.transform = "translateX(-100%)";
+  otherportfolio.style.transform = "translateX(-100%)";
 });

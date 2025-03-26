@@ -31,7 +31,7 @@
   --color4: #5a24d988;
 
   /* ----- DIMENTION ------ */
-  --header-height: 3.2rem;
+  --header-height: 4rem;
   --main-img-width: 30rem;
   --main-img-height: 30rem;
   --project-img-width: 60%;
@@ -1005,9 +1005,18 @@ header > * {
 /* -------------------------------------------------- */
 
 /* ===================== PROJECTS SECTION ====================== */
+#portfolio-section {
+  display: flex;
+  /* width: 200%; */
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+#other-portfolio {
+  transform: translateX(-100%);
+}
 #portfolio,
 #other-portfolio {
-  width: 100%;
+  min-width: 100%;
   min-height: 100svh;
   padding: 2rem 2%;
   position: relative;
@@ -1018,6 +1027,8 @@ header > * {
     background-position: center; */
   /* margin-top: 3rem; */
   /* border: 3px solid red; */
+  transition: 1s transform ease-in-out;
+  /* transform: translateX(100%); */
 }
 
 #portfolio > h2,
@@ -1236,8 +1247,8 @@ header > * {
   display: flex;
   justify-content: center;
 }
-#portfolio .other-projects button,
-#other-portfolio .other-projects button {
+#portfolio .other-projects a,
+#other-portfolio .other-projects a {
   font-size: 14px;
   padding: 5px 30px;
   color: var(--default-dark-color);
@@ -1246,12 +1257,12 @@ header > * {
   border: 1px solid var(--default-dark-color);
   cursor: pointer;
 }
-#portfolio .other-projects button:hover,
-#other-portfolio .other-projects button:hover {
+#portfolio .other-projects a:hover,
+#other-portfolio .other-projects a:hover {
   background-color: var(--first-bg-color);
 }
-#portfolio .other-projects button:active,
-#other-portfolio .other-projects button:active {
+#portfolio .other-projects a:active,
+#other-portfolio .other-projects a:active {
   background-color: var(--button-bg-color);
 }
 /* ===================== CONTACT SECTION ====================== */
