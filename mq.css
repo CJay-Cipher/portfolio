@@ -41,7 +41,7 @@
 
   .box:hover,
   .box:active {
-    transform: scale(1.09);
+    transform: scale(1.03);
   }
   .projects:hover > :not(:hover),
   .projects:active > :not(:active) {
@@ -108,8 +108,8 @@
     /* height: 70%; */
     margin: 3%;
     background: transparent;
-    box-shadow: none;
-    /* padding: 0; */
+    /* box-shadow: none; */
+    padding: 12px;
   }
   .box-img {
     width: 60%;
@@ -176,7 +176,6 @@
   #portfolio .projects .box,
   #other-portfolio .projects .box {
     width: 90%;
-    /* padding: 0; */
     background: transparent;
   }
   .box-img {
@@ -312,11 +311,11 @@
     gap: 0.6rem;
   }
   .skills .tools {
-    left: max(calc(50px * 10), 100%);
+    left: max(calc(60px * 15), 100%);
   }
   .skills .tools img {
-    width: 3rem;
-    height: 3rem;
+    /* width: 3rem; */
+    height: 40px;
   }
   .skills .tools p {
     font-size: 0.6rem;
@@ -333,13 +332,19 @@
   }
   #portfolio .projects .box,
   #other-portfolio .projects .box {
+    border: 1px solid #d6d5d625;
     flex-direction: column;
     width: 80%;
     /* height: 70%; */
     margin: 2%;
-    padding: 5%;
+    padding: 5% 16px;
     /* box-shadow: 3px 3px 10px #63636328; */
   }
+  .box:hover,
+  .box:active {
+    transform: scale(1);
+  }
+
   .box-img {
     width: 100%;
     /* margin-bottom: 3vh; */
@@ -425,28 +430,27 @@
   #other-portfolio > h2 {
     letter-spacing: 0.05rem;
   }
-
-  .box:hover,
-  .box:active {
-    transform: scale(1);
-  }
   #portfolio .projects,
   #other-portfolio .projects {
     margin-top: 0;
   }
   #portfolio .projects .box,
   #other-portfolio .projects .box {
-    padding: 5%;
+    padding: 12px;
     width: 90%;
     margin: 2% 0;
-    box-shadow: none;
+    /* box-shadow: none; */
+  }
+  .box:hover,
+  .box:active {
+    transform: scale(1);
   }
   .box-img {
     margin-bottom: 1.7vh;
     /* box-shadow: 5px 5px 10px #6363637a; */
   }
   .box:hover .box-img {
-    transform: scale(1.05);
+    transform: scale(1);
   }
 
   .project-text-content {
@@ -530,18 +534,17 @@
     gap: 0.4rem;
   }
   .skills .tools {
-    left: max(calc(35px * 10), 100%);
+    left: max(calc(55px * 15), 100%);
   }
   .skills .tools img {
-    width: 2rem;
-    height: 2rem;
+    height: 50;
   }
   .skills .tools p {
     font-size: 0.5rem;
   }
   #portfolio .projects .box,
   #other-portfolio .projects .box {
-    margin: 5% 0;
+    margin: 5% 8px;
   }
   .project-options a {
     font-size: 0.8rem;
