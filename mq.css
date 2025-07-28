@@ -201,7 +201,7 @@
     --h3-font-size: 1.3rem;
     /* --h4-font-size: 0.8rem; */
     --p-font-size: 0.9rem;
-    --min-about-text-height: 8vh;
+    --min-about-text-height: 10.5vh;
     --max-about-text-height: 37vh;
   }
 
@@ -375,7 +375,7 @@
     --h3-font-size: 1.1rem;
     /* --h4-font-size: 0.8rem; */
     --p-font-size: 0.9rem;
-    --min-about-text-height: 5vh;
+    --min-about-text-height: 8vh;
     /* --max-about-text-height: 37vh; */
   }
   #main-logo {
@@ -488,7 +488,7 @@
     --h3-font-size: 1.1rem;
     /* --h4-font-size: 0.8rem; */
     --p-font-size: 0.8rem;
-    --min-about-text-height: 9vh;
+    --min-about-text-height: 11vh;
     --header-height: 2.7rem;
   }
   #home {

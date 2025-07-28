@@ -35,7 +35,7 @@
   --main-img-width: 30rem;
   --main-img-height: 30rem;
   --project-img-width: 60%;
-  --min-about-text-height: 8vh;
+  --min-about-text-height: 10vh;
   --max-about-text-height: 27vh;
 
   /* ----- ANIMATION ------ */
@@ -165,12 +165,19 @@ p {
   font-weight: 400;
 }
 
+#container {
+  width: 100%;
+  max-width: 2400px;
+  margin: 0 auto;
+}
 /*  NAVBAR section ------------------------------- */
 header {
   display: flex;
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 2400px;
+  margin: 0 auto;
   height: var(--header-height);
   z-index: 100;
   transition: top 0.5s;
@@ -316,7 +323,8 @@ header > * {
 #home {
   width: 100%;
   position: relative;
-  min-height: 100svh;
+  height: 100svh;
+  max-height: 1200px;
   padding: 12%;
   display: flex;
   justify-content: space-evenly;
@@ -653,69 +661,68 @@ header > * {
 .tools {
   position: absolute;
   animation: skillScrollLeft 20s linear infinite;
-  left: max(calc(90px * 15), 100%);
+  left: max(calc(90px * 17), 100%);
 }
+
 .skills:hover .tools {
   animation-play-state: paused;
 }
+
+.tools {
+  animation-delay: calc(20s / 17 * (17 - var(--item-index)) * -1);
+}
+
+/* Individual item classes */
 .item1 {
-  animation-delay: calc(20s / 15 * (15 - 1) * -1);
+  --item-index: 1;
 }
-
 .item2 {
-  animation-delay: calc(20s / 15 * (15 - 2) * -1);
+  --item-index: 2;
 }
-
 .item3 {
-  animation-delay: calc(20s / 15 * (15 - 3) * -1);
+  --item-index: 3;
 }
-
 .item4 {
-  animation-delay: calc(20s / 15 * (15 - 4) * -1);
+  --item-index: 4;
 }
-
 .item5 {
-  animation-delay: calc(20s / 15 * (15 - 5) * -1);
+  --item-index: 5;
 }
-
 .item6 {
-  animation-delay: calc(20s / 15 * (15 - 6) * -1);
+  --item-index: 6;
 }
-
 .item7 {
-  animation-delay: calc(20s / 15 * (15 - 7) * -1);
+  --item-index: 7;
 }
-
 .item8 {
-  animation-delay: calc(20s / 15 * (15 - 8) * -1);
+  --item-index: 8;
 }
-
 .item9 {
-  animation-delay: calc(20s / 15 * (15 - 9) * -1);
+  --item-index: 9;
 }
-
 .item10 {
-  animation-delay: calc(20s / 15 * (15 - 10) * -1);
+  --item-index: 10;
 }
-
 .item11 {
-  animation-delay: calc(20s / 15 * (15 - 11) * -1);
+  --item-index: 11;
 }
-
 .item12 {
-  animation-delay: calc(20s / 15 * (15 - 12) * -1);
+  --item-index: 12;
 }
-
 .item13 {
-  animation-delay: calc(20s / 15 * (15 - 13) * -1);
+  --item-index: 13;
 }
-
 .item14 {
-  animation-delay: calc(20s / 15 * (15 - 14) * -1);
+  --item-index: 14;
 }
-
 .item15 {
-  animation-delay: calc(20s / 15 * (15 - 15) * -1);
+  --item-index: 15;
+}
+.item16 {
+  --item-index: 16;
+}
+.item17 {
+  --item-index: 17;
 }
 /* ---------------------------------------------------- */
 
@@ -800,6 +807,7 @@ header > * {
   content: "";
   position: absolute;
   width: 100%;
+  max-width: 400px;
   height: 100%;
   /* top: -20px; */
   /* padding: 10px; */
@@ -1337,9 +1345,6 @@ footer p {
   border: 1px solid var(--greencheck);
   /* filter: ; */
 }
-/* #container {
-    filter: blur(10px);
-} */
 #report-cancel {
   position: absolute;
   top: 2%;
