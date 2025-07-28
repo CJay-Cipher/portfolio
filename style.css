@@ -625,15 +625,17 @@ header > * {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  height: 80px;
+  width: 60px;
   transition: transform 0.2s;
+  /* border: 1px solid yellow; */
 }
 .skills .tools:hover {
   transform: scale(1.2);
 }
 .skills .tools img {
-  width: max-content;
-  height: 60px;
   /* padding: 1px; */
+  width: 100%;
   border-radius: 5px;
 }
 .skills .tools p {
@@ -661,7 +663,7 @@ header > * {
 .tools {
   position: absolute;
   animation: skillScrollLeft 20s linear infinite;
-  left: max(calc(90px * 17), 100%);
+  left: max(calc(90px * 18), 100%);
 }
 
 .skills:hover .tools {
@@ -669,7 +671,7 @@ header > * {
 }
 
 .tools {
-  animation-delay: calc(20s / 17 * (17 - var(--item-index)) * -1);
+  animation-delay: calc(20s / 18 * (18 - var(--item-index)) * -1);
 }
 
 /* Individual item classes */
@@ -723,6 +725,9 @@ header > * {
 }
 .item17 {
   --item-index: 17;
+}
+.item18 {
+  --item-index: 18;
 }
 /* ---------------------------------------------------- */
 
