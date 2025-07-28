@@ -35,7 +35,6 @@
   --main-img-width: 30rem;
   --main-img-height: 30rem;
   --project-img-width: 60%;
-  --min-about-text-height: 10vh;
   --max-about-text-height: 27vh;
 
   /* ----- ANIMATION ------ */
@@ -608,11 +607,8 @@ header > * {
   flex-wrap: wrap;
   gap: 1rem;
   width: max-content;
-  padding: 1rem 0;
-  /* border-top: 1px solid var(--main-font-color);
-    border-bottom: 1px solid var(--main-font-color); */
-  /* background-color: #37187e64;
-    backdrop-filter: blur(10px); */
+  margin: 0.6rem 0;
+  /* border: 1px solid red; */
 }
 .skills .tools > * {
   margin: 0;
@@ -643,10 +639,10 @@ header > * {
   width: max-content;
   text-align: center;
 }
-/* -------- SKILL ANIMAATION ------ */
 
+/* -------- SKILL ANIMAATION ------ */
 .wrapper {
-  height: 100px;
+  height: 90px;
   width: 90%;
   /* max-width: 600px; */
   position: relative;
@@ -745,29 +741,23 @@ header > * {
   display: none;
 }
 .about-content p {
-  max-height: var(--min-about-text-height);
-  margin-top: 2vh;
-  overflow: hidden;
   font-weight: 200;
-  /* animation: borderBottom 0.3s; */
-  /* border-bottom: 0.1px solid transparent; */
-  /* border: 2px solid blue; */
 }
-.about-content p,
 .more-text {
-  transition: max-height 0.3s linear;
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.3s;
 }
-.about-content p.expanded {
-  max-height: var(--max-about-text-height);
+.hide {
+  grid-template-rows: 0fr;
 }
-
+.about-content .more-text > p {
+  overflow: hidden;
+}
 .styled-text {
   /* color: var(--third-font-color); */
   font-weight: 600;
   /* font-style: italic; */
-}
-.hide {
-  visibility: hidden;
 }
 
 .more-about-me {
@@ -775,9 +765,9 @@ header > * {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  margin-top: 3vh;
+  margin-top: 2vh;
   border: none;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 5px;
   border: 1px solid transparent;
   background-color: var(--first-font-color);
