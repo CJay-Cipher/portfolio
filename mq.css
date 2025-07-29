@@ -319,7 +319,7 @@
     font-size: 0.55rem;
   }
   .wrapper {
-    height: 75px;
+    height: 110px;
   }
 
   .img-container .hexagon {
@@ -543,7 +543,7 @@
     font-size: 0.5rem;
   }
   .wrapper {
-    height: 65px;
+    height: 95px;
   }
 
   #portfolio .projects .box,
@@ -569,7 +569,11 @@
   }
   .contact-container {
     width: 100%;
-    /* padding: 0; */
+    padding: 0 5%;
+  }
+  .contact-container .row1 .col {
+    padding: 0;
+    margin: 0;
   }
   .contact-container .contact-input-box .contact-text {
     font-size: 0.85rem;
