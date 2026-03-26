@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Duration Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #050508;
+            --bg-secondary: #0c0c12;
+            --bg-card: rgba(255, 255, 255, 0.02);
+            --bg-card-hover: rgba(255, 255, 255, 0.04);
+            --border-color: rgba(255, 255, 255, 0.06);
+            --border-hover: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --text-muted: rgba(255, 255, 255, 0.35);
+            --accent-1: #7c3aed;
+            --accent-2: #2dd4bf;
+            --accent-3: #f472b6;
+            --gradient-1: linear-gradient(135deg, #7c3aed, #2dd4bf);
+            --gradient-2: linear-gradient(135deg, #f472b6, #7c3aed);
+            --success: #22c55e;
+            --error: #ef4444;
+            --warning: #eab308;
+            --shadow-glow: 0 0 60px rgba(124, 58, 237, 0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background Effects */
+        .background-effects {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.12;
+        }
+
+        .orb-1 {
+            width: 700px;
+            height: 700px;
+            background: var(--accent-1);
+            top: -300px;
+            right: -200px;
+            animation: orb-float-1 25s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--accent-2);
+            bottom: -200px;
+            left: -150px;
+            animation: orb-float-2 30s ease-in-out infinite;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: var(--accent-3);
+            top: 40%;
+            left: 30%;
+            animation: orb-float-3 20s ease-in-out infinite;
+        }
+
+        @keyframes orb-float-1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-60px, 80px) scale(1.1); }
+            66% { transform: translate(40px, -50px) scale(0.95); }
+        }
+
+        @keyframes orb-float-2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(80px, -60px) scale(1.05); }
+            66% { transform: translate(-50px, 40px) scale(1.1); }
+        }
+
+        @keyframes orb-float-3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-40px, -40px) scale(1.15); }
+        }
+
+        .grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* App Container */
+        .app-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .logo-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-1);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: var(--shadow-glow);
+            animation: logo-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes logo-pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.3); }
+            50% { box-shadow: 0 0 50px rgba(124, 58, 237, 0.5); }
+        }
+
+        .logo-text {
+            font-size: 1.75rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 400;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Upload Section */
+        .upload-section {
+            margin-bottom: 32px;
+        }
+
+        .drop-area {
+            background: var(--bg-card);
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 48px 32px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .drop-area::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .drop-area:hover {
+            border-color: var(--accent-1);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .drop-area:hover::before {
+            opacity: 0.03;
+        }
+
+        .drop-area.dragging {
+            border-color: var(--accent-2);
+            background: rgba(45, 212, 191, 0.05);
+            transform: scale(1.01);
+        }
+
+        .drop-area.dragging::before {
+            opacity: 0.05;
+        }
+
+        .drop-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .drop-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .drop-area:hover .drop-icon {
+            transform: scale(1.05);
+        }
+
+        .drop-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .drop-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(124, 58, 237, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--border-hover);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .supported-formats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .format-badge {
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Progress Section */
+        .progress-section {
+            display: none;
+            margin-bottom: 32px;
+        }
+
+        .progress-section.active {
+            display: block;
+            animation: fade-slide-in 0.4s ease;
+        }
+
+        @keyframes fade-slide-in {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .progress-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .progress-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .loading-spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border-color);
+            border-top-color: var(--accent-1);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .progress-percentage {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent-1);
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-1);
+            border-radius: 100px;
+            width: 0%;
+            transition: width 0.3s ease;
+            position: relative;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+
+        .progress-info {
+            margin-top: 12px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: fade-slide-in 0.5s ease;
+        }
+
+        /* Total Duration Card */
+        .total-card {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(45, 212, 191, 0.08));
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .total-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+        }
+
+        .total-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .total-time {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .total-breakdown {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .stat-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 20px 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+            border-color: var(--border-hover);
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .stat-item:nth-child(1) .stat-value { color: var(--accent-1); }
+        .stat-item:nth-child(2) .stat-value { color: var(--accent-2); }
+        .stat-item:nth-child(3) .stat-value { color: var(--accent-3); }
+        .stat-item:nth-child(4) .stat-value { color: var(--warning); }
+
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Video List */
+        .list-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+        }
+
+        .list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .list-title {
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-count {
+            background: rgba(124, 58, 237, 0.15);
+            color: var(--accent-1);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .list-controls {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+        }
+
+        .control-btn.active {
+            background: rgba(124, 58, 237, 0.1);
+            border-color: rgba(124, 58, 237, 0.3);
+            color: var(--accent-1);
+        }
+
+        .control-btn.danger {
+            color: var(--error);
+        }
+
+        .control-btn.danger:hover {
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        /* Search */
+        .search-wrapper {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 16px 12px 42px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-1);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.95rem;
+            opacity: 0.4;
+        }
+
+        /* Video List Items */
+        .video-list {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+
+        .video-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .video-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .video-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+        }
+
+        .video-list::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 24px;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            gap: 14px;
+        }
+
+        .video-item:last-child {
+            border-bottom: none;
+        }
+
+        .video-item:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .video-item.error {
+            background: rgba(239, 68, 68, 0.03);
+        }
+
+        .video-index {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            min-width: 28px;
+            text-align: center;
+        }
+
+        .video-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .video-icon.success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .video-icon.fail {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .video-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .video-name {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 2px;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .video-duration {
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .video-duration.success {
+            background: rgba(45, 212, 191, 0.1);
+            color: var(--accent-2);
+        }
+
+        .video-duration.fail {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--error);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .empty-state {
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .empty-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 24px 16px 40px;
+            }
+
+            .logo-wrapper {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo-text {
+                font-size: 1.4rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .stat-value {
+                font-size: 1.4rem;
+            }
+
+            .total-time {
+                font-size: 1.8rem;
+            }
+
+            .drop-area {
+                padding: 36px 20px;
+            }
+
+            .drop-icon {
+                width: 56px;
+                height: 56px;
+                font-size: 1.5rem;
+            }
+
+            .video-item {
+                padding: 12px 16px;
+                gap: 10px;
+            }
+
+            .video-icon {
+                width: 34px;
+                height: 34px;
+                font-size: 0.85rem;
+            }
+
+            .video-name {
+                font-size: 0.82rem;
+            }
+
+            .video-duration {
+                padding: 5px 10px;
+                font-size: 0.78rem;
+            }
+
+            .list-header {
+                padding: 16px;
+            }
+
+            .search-wrapper {
+                padding: 12px 16px;
+            }
+
+            .supported-formats {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-value {
+                font-size: 1.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.65rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .list-controls {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .total-time {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-effects">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-pattern"></div>
+</div>
+
+<div class="app-container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-wrapper">
+            <div class="logo-icon">🎬</div>
+            <span class="logo-text">Video Duration Calculator</span>
+        </div>
+        <p class="tagline">Select a folder to instantly calculate total video duration. Everything runs locally — no uploads.</p>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <div class="drop-area" id="dropArea">
+            <div class="drop-content">
+                <div class="drop-icon">📁</div>
+                <h2 class="drop-title">Drop your videos here</h2>
+                <p class="drop-subtitle">or click to select a folder / files</p>
+                <div class="button-group">
+                    <button class="btn btn-primary" id="selectFolderBtn">
+                        <span>📂</span> Select Folder
+                    </button>
+                    <button class="btn btn-secondary" id="selectFilesBtn">
+                        <span>📄</span> Select Files
+                    </button>
+                </div>
+                <div class="supported-formats">
+                    <span class="format-badge">mp4</span>
+                    <span class="format-badge">mkv</span>
+                    <span class="format-badge">avi</span>
+                    <span class="format-badge">mov</span>
+                    <span class="format-badge">webm</span>
+                    <span class="format-badge">flv</span>
+                    <span class="format-badge">wmv</span>
+                    <span class="format-badge">mpeg</span>
+                    <span class="format-badge">ts</span>
+                    <span class="format-badge">m4v</span>
+                </div>
+            </div>
+        </div>
+        <input type="file" id="folderInput" class="file-input" webkitdirectory directory multiple>
+        <input type="file" id="fileInput" class="file-input" multiple accept="video/*">
+    </section>
+
+    <!-- Progress Section -->
+    <section class="progress-section" id="progressSection">
+        <div class="progress-card">
+            <div class="progress-header">
+                <div class="progress-title">
+                    <div class="loading-spinner"></div>
+                    <span>Analyzing videos...</span>
+                </div>
+                <span class="progress-percentage" id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-info" id="progressInfo">Preparing to scan...</p>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection">
+        <!-- Total Duration Card -->
+        <div class="total-card">
+            <div class="total-label">Total Duration</div>
+            <div class="total-time" id="totalTime">0h 0m 0s</div>
+            <div class="total-breakdown" id="totalBreakdown">No videos analyzed yet</div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value" id="statVideos">0</div>
+                <div class="stat-label">Videos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statHours">0</div>
+                <div class="stat-label">Hours</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statMinutes">0</div>
+                <div class="stat-label">Minutes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statSeconds">0</div>
+                <div class="stat-label">Seconds</div>
+            </div>
+        </div>
+
+        <!-- Video List -->
+        <div class="list-card">
+            <div class="list-header">
+                <div class="list-title">
+                    📋 Video List
+                    <span class="video-count" id="videoCount">0</span>
+                </div>
+                <div class="list-controls">
+                    <button class="control-btn" id="sortNameBtn" data-sort="name">
+                        ↕️ Name
+                    </button>
+                    <button class="control-btn" id="sortDurationBtn" data-sort="duration">
+                        ↕️ Duration
+                    </button>
+                    <button class="control-btn" id="sortSizeBtn" data-sort="size">
+                        ↕️ Size
+                    </button>
+                    <button class="control-btn danger" id="resetBtn">
+                        ✕ Reset
+                    </button>
+                </div>
+            </div>
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search videos...">
+                </div>
+            </div>
+            <div class="video-list" id="videoList">
+                <div class="empty-state">
+                    <div class="empty-icon">📭</div>
+                    <p>No videos to display</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    // Video Extensions
+    const VIDEO_EXTENSIONS = new Set([
+        'mp4', 'mkv', 'avi', 'mov', 'wmv', 'flv', 'webm', 'mpeg', 'mpg',
+        'm4v', '3gp', '3g2', 'ogv', 'ts', 'mts', 'm2ts', 'vob', 'divx',
+        'asf', 'rm', 'rmvb', 'f4v', 'mxf', 'm2v', 'vid', 'amv', 'qt'
+    ]);
+
+    // State
+    let videoData = [];
+    let filteredData = [];
+    let sortConfig = { key: null, ascending: true };
+
+    // DOM Elements
+    const dropArea = document.getElementById('dropArea');
+    const folderInput = document.getElementById('folderInput');
+    const fileInput = document.getElementById('fileInput');
+    const selectFolderBtn = document.getElementById('selectFolderBtn');
+    const selectFilesBtn = document.getElementById('selectFilesBtn');
+    const progressSection = document.getElementById('progressSection');
+    const progressFill = document.getElementById('progressFill');
+    const progressPercent = document.getElementById('progressPercent');
+    const progressInfo = document.getElementById('progressInfo');
+    const resultsSection = document.getElementById('resultsSection');
+    const videoList = document.getElementById('videoList');
+    const searchInput = document.getElementById('searchInput');
+    const sortNameBtn = document.getElementById('sortNameBtn');
+    const sortDurationBtn = document.getElementById('sortDurationBtn');
+    const sortSizeBtn = document.getElementById('sortSizeBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    // Event Listeners
+    selectFolderBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        folderInput.click();
+    });
+
+    selectFilesBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+
+    dropArea.addEventListener('click', () => folderInput.click());
+
+    dropArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropArea.classList.add('dragging');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+        dropArea.classList.remove('dragging');
+    });
+
+    dropArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropArea.classList.remove('dragging');
+        const files = Array.from(e.dataTransfer.files);
+        if (files.length) processFiles(files);
+    });
+
+    folderInput.addEventListener('change', (e) => {
+        const files = Array.from(e.target.files);
+        if (files.length) processFiles(files);
+    });
+
+    fileInput.addEventListener('change', (e) => {
+        const files = Array.from(e.target.files);
+        if (files.length) processFiles(files);
+    });
+
+    searchInput.addEventListener('input', filterVideos);
+
+    sortNameBtn.addEventListener('click', () => sortVideos('name'));
+    sortDurationBtn.addEventListener('click', () => sortVideos('duration'));
+    sortSizeBtn.addEventListener('click', () => sortVideos('size'));
+
+    resetBtn.addEventListener('click', resetAll);
+
+    // Utility Functions
+    function isVideoFile(filename) {
+        const ext = filename.split('.').pop().toLowerCase();
+        return VIDEO_EXTENSIONS.has(ext);
+    }
+
+    function formatDuration(seconds) {
+        if (!seconds || seconds <= 0) return '0s';
+        const h = Math.floor(seconds / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        const s = Math.floor(seconds % 60);
+        
+        let result = '';
+        if (h > 0) result += `${h}h `;
+        if (m > 0 || h > 0) result += `${m}m `;
+        result += `${s}s`;
+        return result.trim();
+    }
+
+    function formatSize(bytes) {
+        if (bytes < 1024) return bytes + ' B';
+        if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+        if (bytes < 1024 * 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        return (bytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
+    }
+
+    function getVideoDuration(file) {
+        return new Promise((resolve) => {
+            const video = document.createElement('video');
+            video.preload = 'metadata';
+            
+            const timeout = setTimeout(() => {
+                URL.revokeObjectURL(video.src);
+                resolve({ file, duration: 0, error: 'Timeout' });
+            }, 15000);
+
+            video.onloadedmetadata = () => {
+                clearTimeout(timeout);
+                const duration = video.duration;
+                URL.revokeObjectURL(video.src);
+                
+                if (isFinite(duration) && duration > 0) {
+                    resolve({ file, duration, error: null });
+                } else {
+                    resolve({ file, duration: 0, error: 'Invalid duration' });
+                }
+            };
+
+            video.onerror = () => {
+                clearTimeout(timeout);
+                URL.revokeObjectURL(video.src);
+                resolve({ file, duration: 0, error: 'Unsupported format' });
+            };
+
+            video.src = URL.createObjectURL(file);
+        });
+    }
+
+    async function processFiles(files) {
+        const videoFiles = files.filter(f => isVideoFile(f.name));
+
+        if (videoFiles.length === 0) {
+            alert('No video files found. Please select a folder containing videos.');
+            return;
+        }
+
+        // Reset state
+        videoData = [];
+        filteredData = [];
+        sortConfig = { key: null, ascending: true };
+        searchInput.value = '';
+        clearSortButtons();
+
+        // Show progress
+        progressSection.classList.add('active');
+        resultsSection.classList.remove('active');
+        progressFill.style.width = '0%';
+        progressPercent.textContent = '0%';
+
+        const total = videoFiles.length;
+        let processed = 0;
+        const batchSize = 5;
+
+        for (let i = 0; i < videoFiles.length; i += batchSize) {
+            const batch = videoFiles.slice(i, i + batchSize);
+            const results = await Promise.all(batch.map(getVideoDuration));
+            videoData.push(...results);
+            processed += results.length;
+
+            const percent = Math.round((processed / total) * 100);
+            progressFill.style.width = `${percent}%`;
+            progressPercent.textContent = `${percent}%`;
+            progressInfo.textContent = `Processed ${processed} of ${total} videos...`;
+        }
+
+        // Hide progress, show results
+        progressSection.classList.remove('active');
+        filteredData = [...videoData];
+        displayResults();
+    }
+
+    function displayResults() {
+        resultsSection.classList.add('active');
+
+        const successVideos = videoData.filter(v => !v.error);
+        const totalSeconds = videoData.reduce((sum, v) => sum + v.duration, 0);
+        const totalSize = videoData.reduce((sum, v) => sum + v.file.size, 0);
+
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = Math.floor(totalSeconds % 60);
+
+        // Update stats
+        document.getElementById('totalTime').textContent = `${hours}h ${minutes}m ${seconds}s`;
+        document.getElementById('totalBreakdown').textContent = 
+            `${successVideos.length} of ${videoData.length} videos analyzed • Total size: ${formatSize(totalSize)}`;
+
+        document.getElementById('statVideos').textContent = videoData.length;
+        document.getElementById('statHours').textContent = hours;
+        document.getElementById('statMinutes').textContent = minutes;
+        document.getElementById('statSeconds').textContent = seconds;
+        document.getElementById('videoCount').textContent = videoData.length;
+
+        renderVideoList();
+    }
+
+    function renderVideoList() {
+        if (filteredData.length === 0) {
+            videoList.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">📭</div>
+                    <p>No videos match your search</p>
+                </div>
+            `;
+            return;
+        }
+
+        videoList.innerHTML = filteredData.map((v, index) => {
+            const ext = v.file.name.split('.').pop().toUpperCase();
+            const isError = !!v.error;
+            
+            return `
+                <div class="video-item ${isError ? 'error' : ''}">
+                    <span class="video-index">${index + 1}</span>
+                    <div class="video-icon ${isError ? 'fail' : 'success'}">
+                        ${isError ? '⚠️' : '🎥'}
+                    </div>
+                    <div class="video-details">
+                        <div class="video-name" title="${v.file.name}">${v.file.name}</div>
+                        <div class="video-meta">
+                            <span>${ext}</span>
+                            <span>${formatSize(v.file.size)}</span>
+                        </div>
+                    </div>
+                    <div class="video-duration ${isError ? 'fail' : 'success'}">
+                        ${isError ? v.error : formatDuration(v.duration)}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function filterVideos() {
+        const query = searchInput.value.toLowerCase().trim();
+        
+        if (!query) {
+            filteredData = [...videoData];
+        } else {
+            filteredData = videoData.filter(v => 
+                v.file.name.toLowerCase().includes(query)
+            );
+        }
+        
+        if (sortConfig.key) {
+            applySorting();
+        } else {
+            renderVideoList();
+        }
+    }
+
+    function sortVideos(key) {
+        if (sortConfig.key === key) {
+            sortConfig.ascending = !sortConfig.ascending;
+        } else {
+            sortConfig.key = key;
+            sortConfig.ascending = true;
+        }
+
+        clearSortButtons();
+        const btn = document.getElementById(`sort${key.charAt(0).toUpperCase() + key.slice(1)}Btn`);
+        if (btn) btn.classList.add('active');
+
+        applySorting();
+    }
+
+    function applySorting() {
+        const { key, ascending } = sortConfig;
+
+        filteredData.sort((a, b) => {
+            let valueA, valueB;
+
+            switch (key) {
+                case 'name':
+                    valueA = a.file.name.toLowerCase();
+                    valueB = b.file.name.toLowerCase();
+                    return ascending ? valueA.localeCompare(valueB) : valueB.localeCompare(valueA);
+                case 'duration':
+                    valueA = a.duration;
+                    valueB = b.duration;
+                    break;
+                case 'size':
+                    valueA = a.file.size;
+                    valueB = b.file.size;
+                    break;
+                default:
+                    return 0;
+            }
+
+            return ascending ? valueA - valueB : valueB - valueA;
+        });
+
+        renderVideoList();
+    }
+
+    function clearSortButtons() {
+        sortNameBtn.classList.remove('active');
+        sortDurationBtn.classList.remove('active');
+        sortSizeBtn.classList.remove('active');
+    }
+
+    function resetAll() {
+        videoData = [];
+        filteredData = [];
+        sortConfig = { key: null, ascending: true };
+        
+        folderInput.value = '';
+        fileInput.value = '';
+        searchInput.value = '';
+        
+        clearSortButtons();
+        
+        progressSection.classList.remove('active');
+        resultsSection.classList.remove('active');
+        progressFill.style.width = '0%';
+        progressPercent.textContent = '0%';
+        progressInfo.textContent = 'Preparing to scan...';
+    }
+</script>
+
+</body>
+</html>
