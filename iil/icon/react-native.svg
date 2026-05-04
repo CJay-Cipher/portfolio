@@ -1,1 +1,1026 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/></g></svg>
+// 1. Install next-seo for easier metadata management
+// npm install next-seo
+
+// pages/_app.tsx - Global SEO configuration
+import type { AppProps } from 'next/app'
+import { DefaultSeo } from 'next-seo'
+import Head from 'next/head'
+
+const SEO_CONFIG = {
+  title: "Tokunbo.io - Nigeria's Smart Car Buying Guide",
+  titleTemplate: "%s | Tokunbo.io",
+  description: "Compare real tokunbo car prices in Nigeria. Get verified vehicle data, VIN history checks, and expert advice from over 1.2 million listings. Avoid bad deals with our smart buyer's guide.",
+  canonical: "https://tokunbo.io",
+  openGraph: {
+    type: 'website',
+    locale: 'en_NG',
+    url: 'https://tokunbo.io',
+    siteName: 'Tokunbo.io',
+    title: "Tokunbo.io - Nigeria's Smart Car Buying Guide",
+    description: "Compare real tokunbo car prices in Nigeria. Get verified vehicle data, VIN history checks, and expert advice from over 1.2 million listings.",
+    images: [
+      {
+        url: 'https://tokunbo.io/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tokunbo.io - Smart Car Buying Guide for Nigeria',
+      },
+    ],
+  },
+  twitter: {
+    handle: '@tokunboio',
+    site: '@tokunboio',
+    cardType: 'summary_large_image',
+  },
+  additionalMetaTags: [
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1',
+    },
+    {
+      name: 'robots',
+      content: 'index, follow',
+    },
+    {
+      name: 'author',
+      content: 'Tokunbo.io',
+    },
+    {
+      name: 'keywords',
+      content: 'tokunbo cars Nigeria, used cars Nigeria, car prices Nigeria, vehicle history check, VIN check Nigeria, car buying guide Nigeria',
+    },
+  ],
+  additionalLinkTags: [
+    {
+      rel: 'icon',
+      href: '/favicon.ico',
+    },
+    {
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180',
+    },
+    {
+      rel: 'manifest',
+      href: '/site.webmanifest',
+    },
+  ],
+}
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <DefaultSeo {...SEO_CONFIG} />
+      <Head>
+        {/* Global Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Tokunbo.io",
+              "url": "https://tokunbo.io",
+              "logo": "https://tokunbo.io/logo.png",
+              "description": "Nigeria's smart car buying guide for tokunbo vehicles",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "NG"
+              },
+              "sameAs": [
+                "https://twitter.com/tokunboio",
+                "https://facebook.com/tokunboio"
+              ]
+            })
+          }}
+        />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
+}
+
+// pages/index.tsx - Homepage
+import { NextSeo } from 'next-seo'
+import Head from 'next/head'
+
+export default function HomePage() {
+  return (
+    <>
+      <NextSeo
+        title="Find Real Tokunbo Car Prices in Nigeria"
+        description="Search and compare real tokunbo car prices from over 1.2 million Nigerian listings. Get verified vehicle data, VIN history, and expert buying advice."
+        canonical="https://tokunbo.io"
+        openGraph={{
+          title: "Find Real Tokunbo Car Prices in Nigeria | Tokunbo.io",
+          description: "Search and compare real tokunbo car prices from over 1.2 million Nigerian listings. Get verified vehicle data, VIN history, and expert buying advice.",
+          url: "https://tokunbo.io",
+        }}
+      />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Tokunbo.io",
+              "url": "https://tokunbo.io",
+              "description": "Nigeria's smart car buying guide for tokunbo vehicles",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://tokunbo.io/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+      </Head>
+      {/* Your homepage content */}
+    </>
+  )
+}
+
+// pages/cars/[make].tsx - Car make pages (e.g., /cars/toyota)
+import { NextSeo } from 'next-seo'
+import { GetStaticProps, GetStaticPaths } from 'next'
+import Head from 'next/head'
+
+interface MakePageProps {
+  make: string
+  makeData: {
+    totalListings: number
+    models: Array<{
+      name: string
+      count: number
+      averagePrice: number
+    }>
+    priceRange: {
+      min: number
+      max: number
+    }
+  }
+}
+
+export default function MakePage({ make, makeData }: MakePageProps) {
+  const capitalizedMake = make.charAt(0).toUpperCase() + make.slice(1)
+  const title = `${capitalizedMake} Cars in Nigeria - Prices & Models`
+  const description = `Find all ${capitalizedMake} tokunbo cars in Nigeria. Compare prices across ${makeData.models.length} models from ${makeData.totalListings.toLocaleString()} verified listings. Get expert buying advice.`
+
+  return (
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={`https://tokunbo.io/cars/${make}`}
+        openGraph={{
+          title,
+          description,
+          url: `https://tokunbo.io/cars/${make}`,
+        }}
+      />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": `${capitalizedMake} Cars in Nigeria`,
+              "description": description,
+              "url": `https://tokunbo.io/cars/${make}`,
+              "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": makeData.models.length,
+                "itemListElement": makeData.models.map((model, index) => ({
+                  "@type": "ListItem",
+                  "position": index + 1,
+                  "item": {
+                    "@type": "Product",
+                    "name": `${capitalizedMake} ${model.name}`,
+                    "url": `https://tokunbo.io/cars/${make}/${model.name.toLowerCase()}`,
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "NGN",
+                      "offerCount": model.count,
+                      "lowPrice": Math.round(model.averagePrice * 0.7),
+                      "highPrice": Math.round(model.averagePrice * 1.3)
+                    }
+                  }
+                }))
+              }
+            })
+          }}
+        />
+      </Head>
+      {/* Your make page content */}
+    </>
+  )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Fetch all car makes from your API
+  const makes = await fetchAllMakes()
+  
+  const paths = makes.map((make: string) => ({
+    params: { make: make.toLowerCase() },
+  }))
+
+  return {
+    paths,
+    fallback: false, // or 'blocking' if you want to generate on-demand
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const make = params!.make as string
+  const makeData = await fetchMakeData(make)
+
+  if (!makeData) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      make,
+      makeData,
+    },
+    revalidate: 86400, // Revalidate once per day
+  }
+}
+
+// pages/cars/[make]/[model].tsx - Car model pages (e.g., /cars/toyota/camry)
+import { NextSeo } from 'next-seo'
+import { GetStaticProps, GetStaticPaths } from 'next/head'
+
+interface ModelPageProps {
+  make: string
+  model: string
+  modelData: {
+    totalListings: number
+    averagePrice: number
+    years: Array<{
+      year: number
+      count: number
+      averagePrice: number
+    }>
+    priceRange: {
+      min: number
+      max: number
+    }
+  }
+}
+
+export default function ModelPage({ make, model, modelData }: ModelPageProps) {
+  const capitalizedMake = make.charAt(0).toUpperCase() + make.slice(1)
+  const capitalizedModel = model.charAt(0).toUpperCase() + model.slice(1)
+  const title = `${capitalizedMake} ${capitalizedModel} Prices in Nigeria`
+  const description = `Find ${capitalizedMake} ${capitalizedModel} tokunbo cars in Nigeria. Compare prices from ${modelData.totalListings.toLocaleString()} verified listings across ${modelData.years.length} model years. Average price: ₦${modelData.averagePrice.toLocaleString()}.`
+
+  return (
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={`https://tokunbo.io/cars/${make}/${model}`}
+        openGraph={{
+          title,
+          description,
+          url: `https://tokunbo.io/cars/${make}/${model}`,
+          images: [
+            {
+              url: `https://tokunbo.io/cars/${make}/${model}/og-image.jpg`,
+              width: 1200,
+              height: 630,
+              alt: `${capitalizedMake} ${capitalizedModel} in Nigeria`,
+            },
+          ],
+        }}
+      />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": `${capitalizedMake} ${capitalizedModel}`,
+              "description": description,
+              "brand": {
+                "@type": "Brand",
+                "name": capitalizedMake
+              },
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "NGN",
+                "lowPrice": modelData.priceRange.min,
+                "highPrice": modelData.priceRange.max,
+                "offerCount": modelData.totalListings
+              },
+              "audience": {
+                "@type": "Audience",
+                "geographicArea": {
+                  "@type": "Country",
+                  "name": "Nigeria"
+                }
+              }
+            })
+          }}
+        />
+      </Head>
+      {/* Your model page content */}
+    </>
+  )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Fetch all make/model combinations
+  const makeModels = await fetchAllMakeModels()
+  
+  const paths = makeModels.map((item: { make: string; model: string }) => ({
+    params: { 
+      make: item.make.toLowerCase(), 
+      model: item.model.toLowerCase() 
+    },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const make = params!.make as string
+  const model = params!.model as string
+  const modelData = await fetchModelData(make, model)
+
+  if (!modelData) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      make,
+      model,
+      modelData,
+    },
+    revalidate: 86400,
+  }
+}
+
+// pages/cars/[make]/[model]/[year].tsx - Specific year pages
+import { NextSeo } from 'next-seo'
+import { GetStaticProps, GetStaticPaths } from 'next'
+
+interface YearPageProps {
+  make: string
+  model: string
+  year: string
+  yearData: {
+    totalListings: number
+    averagePrice: number
+    priceRange: {
+      min: number
+      max: number
+    }
+    features: string[]
+    bodyTypes: Array<{
+      type: string
+      count: number
+    }>
+  }
+}
+
+export default function YearPage({ make, model, year, yearData }: YearPageProps) {
+  const capitalizedMake = make.charAt(0).toUpperCase() + make.slice(1)
+  const capitalizedModel = model.charAt(0).toUpperCase() + model.slice(1)
+  const title = `${year} ${capitalizedMake} ${capitalizedModel} Prices in Nigeria`
+  const description = `Find ${year} ${capitalizedMake} ${capitalizedModel} tokunbo cars in Nigeria. ${yearData.totalListings.toLocaleString()} verified listings. Average price: ₦${yearData.averagePrice.toLocaleString()}. Price range: ₦${yearData.priceRange.min.toLocaleString()} - ₦${yearData.priceRange.max.toLocaleString()}.`
+
+  return (
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={`https://tokunbo.io/cars/${make}/${model}/${year}`}
+        openGraph={{
+          title,
+          description,
+          url: `https://tokunbo.io/cars/${make}/${model}/${year}`,
+          images: [
+            {
+              url: `https://tokunbo.io/cars/${make}/${model}/${year}/og-image.jpg`,
+              width: 1200,
+              height: 630,
+              alt: `${year} ${capitalizedMake} ${capitalizedModel} in Nigeria`,
+            },
+          ],
+        }}
+      />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": `${year} ${capitalizedMake} ${capitalizedModel}`,
+              "description": description,
+              "brand": {
+                "@type": "Brand",
+                "name": capitalizedMake
+              },
+              "model": capitalizedModel,
+              "productionDate": year,
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "NGN",
+                "lowPrice": yearData.priceRange.min,
+                "highPrice": yearData.priceRange.max,
+                "offerCount": yearData.totalListings
+              },
+              "additionalProperty": yearData.features.map(feature => ({
+                "@type": "PropertyValue",
+                "name": "Feature",
+                "value": feature
+              }))
+            })
+          }}
+        />
+      </Head>
+      {/* Your year page content */}
+    </>
+  )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Fetch all make/model/year combinations
+  const makeModelYears = await fetchAllMakeModelYears()
+  
+  const paths = makeModelYears.map((item: { make: string; model: string; year: string }) => ({
+    params: { 
+      make: item.make.toLowerCase(), 
+      model: item.model.toLowerCase(),
+      year: item.year
+    },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const make = params!.make as string
+  const model = params!.model as string
+  const year = params!.year as string
+  const yearData = await fetchYearData(make, model, year)
+
+  if (!yearData) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      make,
+      model,
+      year,
+      yearData,
+    },
+    revalidate: 86400,
+  }
+}
+
+// pages/blog/index.tsx - Blog listing page
+import { NextSeo } from 'next-seo'
+import { GetStaticProps } from 'next'
+
+interface BlogIndexProps {
+  posts: Array<{
+    slug: string
+    title: string
+    excerpt: string
+    publishedAt: string
+    author: string
+    readingTime: number
+  }>
+}
+
+export default function BlogIndex({ posts }: BlogIndexProps) {
+  return (
+    <>
+      <NextSeo
+        title="Car Buying Guides & Tips for Nigeria"
+        description="Expert guides on buying tokunbo cars in Nigeria. Learn how to avoid scams, check vehicle history, negotiate prices, and make smart car buying decisions."
+        canonical="https://tokunbo.io/blog"
+        openGraph={{
+          title: "Car Buying Guides & Tips for Nigeria | Tokunbo.io",
+          description: "Expert guides on buying tokunbo cars in Nigeria. Learn how to avoid scams, check vehicle history, negotiate prices, and make smart car buying decisions.",
+          url: "https://tokunbo.io/blog",
+        }}
+      />
+      {/* Your blog index content */}
+    </>
+  )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await fetchAllBlogPosts()
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 3600, // Revalidate every hour
+  }
+}
+
+// pages/blog/[slug].tsx - Individual blog posts
+import { NextSeo, ArticleJsonLd } from 'next-seo'
+import { GetStaticProps, GetStaticPaths } from 'next'
+
+interface BlogPostProps {
+  post: {
+    title: string
+    excerpt: string
+    content: string
+    slug: string
+    publishedAt: string
+    updatedAt: string
+    author: string
+    readingTime: number
+    tags: string[]
+  }
+}
+
+export default function BlogPost({ post }: BlogPostProps) {
+  return (
+    <>
+      <NextSeo
+        title={post.title}
+        description={post.excerpt}
+        canonical={`https://tokunbo.io/blog/${post.slug}`}
+        openGraph={{
+          title: post.title,
+          description: post.excerpt,
+          url: `https://tokunbo.io/blog/${post.slug}`,
+          type: 'article',
+          article: {
+            publishedTime: post.publishedAt,
+            modifiedTime: post.updatedAt,
+            authors: [post.author],
+            tags: post.tags,
+          },
+          images: [
+            {
+              url: `https://tokunbo.io/blog/${post.slug}/og-image.jpg`,
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ],
+        }}
+      />
+      <ArticleJsonLd
+        url={`https://tokunbo.io/blog/${post.slug}`}
+        title={post.title}
+        images={[`https://tokunbo.io/blog/${post.slug}/og-image.jpg`]}
+        datePublished={post.publishedAt}
+        dateModified={post.updatedAt}
+        authorName={post.author}
+        publisherName="Tokunbo.io"
+        publisherLogo="https://tokunbo.io/logo.png"
+        description={post.excerpt}
+      />
+      {/* Your blog post content */}
+    </>
+  )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await fetchAllBlogPosts()
+  
+  const paths = posts.map((post: { slug: string }) => ({
+    params: { slug: post.slug },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const post = await fetchBlogPost(params!.slug as string)
+
+  if (!post) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      post,
+    },
+    revalidate: 3600,
+  }
+}
+
+// pages/contact.tsx - Contact page
+import { NextSeo } from 'next-seo'
+
+export default function Contact() {
+  return (
+    <>
+      <NextSeo
+        title="Contact Us"
+        description="Get in touch with Tokunbo.io. Have questions about car prices, vehicle history, or need help with your car buying decision? We're here to help."
+        canonical="https://tokunbo.io/contact"
+        openGraph={{
+          title: "Contact Tokunbo.io",
+          description: "Get in touch with Tokunbo.io. Have questions about car prices, vehicle history, or need help with your car buying decision? We're here to help.",
+          url: "https://tokunbo.io/contact",
+        }}
+      />
+      {/* Your contact page content */}
+    </>
+  )
+}
+
+// pages/privacy-policy.tsx - Privacy policy page
+import { NextSeo } from 'next-seo'
+
+export default function PrivacyPolicy() {
+  return (
+    <>
+      <NextSeo
+        title="Privacy Policy"
+        description="Learn how Tokunbo.io collects, uses, and protects your personal information when you use our car buying guide service."
+        canonical="https://tokunbo.io/privacy-policy"
+        noindex={true} // Don't index legal pages
+      />
+      {/* Your privacy policy content */}
+    </>
+  )
+}
+
+// pages/terms-conditions.tsx - Terms and conditions page
+import { NextSeo } from 'next-seo'
+
+export default function TermsConditions() {
+  return (
+    <>
+      <NextSeo
+        title="Terms & Conditions"
+        description="Terms and conditions for using Tokunbo.io's car buying guide service in Nigeria."
+        canonical="https://tokunbo.io/terms-conditions"
+        noindex={true} // Don't index legal pages
+      />
+      {/* Your terms and conditions content */}
+    </>
+  )
+}
+
+// Custom 404 Page - pages/404.tsx
+import { NextSeo } from 'next-seo'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+export default function Custom404() {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [popularCars] = useState([
+    { make: 'toyota', model: 'camry', displayName: 'Toyota Camry' },
+    { make: 'honda', model: 'accord', displayName: 'Honda Accord' },
+    { make: 'toyota', model: 'corolla', displayName: 'Toyota Corolla' },
+    { make: 'lexus', model: 'es', displayName: 'Lexus ES' },
+    { make: 'mercedes', model: 'c-class', displayName: 'Mercedes C-Class' },
+    { make: 'bmw', model: '3-series', displayName: 'BMW 3 Series' },
+  ])
+
+  return (
+    <>
+      <NextSeo
+        title="Page Not Found"
+        description="The page you're looking for doesn't exist. Find tokunbo car prices and buying guides on Tokunbo.io."
+        canonical="https://tokunbo.io/404"
+        noindex={true}
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
+        <div className="max-w-2xl w-full text-center">
+          {/* 404 Animation */}
+          <div className="mb-8">
+            <div className="text-8xl font-bold text-indigo-600 mb-4 animate-bounce">
+              404
+            </div>
+            <div className="text-2xl text-gray-700 mb-6">
+              Oops! This page took a wrong turn
+            </div>
+          </div>
+
+          {/* Car illustration or icon */}
+          <div className="mb-8">
+            <svg 
+              className="mx-auto w-32 h-32 text-indigo-400" 
+              fill="currentColor" 
+              viewBox="0 0 20 20"
+            >
+              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h1a3 3 0 006 0h2a3 3 0 006 0h1a2 2 0 002-2V9zM5 13a1 1 0 11-2 0 1 1 0 012 0zm12 0a1 1 0 11-2 0 1 1 0 012 0z" />
+            </svg>
+          </div>
+
+          <p className="text-gray-600 mb-8 text-lg">
+            The car you're looking for might have driven off, but don't worry! 
+            We have thousands of other tokunbo cars waiting for you.
+          </p>
+
+          {/* Search Section */}
+          <div className="mb-8">
+            <div className="max-w-md mx-auto">
+              <div className="flex rounded-lg shadow-lg">
+                <input
+                  type="text"
+                  placeholder="Search for cars (e.g., Toyota Camry)"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="flex-1 px-4 py-3 rounded-l-lg border-2 border-indigo-300 focus:border-indigo-500 focus:outline-none"
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter' && searchQuery.trim()) {
+                      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`
+                    }
+                  }}
+                />
+                <button
+                  onClick={() => {
+                    if (searchQuery.trim()) {
+                      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`
+                    }
+                  }}
+                  className="px-6 py-3 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-700 transition-colors font-medium"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Popular Cars */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              Or check out these popular cars:
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {popularCars.map((car) => (
+                <Link
+                  key={`${car.make}-${car.model}`}
+                  href={`/cars/${car.make}/${car.model}`}
+                  className="bg-white rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-indigo-300 text-gray-700 hover:text-indigo-600"
+                >
+                  {car.displayName}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link
+              href="/"
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-lg"
+            >
+              Go Home
+            </Link>
+            <Link
+              href="/blog"
+              className="bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium shadow-lg border border-indigo-200"
+            >
+              Read Car Guides
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium shadow-lg border border-indigo-200"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          {/* Fun message */}
+          <p className="text-gray-500 text-sm">
+            🚗 Don't let this stop your car hunt! Nigeria's best tokunbo deals are just a click away.
+          </p>
+        </div>
+      </div>
+    </>
+  )
+}
+
+// pages/sitemap.xml.tsx - Dynamic sitemap
+import { GetServerSideProps } from 'next'
+
+const Sitemap = () => null
+
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // Fetch all your routes
+  const makes = await fetchAllMakes()
+  const makeModels = await fetchAllMakeModels()
+  const makeModelYears = await fetchAllMakeModelYears()  
+  const blogPosts = await fetchAllBlogPosts()
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://tokunbo.io</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+      </url>
+      <url>
+        <loc>https://tokunbo.io/blog</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://tokunbo.io/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      ${makes.map((make: string) => `
+        <url>
+          <loc>https://tokunbo.io/cars/${make}</loc>
+          <changefreq>weekly</changefreq>
+          <priority>0.9</priority>
+        </url>
+      `).join('')}
+      ${makeModels.map((item: { make: string; model: string }) => `
+        <url>
+          <loc>https://tokunbo.io/cars/${item.make}/${item.model}</loc>
+          <changefreq>weekly</changefreq>
+          <priority>0.9</priority>
+        </url>
+      `).join('')}
+      ${makeModelYears.map((item: { make: string; model: string; year: string }) => `
+        <url>
+          <loc>https://tokunbo.io/cars/${item.make}/${item.model}/${item.year}</loc>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+      `).join('')}
+      ${blogPosts.map((post: { slug: string; updatedAt: string }) => `
+        <url>
+          <loc>https://tokunbo.io/blog/${post.slug}</loc>
+          <lastmod>${post.updatedAt}</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.7</priority>
+        </url>
+      `).join('')}
+    </urlset>`
+
+  res.setHeader('Content-Type', 'text/xml')
+  res.write(sitemap)
+  res.end()
+
+  return {
+    props: {},
+  }
+}
+
+export default Sitemap
+
+// Helper functions - Replace these with your actual API calls
+async function fetchAllMakes(): Promise<string[]> {
+  // Replace with your actual API call
+  // Example: const response = await fetch('https://api.tokunbo.io/makes')
+  // return response.json()
+  return ['toyota', 'honda', 'mercedes', 'bmw', 'lexus', 'nissan']
+}
+
+async function fetchMakeData(make: string) {
+  // Replace with your actual API call
+  try {
+    // const response = await fetch(`https://api.tokunbo.io/makes/${make}`)
+    // return response.json()
+    return {
+      totalListings: 15420,
+      models: [
+        { name: 'Camry', count: 3200, averagePrice: 8500000 },
+        { name: 'Corolla', count: 2800, averagePrice: 6200000 },
+        { name: 'Highlander', count: 1900, averagePrice: 12000000 },
+      ],
+      priceRange: { min: 2500000, max: 25000000 }
+    }
+  } catch (error) {
+    return null
+  }
+}
+
+async function fetchAllMakeModels(): Promise<Array<{ make: string; model: string }>> {
+  // Replace with your actual API call
+  return [
+    { make: 'toyota', model: 'camry' },
+    { make: 'toyota', model: 'corolla' },
+    { make: 'honda', model: 'accord' },
+    { make: 'honda', model: 'civic' },
+    // ... more combinations
+  ]
+}
+
+async function fetchModelData(make: string, model: string) {
+  // Replace with your actual API call
+  try {
+    // const response = await fetch(`https://api.tokunbo.io/cars/${make}/${model}`)
+    // return response.json()
+    return {
+      totalListings: 3200,
+      averagePrice: 8500000,
+      years: [
+        { year: 2020, count: 450, averagePrice: 12500000 },
+        { year: 2019, count: 520, averagePrice: 11200000 },
+        { year: 2018, count: 680, averagePrice: 9800000 },
+      ],
+      priceRange: { min: 4500000, max: 15000000 }
+    }
+  } catch (error) {
+    return null
+  }
+}
+
+async function fetchAllMakeModelYears(): Promise<Array<{ make: string; model: string; year: string }>> {
+  // Replace with your actual API call
+  return [
+    { make: 'toyota', model: 'camry', year: '2020' },
+    { make: 'toyota', model: 'camry', year: '2019' },
+    { make: 'toyota', model: 'corolla', year: '2020' },
+    // ... more combinations
+  ]
+}
+
+async function fetchYearData(make: string, model: string, year: string) {
+  // Replace with your actual API call  
+  try {
+    // const response = await fetch(`https://api.tokunbo.io/cars/${make}/${model}/${year}`)
+    // return response.json()
+    return {
+      totalListings: 450,
+      averagePrice: 12500000,
+      priceRange: { min: 10000000, max: 15000000 },
+      features: ['Automatic Transmission', 'Leather Seats', 'Sunroof', 'Navigation System'],
+      bodyTypes: [
+        { type: 'Sedan', count: 380 },
+        { type: 'Hybrid', count: 70 }
+      ]
+    }
+  } catch (error) {
+    return null
+  }
+}
+
+async function fetchAllBlogPosts() {
+  // Replace with your actual API call
+  try {
+    // const response = await fetch('https://api.tokunbo.io/blog/posts')
+    // return response.json()
+    return [
+      {
+        slug: 'how-to-buy-tokunbo-cars-nigeria',
+        title: 'Complete Guide to Buying Tokunbo Cars in Nigeria',
+        excerpt: 'Everything you need to know before buying a used car in Nigeria. From inspection tips to price negotiation.',
+        publishedAt: '2024-01-15T10:00:00Z',
+        updatedAt: '2024-01-20T15:30:00Z',
+        author: 'Tokunbo Expert',
+        readingTime: 8
+      },
+      // ... more posts
+    ]
+  } catch (error) {
+    return []
+  }
+}
+
+async function fetchBlogPost(slug: string) {
+  // Replace with your actual API call
+  try {
+    // const response = await fetch(`https://api.tokunbo.io/blog/posts/${slug}`)
+    // return response.json()
+    return {
+      title: 'Complete Guide to Buying Tokunbo Cars in Nigeria',
+      excerpt: 'Everything you need to know before buying a used car in Nigeria. From inspection tips to price negotiation.',
+      content: '<!-- Your blog post content -->',
+      slug: slug,
+      publishedAt: '2024-01-15T10:00:00Z',
+      updatedAt: '2024-01-20T15:30:00Z',
+      author: 'Tokunbo Expert',
+      readingTime: 8,
+      tags: ['car buying', 'tokunbo cars', 'nigeria', 'used cars']
+    }
+  } catch (error) {
+    return null
+  }
+}
