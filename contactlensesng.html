@@ -1,0 +1,2281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContactLensesNG — Clear Vision, Delivered</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #0f1117;
+        --ink-soft: #4a4e5a;
+        --ink-muted: #9298a5;
+        --bg: #f5f3ee;
+        --surface: #ffffff;
+        --surface-2: #edeae3;
+        --accent: #2e6b5e;
+        --accent-light: #e4edeb;
+        --accent-2: #c9703b;
+        --accent-2-light: #f9ece3;
+        --gold: #b8962e;
+        --gold-light: #faf3e0;
+        --border: #dddad3;
+        --radius: 12px;
+        --radius-lg: 20px;
+        --shadow: 0 2px 16px rgba(15, 17, 23, 0.08);
+        --shadow-hover: 0 8px 32px rgba(15, 17, 23, 0.14);
+        --font-display: "DM Serif Display", Georgia, serif;
+        --font-body: "DM Sans", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      /* ── NAV ── */
+      nav {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: var(--font-display);
+        font-size: 22px;
+        color: var(--ink);
+        text-decoration: none;
+        letter-spacing: -0.3px;
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .nav-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--ink-soft);
+        font-size: 20px;
+        padding: 6px;
+        border-radius: 8px;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        position: relative;
+      }
+
+      .nav-icon:hover {
+        background: var(--surface-2);
+        color: var(--ink);
+      }
+
+      .badge {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background: var(--accent-2);
+        color: white;
+        font-size: 10px;
+        font-weight: 600;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-nav {
+        background: var(--ink);
+        color: white;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .btn-nav:hover {
+        background: var(--accent);
+      }
+
+      /* ── HERO ── */
+      .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        min-height: 520px;
+      }
+
+      .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent-light, #e4edeb);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 100px;
+        margin-bottom: 1.2rem;
+      }
+
+      .hero-label::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+
+      .hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(36px, 5vw, 56px);
+        line-height: 1.1;
+        letter-spacing: -1px;
+        margin-bottom: 1.2rem;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .hero p {
+        color: var(--ink-soft);
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 420px;
+        margin-bottom: 2rem;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        background: var(--ink);
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: var(--radius);
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+
+      .btn-primary:hover {
+        background: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--ink);
+        border: 1.5px solid var(--border);
+        padding: 14px 28px;
+        border-radius: var(--radius);
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+
+      .btn-outline:hover {
+        border-color: var(--ink);
+        background: var(--surface);
+      }
+
+      .hero-visual {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .stat-card {
+        background: var(--bg);
+        border-radius: var(--radius);
+        padding: 1.2rem;
+      }
+
+      .stat-card .num {
+        font-family: var(--font-display);
+        font-size: 28px;
+        color: var(--ink);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-card .lbl {
+        font-size: 12px;
+        color: var(--ink-muted);
+        font-weight: 500;
+      }
+
+      .hero-badge-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink-soft);
+      }
+
+      .pill.green {
+        background: #e4edeb;
+        color: var(--accent);
+        border-color: #c2d8d2;
+      }
+
+      .pill.orange {
+        background: var(--accent-2-light);
+        color: var(--accent-2);
+        border-color: #f0c9ad;
+      }
+
+      /* ── SECTION ── */
+      section {
+        padding: 4rem 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(26px, 4vw, 38px);
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.5rem;
+      }
+
+      .section-sub {
+        color: var(--ink-soft);
+        font-size: 15px;
+        max-width: 500px;
+        line-height: 1.65;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 2.5rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      /* ── CATEGORIES ── */
+      .categories-bg {
+        background: var(--surface);
+      }
+
+      .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .cat-card {
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.5rem;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .cat-card.active {
+        background: var(--ink);
+        border-color: var(--ink);
+      }
+
+      .cat-card.active .cat-name,
+      .cat-card.active .cat-count {
+        color: white;
+      }
+
+      .cat-card.active .cat-count {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .cat-icon {
+        font-size: 32px;
+        margin-bottom: 1rem;
+      }
+
+      .cat-name {
+        font-family: var(--font-display);
+        font-size: 18px;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+
+      .cat-count {
+        font-size: 12px;
+        color: var(--ink-muted);
+        font-weight: 500;
+      }
+
+      /* ── PRODUCTS ── */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .product-card {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border);
+        overflow: hidden;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        cursor: pointer;
+      }
+
+      .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      /* ── PRODUCT IMAGE AREA ── */
+      .product-img {
+        background: var(--bg);
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 56px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Real image fills the box */
+      .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.35s ease;
+      }
+
+      .product-card:hover .product-img img {
+        transform: scale(1.05);
+      }
+
+      /* Emoji shown only when image is missing / broken */
+      .product-img .img-fallback {
+        font-size: 56px;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      .product-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 4px 9px;
+        border-radius: 6px;
+        z-index: 1;
+      }
+
+      .tag-new {
+        background: var(--ink);
+        color: white;
+      }
+
+      .tag-sale {
+        background: var(--accent-2);
+        color: white;
+      }
+
+      .tag-popular {
+        background: var(--gold);
+        color: white;
+      }
+
+      .wishlist-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 16px;
+        transition:
+          background 0.15s,
+          border-color 0.15s;
+        color: var(--ink-muted);
+        z-index: 1;
+      }
+
+      .wishlist-btn:hover {
+        background: var(--accent-2-light);
+        border-color: var(--accent-2);
+        color: var(--accent-2);
+      }
+
+      .wishlist-btn.active {
+        color: var(--accent-2);
+        border-color: var(--accent-2);
+      }
+
+      .product-body {
+        padding: 1rem 1.2rem 1.2rem;
+      }
+
+      .product-brand {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--ink-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin-bottom: 4px;
+      }
+
+      .product-name {
+        font-family: var(--font-display);
+        font-size: 17px;
+        color: var(--ink);
+        margin-bottom: 6px;
+        line-height: 1.3;
+      }
+
+      .product-desc {
+        font-size: 12px;
+        color: var(--ink-soft);
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+
+      .product-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .product-price {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .product-price .old {
+        font-size: 12px;
+        color: var(--ink-muted);
+        text-decoration: line-through;
+        margin-right: 5px;
+        font-weight: 400;
+      }
+
+      .btn-add {
+        background: var(--ink);
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+
+      .btn-add:hover {
+        background: var(--accent);
+      }
+
+      /* ── FEATURED BANNER ── */
+      .featured-banner {
+        background: var(--ink);
+        border-radius: var(--radius-lg);
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        margin: 0 0 3rem;
+      }
+
+      .featured-banner h2 {
+        font-family: var(--font-display);
+        font-size: 32px;
+        color: white;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+      }
+
+      .featured-banner h2 em {
+        color: #8ecfc5;
+        font-style: italic;
+      }
+
+      .featured-banner p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-light {
+        background: white;
+        color: var(--ink);
+        border: none;
+        padding: 12px 24px;
+        border-radius: var(--radius);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.15s;
+      }
+
+      .btn-light:hover {
+        opacity: 0.9;
+      }
+
+      .featured-visual {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .mini-product {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--radius);
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .mini-product .icon {
+        font-size: 24px;
+      }
+
+      .mini-product .info {
+        flex: 1;
+      }
+
+      .mini-product .info p {
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .mini-product .info span {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 11px;
+      }
+
+      .mini-product .price {
+        color: #8ecfc5;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      /* ── CART PANEL ── */
+      .cart-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 17, 23, 0.4);
+        z-index: 200;
+      }
+
+      .cart-overlay.open {
+        display: block;
+      }
+
+      .cart-panel {
+        position: fixed;
+        top: 0;
+        right: -420px;
+        width: 400px;
+        height: 100%;
+        background: var(--surface);
+        z-index: 201;
+        padding: 0;
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cart-panel.open {
+        right: 0;
+      }
+
+      .cart-header {
+        padding: 1.5rem 1.5rem 1rem;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .cart-header h3 {
+        font-family: var(--font-display);
+        font-size: 20px;
+      }
+
+      .close-btn {
+        background: var(--surface-2);
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        color: var(--ink-soft);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cart-items {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1.2rem 1.5rem;
+      }
+
+      .cart-item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      /* Cart thumbnail — supports both img and emoji */
+      .cart-item-img {
+        background: var(--bg);
+        border-radius: 8px;
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        overflow: hidden;
+      }
+
+      .cart-item-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .cart-item-info {
+        flex: 1;
+      }
+
+      .cart-item-info p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+
+      .cart-item-info span {
+        font-size: 12px;
+        color: var(--ink-muted);
+      }
+
+      .cart-item-price {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .qty-ctrl {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      .qty-btn {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 14px;
+        color: var(--ink);
+        transition: background 0.1s;
+      }
+
+      .qty-btn:hover {
+        background: var(--border);
+      }
+
+      .qty-num {
+        font-size: 13px;
+        font-weight: 500;
+        min-width: 16px;
+        text-align: center;
+      }
+
+      .cart-footer {
+        padding: 1.2rem 1.5rem 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .cart-summary {
+        margin-bottom: 1rem;
+      }
+
+      .cart-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: var(--ink-soft);
+        margin-bottom: 6px;
+      }
+
+      .cart-row.total {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--ink);
+        padding-top: 8px;
+        border-top: 1px solid var(--border);
+        margin-top: 4px;
+      }
+
+      .payment-methods {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .pay-method {
+        background: var(--bg);
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--ink-soft);
+        cursor: pointer;
+        transition:
+          border-color 0.15s,
+          color 0.15s;
+      }
+
+      .pay-method.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: #e4edeb;
+      }
+
+      .btn-checkout {
+        width: 100%;
+        background: var(--ink);
+        color: white;
+        border: none;
+        padding: 14px;
+        border-radius: var(--radius);
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .btn-checkout:hover {
+        background: var(--accent);
+      }
+
+      /* ── WISHLIST MODAL ── */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 17, 23, 0.5);
+        z-index: 300;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-overlay.open {
+        display: flex;
+      }
+
+      .modal {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        width: 480px;
+        max-width: 90vw;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      .modal-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .modal-head h3 {
+        font-family: var(--font-display);
+        font-size: 22px;
+      }
+
+      .wishlist-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .wishlist-item {
+        background: var(--bg);
+        border-radius: var(--radius);
+        padding: 1rem;
+        text-align: center;
+      }
+
+      /* Wishlist thumbnail */
+      .wishlist-item .item-thumb {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0 auto 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--surface);
+        font-size: 36px;
+      }
+
+      .wishlist-item .item-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .wishlist-item p {
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      .wishlist-item span {
+        font-size: 13px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .btn-move-cart {
+        width: 100%;
+        margin-top: 8px;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 7px;
+        padding: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink-soft);
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+
+      .btn-move-cart:hover {
+        background: var(--surface);
+      }
+
+      .empty-wish {
+        text-align: center;
+        padding: 2rem 0;
+        color: var(--ink-muted);
+        font-size: 14px;
+      }
+
+      .empty-wish .icon {
+        font-size: 40px;
+        margin-bottom: 8px;
+      }
+
+      /* ── FEATURES STRIP ── */
+      .features-strip {
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+
+      .feature-item {
+        padding: 1.8rem 1.5rem;
+        border-right: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .feature-item:last-child {
+        border-right: none;
+      }
+
+      .feature-icon {
+        font-size: 24px;
+      }
+
+      .feature-item h4 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .feature-item p {
+        font-size: 12px;
+        color: var(--ink-muted);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--ink);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 3rem 0 2rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .footer-brand .logo {
+        color: white;
+        display: block;
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-brand p {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .footer-col h5 {
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        letter-spacing: 0.3px;
+      }
+
+      .footer-col a {
+        display: block;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 13px;
+        margin-bottom: 8px;
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+
+      .footer-col a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-bottom p {
+        font-size: 12px;
+      }
+
+      .pay-logos {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .pay-logo {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: 11px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 0.3px;
+      }
+
+      /* ── TOAST ── */
+      .toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--ink);
+        color: white;
+        padding: 12px 20px;
+        border-radius: var(--radius);
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transform: translateY(100px);
+        opacity: 0;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+        box-shadow: var(--shadow);
+      }
+
+      .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .toast-icon {
+        font-size: 18px;
+      }
+
+      /* ── FILTER BAR ── */
+      .filter-bar {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .filter-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink-muted);
+        margin-right: 4px;
+      }
+
+      .filter-chip {
+        background: var(--surface);
+        border: 1.5px solid var(--border);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink-soft);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+
+      .filter-chip:hover {
+        border-color: var(--ink);
+        color: var(--ink);
+      }
+
+      .filter-chip.active {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: white;
+      }
+
+      /* ── PAGE TABS ── */
+      .page-tabs {
+        display: flex;
+        gap: 0;
+        border-bottom: 2px solid var(--border);
+        margin-bottom: 2rem;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink-muted);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        transition: color 0.15s;
+      }
+
+      .tab.active {
+        color: var(--ink);
+        border-bottom-color: var(--ink);
+      }
+
+      .page-content {
+        display: none;
+      }
+
+      .page-content.active {
+        display: block;
+      }
+
+      /* ── CONFIRM PAGE ── */
+      .confirm-card {
+        max-width: 520px;
+        margin: 0 auto;
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border);
+        padding: 2.5rem;
+        text-align: center;
+      }
+
+      .confirm-icon {
+        font-size: 56px;
+        margin-bottom: 1rem;
+      }
+
+      .confirm-card h2 {
+        font-family: var(--font-display);
+        font-size: 28px;
+        margin-bottom: 0.5rem;
+      }
+
+      .confirm-card p {
+        color: var(--ink-soft);
+        font-size: 15px;
+        margin-bottom: 1.5rem;
+      }
+
+      .order-details {
+        background: var(--bg);
+        border-radius: var(--radius);
+        padding: 1.2rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+      }
+
+      .order-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        padding: 4px 0;
+      }
+
+      .order-row span:first-child {
+        color: var(--ink-soft);
+      }
+
+      .order-row span:last-child {
+        font-weight: 500;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 1.5rem;
+      }
+
+      .step-item {
+        background: var(--bg);
+        border-radius: var(--radius);
+        padding: 12px 8px;
+        text-align: center;
+      }
+
+      .step-item .s-icon {
+        font-size: 22px;
+        margin-bottom: 4px;
+      }
+
+      .step-item p {
+        font-size: 11px;
+        color: var(--ink-soft);
+        line-height: 1.3;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          min-height: auto;
+        }
+
+        .categories-grid,
+        .products-grid,
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .featured-banner {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .nav-links {
+          display: none;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+
+        .categories-grid,
+        .products-grid {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1rem;
+        }
+
+        .product-body {
+          padding: 1rem 0.7rem 1.2rem;
+        }
+
+        .featured-banner {
+          padding: 1.7rem;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .feature-item {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-inner">
+        <a href="#" class="logo">Contact<span>LensesNG</span></a>
+        <ul class="nav-links">
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('products')">All Products</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('terms')">Terms</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-icon" onclick="openWishlist()" title="Wishlist">
+            ♡
+            <span class="badge" id="wishBadge" style="display: none">0</span>
+          </button>
+          <button class="nav-icon" onclick="openCart()" title="Cart">
+            🛒
+            <span class="badge" id="cartBadge">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <div id="pages">
+      <!-- ── HOME ── -->
+      <div id="page-home" class="page-content active">
+        <!-- HERO -->
+        <div class="hero container">
+          <div class="hero-text">
+            <span class="hero-label">New Arrivals 2026</span>
+            <h1>See the World<br />in <em>Perfect</em> Clarity</h1>
+            <p>Premium contact lenses and designer eyeglasses, delivered to your door. Trusted prescriptions, unbeatable comfort.</p>
+            <div class="hero-cta">
+              <button class="btn-primary" onclick="showPage('products')">Shop Now</button>
+              <button class="btn-outline" onclick="showPage('about')">Learn More</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-stats">
+              <div class="stat-card">
+                <div class="num">20+</div>
+                <div class="lbl">Products Available</div>
+              </div>
+              <div class="stat-card">
+                <div class="num">2 day</div>
+                <div class="lbl">Fast Delivery</div>
+              </div>
+              <div class="stat-card">
+                <div class="num">4.9★</div>
+                <div class="lbl">Customer Rating</div>
+              </div>
+              <div class="stat-card">
+                <div class="num">100%</div>
+                <div class="lbl">Authentic Products</div>
+              </div>
+            </div>
+            <div class="hero-badge-row">
+              <span class="pill green">✓ Prescription Ready</span>
+              <span class="pill orange">Paystack & PayPal</span>
+              <span class="pill">Free Returns</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="features-strip">
+          <div class="container">
+            <div class="features-grid">
+              <div class="feature-item">
+                <span class="feature-icon">🚚</span>
+                <div>
+                  <h4>Free Delivery</h4>
+                  <p>On orders over ₦15,000</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔒</span>
+                <div>
+                  <h4>Secure Payment</h4>
+                  <p>Paystack & PayPal encrypted</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">↩️</span>
+                <div>
+                  <h4>30-Day Returns</h4>
+                  <p>Hassle-free refund policy</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">💬</span>
+                <div>
+                  <h4>24/7 Support</h4>
+                  <p>Chat & email assistance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEATURED -->
+        <section>
+          <div class="container">
+            <div class="featured-banner">
+              <div>
+                <h2>Extra Comfy Contact Lenses,<br /><em>Unique Eyewears</em></h2>
+                <p>Subscribe and save 15% on monthly contact lens delivery. Never run out again — auto-replenish on your schedule.</p>
+                <button class="btn-light" onclick="showPage('products')">Shop Contact Lenses</button>
+              </div>
+              <div class="featured-visual">
+                <div class="mini-product">
+                  <span class="icon">👁️</span>
+                  <div class="info">
+                    <p>Acuvue Moist Daily</p>
+                    <span>30-pack · -2.50 PWR</span>
+                  </div>
+                  <span class="price">₦8,500</span>
+                </div>
+                <div class="mini-product">
+                  <span class="icon">👁️</span>
+                  <div class="info">
+                    <p>Biofinity Monthly</p>
+                    <span>6-pack · Silicone Hydrogel</span>
+                  </div>
+                  <span class="price">₦14,000</span>
+                </div>
+                <div class="mini-product">
+                  <span class="icon">👁️</span>
+                  <div class="info">
+                    <p>Air Optix Colors</p>
+                    <span>2-pack · Cosmetic</span>
+                  </div>
+                  <span class="price">₦7,200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURED PRODUCTS (home excerpt) -->
+        <section style="padding-top: 0">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="section-label">Trending</p>
+                <h2 class="section-title">Popular Right Now</h2>
+              </div>
+              <button class="btn-outline" onclick="showPage('products')" style="white-space: nowrap">View All →</button>
+            </div>
+            <div class="products-grid" id="homeProductGrid"></div>
+          </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="categories-bg">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="section-label">Browse</p>
+                <h2 class="section-title">Shop by Category</h2>
+              </div>
+            </div>
+            <div class="categories-grid">
+              <div class="cat-card active" onclick="filterCat('all')">
+                <div class="cat-icon">👓</div>
+                <div class="cat-name">All Items</div>
+                <div class="cat-count">20 products</div>
+              </div>
+              <div class="cat-card" onclick="filterCat('frames')">
+                <div class="cat-icon">🕶️</div>
+                <div class="cat-name">Eyeglasses</div>
+                <div class="cat-count">10 products</div>
+              </div>
+              <div class="cat-card" onclick="filterCat('contact')">
+                <div class="cat-icon">👁️</div>
+                <div class="cat-name">Contact Lenses</div>
+                <div class="cat-count">8 products</div>
+              </div>
+              <div class="cat-card" onclick="filterCat('accessories')">
+                <div class="cat-icon">🧴</div>
+                <div class="cat-name">Accessories</div>
+                <div class="cat-count">2 products</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ── ALL PRODUCTS ── -->
+      <div id="page-products" class="page-content">
+        <section>
+          <div class="container">
+            <div class="section-head" style="margin-bottom: 1.5rem">
+              <div>
+                <p class="section-label">Catalogue</p>
+                <h2 class="section-title">All Products</h2>
+                <p class="section-sub">20 premium optical products in stock</p>
+              </div>
+            </div>
+            <div class="filter-bar">
+              <span class="filter-label">Filter:</span>
+              <span class="filter-chip active" onclick="filterProducts('all', this)">All</span>
+              <span class="filter-chip" onclick="filterProducts('frames', this)">Eyeglasses</span>
+              <span class="filter-chip" onclick="filterProducts('contact', this)">Contact Lenses</span>
+              <span class="filter-chip" onclick="filterProducts('accessories', this)">Accessories</span>
+              <span class="filter-chip" onclick="filterProducts('sale', this)">On Sale</span>
+            </div>
+            <div class="products-grid" id="allProductGrid"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ── ABOUT ── -->
+      <div id="page-about" class="page-content">
+        <section>
+          <div class="container" style="max-width: 760px">
+            <p class="section-label">Our Story</p>
+            <h2 class="section-title" style="margin-bottom: 1.5rem">
+              We believe everyone deserves<br /><em style="font-family: var(--font-display); font-style: italic; color: var(--accent)">clear, comfortable vision</em>
+            </h2>
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 1.5rem">
+              <p style="color: var(--ink-soft); font-size: 16px; line-height: 1.8; margin-bottom: 1rem">
+                ContactLensesNG was founded to make quality optical products accessible across Nigeria and beyond. We partner with globally trusted brands — Acuvue,
+                Biofinity, Ray-Ban, Oakley — and deliver directly to your doorstep.
+              </p>
+              <p style="color: var(--ink-soft); font-size: 16px; line-height: 1.8">
+                Every purchase is backed by our authentic product guarantee, and our customer support team is always a message away.
+              </p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem">
+              <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center">
+                <div style="font-family: var(--font-display); font-size: 32px; color: var(--accent); margin-bottom: 4px">5k+</div>
+                <div style="font-size: 13px; color: var(--ink-muted)">Happy Customers</div>
+              </div>
+              <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center">
+                <div style="font-family: var(--font-display); font-size: 32px; color: var(--accent-2); margin-bottom: 4px">20+</div>
+                <div style="font-size: 13px; color: var(--ink-muted)">Premium Products</div>
+              </div>
+              <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center">
+                <div style="font-family: var(--font-display); font-size: 32px; color: var(--gold); margin-bottom: 4px">4.9★</div>
+                <div style="font-size: 13px; color: var(--ink-muted)">Average Rating</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ── TERMS ── -->
+      <div id="page-terms" class="page-content">
+        <section>
+          <div class="container" style="max-width: 720px">
+            <p class="section-label">Legal</p>
+            <h2 class="section-title" style="margin-bottom: 2rem">Terms & Conditions</h2>
+            <div
+              style="
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-lg);
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+              "
+            >
+              <div>
+                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px">1. Products & Prescriptions</h4>
+                <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.7">
+                  Contact lenses and prescription eyeglasses require a valid prescription from a licensed optician. ContactLensesNG is not responsible for incorrect
+                  prescriptions provided by customers.
+                </p>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px">2. Payments</h4>
+                <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.7">
+                  We accept payments via Paystack (card, bank transfer, USSD) and PayPal. All transactions are encrypted and secure. Prices are listed in Nigerian Naira
+                  (₦).
+                </p>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px">3. Returns & Refunds</h4>
+                <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.7">
+                  Unopened products may be returned within 30 days for a full refund. Contact lenses that have been opened cannot be returned for hygiene reasons.
+                </p>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px">4. Delivery</h4>
+                <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.7">
+                  Standard delivery takes 2–5 business days within Nigeria. International shipping timelines vary. Free delivery on orders above ₦15,000.
+                </p>
+              </div>
+              <div>
+                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px">5. Privacy</h4>
+                <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.7">
+                  Your personal information is used solely for order processing and communication. We do not sell or share data with third parties.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ── PAYMENT CONFIRM ── -->
+      <div id="page-confirm" class="page-content">
+        <section>
+          <div class="container">
+            <div class="confirm-card">
+              <div class="confirm-icon">✅</div>
+              <h2>Order Confirmed!</h2>
+              <p>Thank you for your purchase. A confirmation email has been sent to <strong>you@email.com</strong></p>
+              <div class="order-details">
+                <div class="order-row"><span>Order ID</span><span>#OPT-20260512</span></div>
+                <div class="order-row"><span>Payment</span><span>Paystack ✓</span></div>
+                <div class="order-row"><span>Estimated Delivery</span><span>May 14 – May 17</span></div>
+                <div class="order-row"><span>Total Paid</span><span>₦22,700</span></div>
+              </div>
+              <div class="steps-grid">
+                <div class="step-item">
+                  <div class="s-icon">📦</div>
+                  <p>Order<br />Packed</p>
+                </div>
+                <div class="step-item">
+                  <div class="s-icon">🚚</div>
+                  <p>In<br />Transit</p>
+                </div>
+                <div class="step-item">
+                  <div class="s-icon">🏠</div>
+                  <p>Delivered<br />to You</p>
+                </div>
+              </div>
+              <button class="btn-primary" onclick="showPage('home')" style="width: 100%">Continue Shopping</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- end #pages -->
+
+    <!-- CART PANEL -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-btn" onclick="closeCart()">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-summary">
+          <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">₦0</span></div>
+          <div class="cart-row"><span>Delivery</span><span>₦1,500</span></div>
+          <div class="cart-row total"><span>Total</span><span id="cartTotal">₦1,500</span></div>
+        </div>
+        <div>
+          <p style="font-size: 12px; color: var(--ink-muted); margin-bottom: 8px; font-weight: 500">Pay with:</p>
+          <div class="payment-methods">
+            <span class="pay-method active" onclick="selectPay(this)">Paystack</span>
+            <span class="pay-method" onclick="selectPay(this)">PayPal</span>
+          </div>
+        </div>
+        <button class="btn-checkout" onclick="checkout()">Proceed to Checkout →</button>
+      </div>
+    </div>
+
+    <!-- WISHLIST MODAL -->
+    <div class="modal-overlay" id="wishlistModal" onclick="closeWishlist(event)">
+      <div class="modal" onclick="event.stopPropagation()">
+        <div class="modal-head">
+          <h3>My Wishlist ♡</h3>
+          <button class="close-btn" onclick="closeWishlist()">✕</button>
+        </div>
+        <div id="wishlistContent"></div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+      <span class="toast-icon" id="toastIcon"></span>
+      <span id="toastMsg"></span>
+    </div>
+
+    <script>
+      // ── DATA ──
+      // imgPath: path to your product image relative to this HTML file.
+      // Keep emoji as fallback — shown automatically if the image is missing or fails to load.
+      const products = [
+        {
+          id: 1,
+          name: "Classic Frames",
+          imgPath: "iil/products/contactlense_1.webp",
+          brand: "Ray-Ban",
+          cat: "frames",
+          price: 42000,
+          emoji: "👓",
+          tag: "popular",
+          desc: "Timeless round acetate frames in matte black.",
+        },
+        {
+          id: 2,
+          name: "Aviator Sunglasses",
+          imgPath: "iil/products/contactlense_2.webp",
+          brand: "Ray-Ban",
+          cat: "frames",
+          price: 55000,
+          oldPrice: 65000,
+          emoji: "🕶️",
+          tag: "sale",
+          desc: "Iconic gold-frame aviators with UV400 lenses.",
+        },
+        {
+          id: 3,
+          name: "Slim Rectangular",
+          imgPath: "iil/products/contactlense_3.webp",
+          brand: "Oakley",
+          cat: "frames",
+          price: 38000,
+          emoji: "👓",
+          tag: "new",
+          desc: "Lightweight titanium frame, ultra-slim profile.",
+        },
+        {
+          id: 4,
+          name: "Cat-Eye Fashion",
+          imgPath: "iil/products/contactlense_4.webp",
+          brand: "Vogue",
+          cat: "frames",
+          price: 29500,
+          emoji: "👓",
+          tag: "",
+          desc: "Retro cat-eye design in tortoiseshell brown.",
+        },
+        {
+          id: 5,
+          name: "Sport Wrap Shades",
+          imgPath: "iil/products/contactlense_5.webp",
+          brand: "Oakley",
+          cat: "frames",
+          price: 47500,
+          emoji: "🕶️",
+          tag: "popular",
+          desc: "Wrap-around sports frame with polarised lens.",
+        },
+        {
+          id: 6,
+          name: "Oversized Square",
+          imgPath: "iil/products/contactlense_1.webp",
+          brand: "Gucci",
+          cat: "frames",
+          price: 89000,
+          emoji: "🕶️",
+          tag: "new",
+          desc: "Bold oversized square in metallic gold.",
+        },
+        {
+          id: 7,
+          name: "Kids Flex Frame",
+          imgPath: "iil/products/contactlense_2.webp",
+          brand: "Silhouette",
+          cat: "frames",
+          price: 18000,
+          emoji: "👓",
+          tag: "",
+          desc: "Durable flexible memory frame for children.",
+        },
+        {
+          id: 8,
+          name: "Rimless Executive",
+          imgPath: "iil/products/contactlense_3.webp",
+          brand: "Silhouette",
+          cat: "frames",
+          price: 62000,
+          emoji: "👓",
+          tag: "",
+          desc: "Premium rimless with titanium nose bridge.",
+        },
+        {
+          id: 9,
+          name: "Browline Retro",
+          imgPath: "iil/products/contactlense_4.webp",
+          brand: "Persol",
+          cat: "frames",
+          price: 34000,
+          oldPrice: 41000,
+          emoji: "👓",
+          tag: "sale",
+          desc: "Classic browline in havana brown.",
+        },
+        {
+          id: 10,
+          name: "Foldable Compact",
+          imgPath: "iil/products/contactlense_5.webp",
+          brand: "Lindberg",
+          cat: "frames",
+          price: 53000,
+          emoji: "👓",
+          tag: "new",
+          desc: "Foldable frame that fits in any pocket.",
+        },
+        {
+          id: 11,
+          name: "Acuvue Moist Daily",
+          imgPath: "iil/products/acuvue-moist-daily.jpg",
+          brand: "Acuvue",
+          cat: "contact",
+          price: 8500,
+          emoji: "👁️",
+          tag: "popular",
+          desc: "Daily disposable, -0.50 to -6.00 PWR. 30-pack.",
+        },
+        {
+          id: 12,
+          name: "Biofinity Monthly",
+          imgPath: "iil/products/biofinity-monthly.jpg",
+          brand: "CooperVision",
+          cat: "contact",
+          price: 14000,
+          emoji: "👁️",
+          tag: "",
+          desc: "Silicone hydrogel monthly lenses. 6-pack.",
+        },
+        {
+          id: 13,
+          name: "Air Optix Colors",
+          imgPath: "iil/products/air-optix-colors.jpg",
+          brand: "Alcon",
+          cat: "contact",
+          price: 7200,
+          emoji: "👁️",
+          tag: "new",
+          desc: "Cosmetic colour lenses, 9 shades. 2-pack.",
+        },
+        {
+          id: 14,
+          name: "Dailies Total 1",
+          imgPath: "iil/products/dailies-total-1.jpg",
+          brand: "Alcon",
+          cat: "contact",
+          price: 16500,
+          emoji: "👁️",
+          tag: "popular",
+          desc: "Water-gradient daily lenses for all-day comfort.",
+        },
+        {
+          id: 15,
+          name: "Soflens Daily",
+          imgPath: "iil/products/soflens-daily.jpg",
+          brand: "Bausch+Lomb",
+          cat: "contact",
+          price: 6800,
+          oldPrice: 8000,
+          emoji: "👁️",
+          tag: "sale",
+          desc: "Ultra-thin daily disposables. 30-pack.",
+        },
+        {
+          id: 16,
+          name: "PureVision Toric",
+          imgPath: "iil/products/purevision-toric.jpg",
+          brand: "Bausch+Lomb",
+          cat: "contact",
+          price: 19000,
+          emoji: "👁️",
+          tag: "",
+          desc: "Toric lenses for astigmatism correction.",
+        },
+        {
+          id: 17,
+          name: "Proclear Multifocal",
+          imgPath: "iil/products/proclear-multifocal.jpg",
+          brand: "CooperVision",
+          cat: "contact",
+          price: 22000,
+          emoji: "👁️",
+          tag: "new",
+          desc: "Multifocal lenses for presbyopia. 6-pack.",
+        },
+        {
+          id: 18,
+          name: "FreshLook Colorblends",
+          imgPath: "iil/products/freshlook-colorblends.jpg",
+          brand: "Alcon",
+          cat: "contact",
+          price: 6500,
+          oldPrice: 7500,
+          emoji: "👁️",
+          tag: "sale",
+          desc: "Vibrant colour lenses in 12 shades. 2-pack.",
+        },
+        {
+          id: 19,
+          name: "Lens Solution 360ml",
+          imgPath: "iil/products/lens-solution.jpg",
+          brand: "OptiFree",
+          cat: "accessories",
+          price: 3500,
+          emoji: "🧴",
+          tag: "popular",
+          desc: "Multi-purpose contact lens solution, 360ml.",
+        },
+        {
+          id: 20,
+          name: "Premium Lens Case Set",
+          imgPath: "iil/products/lens-case-set.jpg",
+          brand: "ContactLensesNG",
+          cat: "accessories",
+          price: 1800,
+          emoji: "📦",
+          tag: "new",
+          desc: "Stylish hard case + microfibre cloth set.",
+        },
+      ];
+
+      let cart = [];
+      let wishlist = [];
+
+      // ── HELPERS ──
+
+      // Returns the image HTML for product cards.
+      // Shows <img> when imgPath is set; falls back to emoji on load error or if imgPath is absent.
+      function productImgHTML(p) {
+        if (!p.imgPath) {
+          return `<span class="img-fallback">${p.emoji}</span>`;
+        }
+        return `
+          <img
+            src="${p.imgPath}"
+            alt="${p.name}"
+            loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <span class="img-fallback" style="display:none">${p.emoji}</span>`;
+      }
+
+      // Returns the thumbnail HTML for cart / wishlist (smaller, square crop).
+      function thumbHTML(p) {
+        if (!p.imgPath) {
+          return `<span>${p.emoji}</span>`;
+        }
+        return `
+          <img
+            src="${p.imgPath}"
+            alt="${p.name}"
+            loading="lazy"
+            onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span>${p.emoji}</span>');"
+          />`;
+      }
+
+      // ── RENDER PRODUCTS ──
+      function productCard(p) {
+        const wishedClass = wishlist.find((w) => w.id === p.id) ? "active" : "";
+        const priceHTML = p.oldPrice ? `<span class="old">₦${p.oldPrice.toLocaleString()}</span>₦${p.price.toLocaleString()}` : `₦${p.price.toLocaleString()}`;
+        const tagHTML = p.tag
+          ? `<span class="product-tag tag-${p.tag === "popular" ? "popular" : p.tag === "new" ? "new" : "sale"}">${
+              p.tag === "popular" ? "🔥 Popular" : p.tag === "new" ? "✦ New" : "% Sale"
+            }</span>`
+          : "";
+        return `
+          <div class="product-card">
+            <div class="product-img">
+              ${tagHTML}
+              ${productImgHTML(p)}
+              <button class="wishlist-btn ${wishedClass}" onclick="toggleWish(${p.id})" title="Wishlist">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-brand">${p.brand}</div>
+              <div class="product-name">${p.name}</div>
+              <div class="product-desc">${p.desc}</div>
+              <div class="product-footer">
+                <div class="product-price">${priceHTML}</div>
+                <button class="btn-add" onclick="addToCart(${p.id})">Add to Cart</button>
+              </div>
+            </div>
+          </div>`;
+      }
+
+      function renderGrid(containerId, items) {
+        document.getElementById(containerId).innerHTML = items.map((p) => productCard(p)).join("");
+      }
+
+      renderGrid("homeProductGrid", products.filter((p) => p.tag === "popular" || p.tag === "new").slice(0, 4));
+      renderGrid("allProductGrid", products);
+
+      // ── FILTER ──
+      function filterProducts(cat, el) {
+        document.querySelectorAll(".filter-chip").forEach((c) => c.classList.remove("active"));
+        el.classList.add("active");
+        const items = cat === "all" ? products : cat === "sale" ? products.filter((p) => p.tag === "sale") : products.filter((p) => p.cat === cat);
+        renderGrid("allProductGrid", items);
+      }
+
+      function filterCat(cat) {
+        showPage("products");
+        document.querySelectorAll(".cat-card").forEach((c) => c.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        const chips = document.querySelectorAll(".filter-chip");
+        chips.forEach((c) => c.classList.remove("active"));
+        const target = cat === "all" ? chips[0] : cat === "frames" ? chips[1] : cat === "contact" ? chips[2] : chips[3];
+        if (target) target.classList.add("active");
+        renderGrid("allProductGrid", cat === "all" ? products : products.filter((p) => p.cat === cat));
+      }
+
+      // ── CART ──
+      function addToCart(id) {
+        const p = products.find((x) => x.id === id);
+        const ex = cart.find((x) => x.id === id);
+        if (ex) ex.qty++;
+        else cart.push({ ...p, qty: 1 });
+        updateCartBadge();
+        showToast("🛒", `${p.name} added to cart`);
+        openCart();
+      }
+
+      function openCart() {
+        document.getElementById("cartPanel").classList.add("open");
+        document.getElementById("cartOverlay").classList.add("open");
+        renderCart();
+      }
+
+      function closeCart() {
+        document.getElementById("cartPanel").classList.remove("open");
+        document.getElementById("cartOverlay").classList.remove("open");
+      }
+
+      function renderCart() {
+        const el = document.getElementById("cartItems");
+        if (!cart.length) {
+          el.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--ink-muted);font-size:14px">🛒<br><br>Your cart is empty</div>';
+          document.getElementById("cartSubtotal").textContent = "₦0";
+          document.getElementById("cartTotal").textContent = "₦1,500";
+          return;
+        }
+        const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+        el.innerHTML = cart
+          .map(
+            (i) => `
+            <div class="cart-item">
+              <div class="cart-item-img">${thumbHTML(i)}</div>
+              <div class="cart-item-info">
+                <p>${i.name}</p>
+                <span>${i.brand}</span>
+                <div class="qty-ctrl">
+                  <button class="qty-btn" onclick="changeQty(${i.id}, -1)">−</button>
+                  <span class="qty-num">${i.qty}</span>
+                  <button class="qty-btn" onclick="changeQty(${i.id}, 1)">+</button>
+                </div>
+              </div>
+              <div class="cart-item-price">₦${(i.price * i.qty).toLocaleString()}</div>
+            </div>`,
+          )
+          .join("");
+        document.getElementById("cartSubtotal").textContent = "₦" + subtotal.toLocaleString();
+        document.getElementById("cartTotal").textContent = "₦" + (subtotal + 1500).toLocaleString();
+      }
+
+      function changeQty(id, delta) {
+        const item = cart.find((x) => x.id === id);
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) cart = cart.filter((x) => x.id !== id);
+        updateCartBadge();
+        renderCart();
+      }
+
+      function updateCartBadge() {
+        const total = cart.reduce((s, i) => s + i.qty, 0);
+        document.getElementById("cartBadge").textContent = total;
+      }
+
+      function selectPay(el) {
+        document.querySelectorAll(".pay-method").forEach((e) => e.classList.remove("active"));
+        el.classList.add("active");
+      }
+
+      function checkout() {
+        if (!cart.length) {
+          showToast("⚠️", "Your cart is empty!");
+          return;
+        }
+        closeCart();
+        cart = [];
+        updateCartBadge();
+        showPage("confirm");
+        showToast("✅", "Payment successful!");
+      }
+
+      // ── WISHLIST ──
+      function toggleWish(id) {
+        const p = products.find((x) => x.id === id);
+        const idx = wishlist.findIndex((x) => x.id === id);
+        if (idx > -1) {
+          wishlist.splice(idx, 1);
+          showToast("♡", `Removed from wishlist`);
+        } else {
+          wishlist.push(p);
+          showToast("♥", `${p.name} wishlisted`);
+        }
+        updateWishBadge();
+        document.querySelectorAll(".wishlist-btn").forEach((btn) => {
+          const btnId = parseInt(btn.getAttribute("onclick").match(/\d+/)[0]);
+          btn.classList.toggle(
+            "active",
+            wishlist.some((w) => w.id === btnId),
+          );
+        });
+      }
+
+      function updateWishBadge() {
+        const b = document.getElementById("wishBadge");
+        b.textContent = wishlist.length;
+        b.style.display = wishlist.length ? "flex" : "none";
+      }
+
+      function openWishlist() {
+        document.getElementById("wishlistModal").classList.add("open");
+        renderWishlist();
+      }
+
+      function closeWishlist(e) {
+        if (!e || e.target === document.getElementById("wishlistModal")) document.getElementById("wishlistModal").classList.remove("open");
+      }
+
+      function renderWishlist() {
+        const el = document.getElementById("wishlistContent");
+        if (!wishlist.length) {
+          el.innerHTML = '<div class="empty-wish"><div class="icon">♡</div><p>No items in your wishlist yet.<br>Click ♡ on any product to save it.</p></div>';
+          return;
+        }
+        el.innerHTML = `<div class="wishlist-grid">${wishlist
+          .map(
+            (p) => `
+            <div class="wishlist-item">
+              <div class="item-thumb">${thumbHTML(p)}</div>
+              <p>${p.name}</p>
+              <span>₦${p.price.toLocaleString()}</span>
+              <button class="btn-move-cart" onclick="moveToCart(${p.id})">Move to Cart</button>
+            </div>`,
+          )
+          .join("")}</div>`;
+      }
+
+      function moveToCart(id) {
+        addToCart(id);
+        wishlist = wishlist.filter((x) => x.id !== id);
+        updateWishBadge();
+        closeWishlist();
+      }
+
+      // ── PAGE NAV ──
+      function showPage(name) {
+        document.querySelectorAll(".page-content").forEach((p) => p.classList.remove("active"));
+        document.getElementById("page-" + name).classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // ── TOAST ──
+      function showToast(icon, msg) {
+        const t = document.getElementById("toast");
+        document.getElementById("toastIcon").textContent = icon;
+        document.getElementById("toastMsg").textContent = msg;
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 2800);
+      }
+    </script>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="logo" href="#">Contact<span style="color: #8ecfc5">LensesNG</span></a>
+            <p>Premium optical products delivered to your door. Contact lenses, eyeglasses, and accessories from the world's top brands.</p>
+          </div>
+          <div class="footer-col">
+            <h5>Shop</h5>
+            <a href="#" onclick="filterCat('frames')">Eyeglasses</a>
+            <a href="#" onclick="filterCat('contact')">Contact Lenses</a>
+            <a href="#" onclick="filterCat('accessories')">Accessories</a>
+            <a href="#" onclick="showPage('products')">All Products</a>
+          </div>
+          <div class="footer-col">
+            <h5>Help</h5>
+            <a href="#">How to Order</a>
+            <a href="#">Track Delivery</a>
+            <a href="#">Returns</a>
+            <a href="#" onclick="showPage('terms')">Terms & Conditions</a>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <a href="#" onclick="showPage('about')">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 ContactLensesNG. All rights reserved.</p>
+          <div class="pay-logos">
+            <span class="pay-logo">PAYSTACK</span>
+            <span class="pay-logo">PAYPAL</span>
+            <span class="pay-logo">VISA</span>
+            <span class="pay-logo">MC</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
